@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disha Surati: Digital Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf8f2; --bg-alt:#f5ece0; --bg-card:#fffdf9;
+  --text:#2c1a0e; --text-light:#8a6a4a;
+  --border:#e8d5bc; --accent:#8b5a2b; --accent-soft:rgba(139,90,43,0.1);
+  --tag-blue-bg:#e5edf5; --tag-blue-text:#1e3a5f;
+  --tag-green-bg:#e8f0e3; --tag-green-text:#2a4a1a;
+  --tag-amber-bg:#f5ead3; --tag-amber-text:#6b3a0a;
+  --tag-teal-bg:#e0eeec; --tag-teal-text:#1a4040;
+  --tag-gray-bg:#ede8e0; --tag-gray-text:#4a3a2a;
+  --tag-rose-bg:#f0e0da; --tag-rose-text:#6a2518;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 5%, rgba(180,130,80,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 90% 15%, rgba(160,110,60,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 50% 90%, rgba(150,100,50,0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 80% 60%, rgba(170,120,70,0.04) 0%, transparent 45%);
+}
+/* Custom cursor */
+*{ cursor:none!important; }
+.cursor-dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); position:fixed; pointer-events:none; z-index:99999; transform:translate(-50%,-50%); transition:transform .15s ease,opacity .2s; }
+.cursor-ring{ width:30px; height:30px; border-radius:50%; border:1.5px solid rgba(139,90,43,0.4); position:fixed; pointer-events:none; z-index:99998; transform:translate(-50%,-50%); transition:left .08s ease,top .08s ease,width .2s ease,height .2s ease,border-color .2s; }
+.cursor-ring.hovered{ width:48px; height:48px; border-color:var(--accent); }
+@media(hover:none){ *{ cursor:auto!important; } .cursor-dot,.cursor-ring{ display:none; } }
+
+/* Lightbox */
+.lb-overlay{ display:none; position:fixed; inset:0; background:rgba(20,10,4,0.88); z-index:9990; align-items:center; justify-content:center; padding:24px; backdrop-filter:blur(6px); }
+.lb-overlay.open{ display:flex; }
+.lb-inner{ position:relative; max-width:700px; width:100%; background:var(--bg-card); border-radius:16px; overflow:hidden; border:1px solid var(--border); box-shadow:0 24px 80px rgba(20,10,4,0.4); }
+.lb-inner img,.lb-inner video{ width:100%; display:block; max-height:80vh; object-fit:contain; }
+.lb-graphic{ width:100%; aspect-ratio:4/3; }
+.lb-caption{ padding:16px 20px; border-top:1px solid var(--border); }
+.lb-caption .gc-brand{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-bottom:3px; }
+.lb-caption .gc-name{ font-size:15px; font-weight:600; color:var(--text); }
+.lb-close{ position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(20,10,4,0.55); border:1px solid rgba(255,255,255,0.15); color:#fff; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; line-height:1; }
+.gallery-item{ cursor:none!important; }
+
+/* Fine grain */
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9998;
+  opacity:0.075;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+/* Linen weave */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9997;
+  opacity:0.028;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,90,43,0.12) 2px, rgba(139,90,43,0.12) 3px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139,90,43,0.08) 2px, rgba(139,90,43,0.08) 3px);
+}
+
+/* NAV */
+nav{ position:sticky; top:0; z-index:100; background:rgba(253,248,242,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+.nav-inner{ max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; height:56px; gap:6px; }
+.nav-logo{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; color:var(--text); text-decoration:none; margin-right:auto; white-space:nowrap; }
+.nav-links{ display:flex; align-items:center; gap:2px; }
+.nav-links a{ color:var(--text-light); text-decoration:none; font-size:12.5px; padding:6px 9px; border-radius:6px; transition:color .15s,background .15s; white-space:nowrap; }
+.nav-links a:hover,.nav-links a.active{ color:var(--text); background:rgba(139,90,43,0.07); }
+.nav-links a.nav-li{ color:var(--tag-blue-text); background:var(--tag-blue-bg); font-weight:600; font-size:12px; }
+.nav-links a.nav-li:hover{ opacity:.82; }
+.nav-links a.nav-resume{ background:var(--accent-soft); color:var(--accent); border:1px solid rgba(139,90,43,0.22); font-weight:600; font-size:12px; }
+.hamburger{ display:none; background:none; border:none; cursor:pointer; padding:8px; color:var(--text); flex-direction:column; gap:5px; }
+.hamburger span{ display:block; width:22px; height:2px; background:currentColor; border-radius:2px; }
+.mobile-menu{ display:none; flex-direction:column; background:var(--bg-card); border-bottom:1px solid var(--border); padding:12px 24px 20px; gap:2px; box-shadow:0 4px 16px rgba(44,26,14,0.08); }
+.mobile-menu.open{ display:flex; }
+.mobile-menu a{ color:var(--text-light); text-decoration:none; font-size:14px; padding:10px 8px; border-bottom:1px solid var(--border); }
+.mobile-menu a:last-child{ border-bottom:none; }
+@media(max-width:860px){ .nav-links{ display:none; } .hamburger{ display:flex; } }
+
+/* LAYOUT */
+.section{ padding:72px 24px; max-width:1100px; margin:0 auto; }
+.alt-wrap{
+  background:var(--bg-alt);
+  background-image:
+    radial-gradient(ellipse 90% 70% at 15% 40%, rgba(139,90,43,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 20%, rgba(139,90,43,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 60% 80%, rgba(139,90,43,0.04) 0%, transparent 45%);
+}
+h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4vw,30px); font-weight:700; margin-bottom:8px; }
+.section-sub{ color:var(--text-light); font-size:14px; margin-bottom:40px; }
+.section-sub a{ color:var(--accent); text-decoration:none; }
+
+/* HERO */
+#hero{ padding:80px 24px 72px; max-width:1100px; margin:0 auto; position:relative; }
+#hero::before{ content:''; position:absolute; top:-20px; right:0; width:420px; height:420px; background:radial-gradient(ellipse, rgba(139,90,43,0.06) 0%, transparent 70%); pointer-events:none; z-index:0; }
+#hero > *{ position:relative; z-index:1; }
+.hero-eyebrow{ font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+.hero-name{ font-family:'Space Grotesk',sans-serif; font-size:clamp(38px,6vw,66px); font-weight:700; line-height:1.04; margin-bottom:12px; }
+.hero-role{ font-family:'Space Grotesk',sans-serif; font-size:clamp(15px,2.2vw,20px); font-weight:600; color:var(--text-light); margin-bottom:18px; }
+.hero-desc{ font-size:16px; color:var(--text-light); max-width:580px; line-height:1.75; margin-bottom:32px; }
+.hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:52px; }
+.btn-primary{ background:var(--accent); color:#fffdf9; font-weight:700; font-size:14px; padding:12px 24px; border-radius:8px; text-decoration:none; transition:opacity .15s; display:inline-block; }
+.btn-primary:hover{ opacity:.86; }
+.btn-secondary{ background:transparent; color:var(--text); font-weight:600; font-size:14px; padding:11px 22px; border-radius:8px; border:1px solid var(--border); text-decoration:none; transition:border-color .15s,color .15s; display:inline-block; }
+.btn-secondary:hover{ border-color:var(--accent); color:var(--accent); }
+.btn-li{ background:var(--tag-blue-bg); color:var(--tag-blue-text); font-weight:600; font-size:14px; padding:11px 22px; border-radius:8px; border:1px solid rgba(30,58,95,0.15); text-decoration:none; transition:opacity .15s; display:inline-block; }
+.btn-li:hover{ opacity:.85; }
+.hero-stats{ display:flex; gap:36px; flex-wrap:wrap; padding-top:24px; border-top:1px solid var(--border); }
+.stat-num{ font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; line-height:1; color:var(--text); }
+.stat-label{ font-size:12px; color:var(--text-light); margin-top:4px; }
+
+/* SERVICES */
+.services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.svc-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.06); }
+.svc-card:hover{ border-color:rgba(139,90,43,0.4); box-shadow:0 4px 14px rgba(139,90,43,0.08); }
+.svc-icon{ font-size:24px; margin-bottom:14px; }
+.svc-card h3{ font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:600; margin-bottom:8px; }
+.svc-card p{ font-size:13px; color:var(--text-light); line-height:1.6; }
+@media(max-width:760px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px){ .services-grid{ grid-template-columns:1fr; } }
+
+/* ABOUT */
+.about-grid{ display:grid; grid-template-columns:260px 1fr; gap:52px; align-items:start; }
+.photo-ring{ width:220px; height:220px; border-radius:50%; border:3px solid var(--accent); padding:4px; margin:0 auto; }
+.photo-inner{ width:100%; height:100%; border-radius:50%; overflow:hidden; background:var(--bg-alt); display:flex; align-items:center; justify-content:center; }
+.photo-inner img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.photo-fallback{ font-family:'Space Grotesk',sans-serif; font-size:52px; font-weight:700; color:var(--accent); display:none; }
+.about-content h2{ font-family:'Space Grotesk',sans-serif; font-size:clamp(20px,3vw,26px); font-weight:700; margin-bottom:14px; }
+.about-content p{ font-size:14.5px; color:var(--text-light); line-height:1.8; margin-bottom:14px; }
+.fact-chips{ display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+.chip{ background:var(--bg-alt); border:1px solid var(--border); border-radius:999px; padding:7px 16px; font-size:13px; color:var(--text-light); }
+.chip b{ color:var(--text); font-weight:600; }
+@media(max-width:760px){ .about-grid{ grid-template-columns:1fr; } .photo-ring{ width:180px; height:180px; } }
+
+/* TOOLKIT */
+.toolkit-groups{ display:flex; flex-direction:column; gap:22px; }
+.tg-label{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-light); margin-bottom:10px; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag{ display:inline-block; padding:6px 14px; border-radius:999px; font-size:12.5px; font-weight:600; border:1px solid; }
+.tb{ background:var(--tag-blue-bg); color:var(--tag-blue-text); border-color:rgba(30,58,95,0.15); }
+.tg{ background:var(--tag-green-bg); color:var(--tag-green-text); border-color:rgba(42,74,26,0.15); }
+.ta{ background:var(--tag-amber-bg); color:var(--tag-amber-text); border-color:rgba(107,58,10,0.15); }
+.tt{ background:var(--tag-teal-bg); color:var(--tag-teal-text); border-color:rgba(26,64,64,0.15); }
+.tr{ background:var(--tag-rose-bg); color:var(--tag-rose-text); border-color:rgba(106,37,24,0.15); }
+.tgr{ background:var(--tag-gray-bg); color:var(--tag-gray-text); border-color:rgba(74,58,42,0.15); }
+
+/* EXPERIENCE */
+.exp-list{ display:flex; flex-direction:column; gap:20px; }
+.exp-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px 30px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.05), inset 0 1px 0 rgba(255,255,255,0.6); background-image:radial-gradient(ellipse at top left, rgba(255,253,249,0.8) 0%, transparent 60%); }
+.exp-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba(139,90,43,0.07); }
+.exp-header{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; margin-bottom:4px; }
+.exp-title{ font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; }
+.exp-period{ font-size:12px; font-weight:600; color:var(--accent); background:var(--accent-soft); padding:4px 10px; border-radius:999px; white-space:nowrap; flex-shrink:0; border:1px solid rgba(139,90,43,0.18); }
+.exp-co{ font-size:14px; color:var(--text-light); margin-bottom:14px; }
+.exp-co .dot{ margin:0 6px; opacity:.4; }
+.exp-ul{ list-style:none; padding:0; display:flex; flex-direction:column; gap:8px; }
+.exp-ul li{ font-size:13.5px; color:var(--text-light); padding-left:18px; position:relative; line-height:1.6; }
+.exp-ul li::before{ content:'→'; position:absolute; left:0; color:var(--accent); font-size:11px; top:4px; }
+.aside-note{ background:var(--bg-alt); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 18px; font-size:13.5px; color:var(--text-light); line-height:1.7; margin-top:20px; font-style:italic; }
+.exp-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
+
+/* CONTENT WORK */
+.cw-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.cw-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:0 1px 4px rgba(44,26,14,0.05); }
+.cw-brand-tag{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.cw-card h3{ font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; margin-bottom:5px; }
+.cw-role{ font-size:13px; color:var(--text-light); margin-bottom:16px; }
+.cw-metrics{ display:flex; gap:20px; flex-wrap:wrap; margin-bottom:16px; }
+.metric-num{ font-family:'Space Grotesk',sans-serif; font-size:24px; font-weight:700; line-height:1; color:var(--text); }
+.metric-label{ font-size:11px; color:var(--text-light); margin-top:2px; }
+.cw-types{ font-size:13px; color:var(--text-light); line-height:1.65; }
+@media(max-width:760px){ .cw-grid{ grid-template-columns:1fr; } }
+
+/* GALLERY */
+.gallery-filters{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
+.gf-btn{ padding:8px 20px; border-radius:999px; border:1px solid var(--border); background:transparent; font-size:13px; font-weight:600; color:var(--text-light); cursor:pointer; transition:all .15s; font-family:'Inter',sans-serif; }
+.gf-btn.active,.gf-btn:hover{ border-color:var(--accent); color:var(--accent); background:var(--accent-soft); }
+.gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.gallery-item{ border-radius:12px; overflow:hidden; border:1px solid var(--border); background:var(--bg-card); transition:border-color .15s,transform .15s,box-shadow .15s; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
+.gallery-item:hover{ border-color:rgba(139,90,43,0.35); transform:translateY(-3px); box-shadow:0 6px 20px rgba(139,90,43,0.09); }
+.gallery-item[data-hidden]{ display:none; }
+.g-thumb-wrap{ position:relative; width:100%; aspect-ratio:4/3; overflow:hidden; }
+.g-thumb{ width:100%; height:100%; object-fit:cover; display:block; }
+.g-placeholder{ position:absolute; inset:0; }
+.g-caption{ padding:13px 16px; background:var(--bg-card); }
+.gc-brand{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-bottom:4px; }
+.gc-name{ font-size:14px; font-weight:600; line-height:1.35; color:var(--text); }
+@media(max-width:760px){ .gallery-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* PROJECTS */
+.proj-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.proj-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:12px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.05); }
+.proj-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba(139,90,43,0.07); }
+.proj-tag{ font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.proj-card h3{ font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:700; line-height:1.3; }
+.proj-ul{ list-style:none; padding:0; display:flex; flex-direction:column; gap:7px; flex:1; }
+.proj-ul li{ font-size:13px; color:var(--text-light); padding-left:16px; position:relative; line-height:1.55; }
+.proj-ul li::before{ content:'·'; position:absolute; left:4px; color:var(--accent); font-size:16px; top:-1px; }
+@media(max-width:900px){ .proj-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:560px){ .proj-grid{ grid-template-columns:1fr; } }
+
+/* RESEARCH */
+.research-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media(min-width:900px){ .research-grid{ grid-template-columns:1fr 1fr; } }
+.rc{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:26px 28px; display:flex; flex-direction:column; gap:12px; box-shadow:0 1px 4px rgba(44,26,14,0.05); transition:border-color .15s,box-shadow .15s; }
+.rc:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba(139,90,43,0.07); }
+.rc-tag{ font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.rc h3{ font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; line-height:1.25; }
+.rc-meta{ font-size:12px; color:var(--text-light); font-weight:600; }
+.rc-body{ font-size:13.5px; color:var(--text-light); line-height:1.7; flex:1; }
+@media(max-width:680px){ .research-grid{ grid-template-columns:1fr; } }
+
+/* WRITING */
+.writing-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+.wc{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:22px 24px; text-decoration:none; display:block; transition:border-color .15s,transform .15s,box-shadow .15s; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
+.wc:hover{ border-color:rgba(139,90,43,0.35); transform:translateY(-2px); box-shadow:0 4px 14px rgba(139,90,43,0.08); }
+.wc-tag{ font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.wc-title{ font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:var(--text); line-height:1.3; margin-bottom:8px; }
+.wc-desc{ font-size:13px; color:var(--text-light); line-height:1.6; }
+@media(max-width:600px){ .writing-grid{ grid-template-columns:1fr; } }
+
+/* EDUCATION */
+.edu-list{ display:flex; flex-direction:column; gap:14px; }
+.edu-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px 28px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
+.edu-school{ font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; margin-bottom:4px; }
+.edu-degree{ font-size:14px; color:var(--text-light); margin-bottom:4px; }
+.edu-note{ font-size:12px; color:var(--accent); font-weight:600; }
+.edu-period{ font-size:12px; color:var(--text-light); background:var(--bg-alt); border:1px solid var(--border); padding:4px 10px; border-radius:999px; white-space:nowrap; flex-shrink:0; }
+
+/* BEHIND THE WORK */
+.btw-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.btw-photo{ border-radius:12px; overflow:hidden; position:relative; aspect-ratio:4/3; border:1px solid var(--border); background:var(--bg-alt); cursor:pointer; }
+.btw-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease; }
+.btw-photo:hover img{ transform:scale(1.04); }
+.btw-overlay{ position:absolute; inset:0; background:linear-gradient(to top,rgba(44,26,14,0.72) 0%,transparent 50%); opacity:0; transition:opacity .25s; display:flex; align-items:flex-end; padding:14px; }
+.btw-photo:hover .btw-overlay{ opacity:1; }
+.btw-caption{ color:#fff; font-size:12px; font-weight:600; line-height:1.3; }
+.btw-label{ font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:3px; }
+.btw-placeholder{ width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);color:var(--text-light);font-size:12px;font-style:italic;text-align:center;padding:16px; }
+@media(max-width:860px){ .btw-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px){ .btw-grid{ grid-template-columns:1fr; } }
+
+/* Research PDF link */
+.rc-link{ display:inline-flex; align-items:center; gap:5px; margin-top:12px; font-size:12px; font-weight:600; color:var(--accent); text-decoration:none; border:1px solid var(--border); border-radius:6px; padding:5px 12px; transition:border-color .15s,background .15s; }
+.rc-link:hover{ border-color:var(--accent); background:var(--accent-soft); }
+
+/* Case study photo */
+.cs-photo{ width:100%; border-radius:12px; overflow:hidden; margin:24px 0; border:1px solid var(--border); }
+.cs-photo img{ width:100%; display:block; max-height:360px; object-fit:cover; object-position:center top; }
+
+/* CERTIFICATIONS */
+.cert-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.cert-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:18px 14px; text-align:center; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
+.cert-icon{ font-size:26px; margin-bottom:10px; }
+.cert-name{ font-size:12.5px; font-weight:700; line-height:1.3; margin-bottom:4px; color:var(--text); }
+.cert-issuer{ font-size:11px; color:var(--text-light); }
+.cert-verify{ display:inline-block; margin-top:10px; font-size:11px; font-weight:600; color:var(--accent); text-decoration:none; border:1px solid var(--border); border-radius:5px; padding:3px 10px; transition:border-color .15s,background .15s; }
+.cert-verify:hover{ border-color:var(--accent); background:var(--accent-soft); }
+a.cert-card{ text-decoration:none; color:inherit; }
+a.cert-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba(139,90,43,0.07); }
+@media(max-width:760px){ .cert-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* CONTACT */
+.contact-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.ci h3{ font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700; margin-bottom:10px; }
+.ci p{ font-size:14.5px; color:var(--text-light); line-height:1.75; margin-bottom:24px; }
+.contact-links{ display:flex; flex-direction:column; gap:10px; }
+.cl{ display:flex; align-items:center; gap:12px; text-decoration:none; padding:12px 16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
+.cl:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 3px 10px rgba(139,90,43,0.07); }
+.cl-icon{ font-size:18px; }
+.cl-lbl{ font-size:11px; color:var(--text-light); display:block; }
+.cl-val{ font-size:14px; font-weight:600; color:var(--text); display:block; }
+.contact-form{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:0 1px 4px rgba(44,26,14,0.05); }
+.form-row{ margin-bottom:16px; }
+.form-lbl{ display:block; font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text-light); margin-bottom:6px; }
+.form-input,.form-ta{ width:100%; background:var(--bg-alt); border:1px solid var(--border); border-radius:8px; padding:12px 14px; color:var(--text); font-size:14px; font-family:'Inter',sans-serif; outline:none; transition:border-color .15s; }
+.form-input:focus,.form-ta:focus{ border-color:var(--accent); }
+.form-ta{ resize:vertical; min-height:100px; }
+.form-submit{ width:100%; background:var(--accent); color:#fffdf9; font-weight:700; font-size:14px; padding:13px; border-radius:8px; border:none; cursor:pointer; font-family:'Inter',sans-serif; transition:opacity .15s; margin-top:4px; }
+.form-submit:hover{ opacity:.86; }
+@media(max-width:760px){ .contact-wrap{ grid-template-columns:1fr; } }
+
+/* PIPELINE */
+.pipeline{ display:grid; grid-template-columns:repeat(7,1fr); gap:0; position:relative; margin-top:8px; }
+.pipeline::before{ content:''; position:absolute; top:28px; left:calc(100%/14); right:calc(100%/14); height:2px; background:var(--border); z-index:0; }
+.pip-step{ display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 4px; position:relative; z-index:1; }
+.pip-icon{ width:56px; height:56px; border-radius:50%; background:var(--bg-card); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:12px; box-shadow:0 2px 8px rgba(44,26,14,0.07); transition:border-color .2s,transform .2s; }
+.pip-step:hover .pip-icon{ border-color:var(--accent); transform:translateY(-3px); }
+.pip-label{ font-family:'Space Grotesk',sans-serif; font-size:13px; font-weight:700; color:var(--text); margin-bottom:6px; }
+.pip-desc{ font-size:12px; color:var(--text-light); line-height:1.55; }
+@media(max-width:860px){ .pipeline{ grid-template-columns:repeat(4,1fr); gap:20px; } .pipeline::before{ display:none; } }
+@media(max-width:540px){ .pipeline{ grid-template-columns:repeat(2,1fr); } }
+
+/* CASE STUDY */
+.cs-wrap{ max-width:800px; }
+.cs-label{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+.cs-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4vw,32px); font-weight:700; line-height:1.15; margin-bottom:6px; }
+.cs-sub{ font-size:14px; color:var(--text-light); margin-bottom:36px; }
+.cs-block{ margin-bottom:32px; }
+.cs-block-h{ font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.cs-block p{ font-size:14.5px; color:var(--text-light); line-height:1.8; margin-bottom:10px; }
+.cs-block p:last-child{ margin-bottom:0; }
+.cs-nums{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; background:var(--bg-card); border:1px solid var(--border); border-radius:14px; overflow:hidden; margin:28px 0; box-shadow:0 2px 8px rgba(44,26,14,0.06); }
+.cs-num{ padding:22px 20px; text-align:center; border-right:1px solid var(--border); }
+.cs-num:last-child{ border-right:none; }
+.cs-n{ font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; color:var(--text); line-height:1; }
+.cs-nl{ font-size:12px; color:var(--text-light); margin-top:5px; line-height:1.4; }
+.cs-events{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.cs-event{ background:var(--bg-alt); border:1px solid var(--border); border-radius:8px; padding:8px 14px; font-size:13px; color:var(--text); font-weight:500; }
+.cs-honest{ background:var(--bg-alt); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:18px 22px; font-size:14px; color:var(--text-light); line-height:1.75; font-style:italic; margin-top:8px; }
+@media(max-width:640px){ .cs-nums{ grid-template-columns:repeat(2,1fr); } .cs-num:nth-child(2){ border-right:none; } .cs-num:nth-child(1),.cs-num:nth-child(2){ border-bottom:1px solid var(--border); } }
+
+/* FOOTER */
+footer{ border-top:1px solid var(--border); padding:32px 24px; text-align:center; background:var(--bg); }
+.footer-links{ display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:12px; }
+.footer-links a{ font-size:13px; color:var(--text-light); text-decoration:none; }
+.footer-links a:hover{ color:var(--text); }
+footer p{ font-size:13px; color:var(--text-light); }
+footer a{ color:var(--accent); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Disha Surati</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#casestudy">Case Study</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="nav-li">LinkedIn ↗</a>
+      <a href="Disha_Surati_Resume.pdf" download class="nav-resume">Resume ↓</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#toolkit">Toolkit</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work Samples</a>
+    <a href="#casestudy">Case Study</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank">LinkedIn ↗</a>
+    <a href="Disha_Surati_Resume.pdf" download>Resume ↓</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">Yes, I built this myself.</div>
+  <h1 class="hero-name">Disha Surati</h1>
+  <p class="hero-role">Content &nbsp;·&nbsp; Digital Marketing &nbsp;·&nbsp; SEO &nbsp;·&nbsp; Campaigns &nbsp;·&nbsp; Analytics</p>
+  <p class="hero-desc">Most people in marketing are either the creative or the analyst. I've always been a bit of both, and I think that combination is harder to find than most people realize. I design the assets, write the copy, run the campaign, then sit with the data and ask why it worked. That's just how I think.</p>
+  <div class="hero-ctas">
+    <a href="#work" class="btn-primary">View My Work</a>
+    <a href="Disha_Surati_Resume.pdf" download class="btn-secondary">Download Resume</a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="btn-li">LinkedIn ↗</a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-num">13.7K+</div><div class="stat-label">LinkedIn impressions (KMG)</div></div>
+    <div><div class="stat-num">242+</div><div class="stat-label">Post reactions</div></div>
+    <div><div class="stat-num">878</div><div class="stat-label">Followers grown (+11%)</div></div>
+    <div><div class="stat-num">10+</div><div class="stat-label">Client accounts managed</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div class="alt-wrap">
+<section id="services" class="section">
+  <h2 class="section-title">What I Do</h2>
+  <p class="section-sub">From strategy and creative to analytics and everything in between</p>
+  <div class="services-grid">
+    <div class="svc-card"><div class="svc-icon">📣</div><h3>Campaign Management</h3><p>I coordinate multichannel campaigns across social, email, and search with a focus on QA, timelines, and performance reporting that actually means something.</p></div>
+    <div class="svc-card"><div class="svc-icon">✍️</div><h3>Content Strategy</h3><p>From content calendars to copywriting and branded assets, I build content systems that keep audiences engaged and algorithms on our side.</p></div>
+    <div class="svc-card"><div class="svc-icon">🔍</div><h3>SEO &amp; Search</h3><p>I use on page optimization, keyword research, and Google Search Console to grow organic traffic in ways that compound over time.</p></div>
+    <div class="svc-card"><div class="svc-icon">📊</div><h3>Analytics &amp; Reporting</h3><p>GA4, SEMrush, and platform analytics help me build KPI dashboards that turn raw numbers into strategy you can actually act on.</p></div>
+    <div class="svc-card"><div class="svc-icon">📱</div><h3>Social Media</h3><p>I manage Instagram, LinkedIn, and Facebook end to end including scheduling, community engagement, and data informed content planning.</p></div>
+    <div class="svc-card"><div class="svc-icon">📧</div><h3>Email Marketing</h3><p>I build Mailchimp and HubSpot campaigns from audience segmentation and A/B testing all the way through automation and performance analysis.</p></div>
+  </div>
+</section>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-sub">The person behind the campaigns</p>
+  <div class="about-grid">
+    <div>
+      <div class="photo-ring">
+        <div class="photo-inner">
+          <img src="disha.jpg" alt="Disha Surati" onerror="this.style.display='none'; document.querySelector('.photo-fallback').style.display='flex';">
+          <div class="photo-fallback">DS</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <h2>Hey, I'm Disha 👋</h2>
+      <p>I think the best marketers are the ones who can't turn off the part of their brain that notices everything. Why did that post travel? Why did this email get opened and that one didn't? What made someone stop on that ad for three seconds longer than the last one? I've been asking those questions for years. Long before I had a job title that said I should.</p>
+      <p>I started as a graphic designer. That's where I learned to actually look at things: what makes a visual work, what makes it forgettable, why some choices feel right and others feel off even when you can't explain it yet. When I moved into marketing, I brought that eye with me. So I'm not the person who briefs the designer and waits. I build the thing. Then I measure it. Then I rebuild it better.</p>
+      <p>I care about work that actually does something, not just looks good in a deck. If I'm running a campaign, I want to understand it well enough to defend every decision in the copy, the creative, and the targeting. I'm in Chicago, actively looking, and I genuinely love talking to people who care about this stuff the same way I do.</p>
+      <div class="aside-note">Right now: MS done, actively looking for my next full time role, and still designing things on weekends because I can't help it.</div>
+      <div class="fact-chips">
+        <div class="chip">📍 Chicago, IL</div>
+        <div class="chip">🟢 Open to work</div>
+        <div class="chip">🎨 Graphic designer turned marketer</div>
+        <div class="chip">🇮🇳 Originally from Ahmedabad</div>
+        <div class="chip">🏆 C.V. Starr Merit Scholar</div>
+        <div class="chip">☕ Best ideas happen at 11pm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<div class="alt-wrap">
+<section id="toolkit" class="section">
+  <h2 class="section-title">Toolkit</h2>
+  <p class="section-sub">Tools and skills I work with regularly</p>
+  <div class="toolkit-groups">
+    <div><div class="tg-label">Analytics &amp; SEO</div><div class="tag-row"><span class="tag tb">Google Analytics 4 (GA4)</span><span class="tag tb">Google Search Console</span><span class="tag tb">SEMrush</span><span class="tag tb">Social Media Analytics</span><span class="tag tb">Tableau</span><span class="tag tb">SQL</span><span class="tag tb">iMotions</span><span class="tag tb">Data Visualization</span><span class="tag tb">Keyword Research</span><span class="tag tb">On Page SEO</span></div></div>
+    <div><div class="tg-label">Campaigns &amp; Paid Media</div><div class="tag-row"><span class="tag tr">Google Ads</span><span class="tag tr">Meta Ads</span><span class="tag tr">A/B Testing</span><span class="tag tr">Campaign QA</span><span class="tag tr">KPI Tracking</span><span class="tag tr">Marketing Performance Analysis</span><span class="tag tr">Audience Targeting</span><span class="tag tr">Funnel Optimization</span><span class="tag tr">Campaign Strategy</span></div></div>
+    <div><div class="tg-label">Social &amp; Email</div><div class="tag-row"><span class="tag tg">Instagram</span><span class="tag tg">LinkedIn</span><span class="tag tg">Facebook</span><span class="tag tg">Hootsuite</span><span class="tag tg">Mailchimp</span><span class="tag tg">HubSpot</span><span class="tag tg">Community Management</span><span class="tag tg">Content Scheduling</span><span class="tag tg">Email Automation</span></div></div>
+    <div><div class="tg-label">Content &amp; Design</div><div class="tag-row"><span class="tag ta">WordPress</span><span class="tag ta">Canva</span><span class="tag ta">Adobe Creative Suite</span><span class="tag ta">Figma</span><span class="tag ta">Copywriting</span><span class="tag ta">Content Calendar Management</span><span class="tag ta">Brand Identity</span><span class="tag ta">Digital Storytelling</span><span class="tag ta">Graphic Design</span></div></div>
+    <div><div class="tg-label">Product &amp; Strategy</div><div class="tag-row"><span class="tag tt">Product Marketing</span><span class="tag tt">GTM Strategy</span><span class="tag tt">UX Research</span><span class="tag tt">Monetization Strategy</span><span class="tag tt">Market Analysis</span><span class="tag tt">Consumer Research</span><span class="tag tt">Competitive Analysis</span><span class="tag tt">Segmentation Analysis</span></div></div>
+    <div><div class="tg-label">Research &amp; Insights</div><div class="tag-row"><span class="tag tgr">SWOT Analysis</span><span class="tag tgr">Consumer Behavior</span><span class="tag tgr">Strategic Planning</span><span class="tag tgr">Eye Tracking Research</span><span class="tag tgr">Campaign Reporting</span><span class="tag tgr">Stakeholder Presentations</span><span class="tag tgr">Business Analysis</span></div></div>
+    <div><div class="tg-label">Productivity &amp; Collaboration</div><div class="tag-row"><span class="tag tgr">Microsoft Excel</span><span class="tag tgr">PowerPoint</span><span class="tag tgr">Stakeholder Communication</span><span class="tag tgr">Cross Functional Collaboration</span><span class="tag tgr">Timeline &amp; Task Management</span><span class="tag tgr">Project Coordination</span></div></div>
+  </div>
+</section>
+</div>
+
+<!-- HOW I WORK -->
+<div class="alt-wrap">
+<section id="process" class="section">
+  <h2 class="section-title">How I Work</h2>
+  <p class="section-sub">The process behind every campaign and piece of creative</p>
+  <div class="pipeline">
+    <div class="pip-step">
+      <div class="pip-icon">📋</div>
+      <div class="pip-label">Brief</div>
+      <p class="pip-desc">Understand the goal, the audience, and what success actually looks like before touching anything</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">🔍</div>
+      <div class="pip-label">Research</div>
+      <p class="pip-desc">Look at what's already working, who we're talking to, and where the real gaps are</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">✏️</div>
+      <div class="pip-label">Design</div>
+      <p class="pip-desc">Build the assets myself: copy, graphics, motion. So nothing gets lost between brief and execution</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">📅</div>
+      <div class="pip-label">Plan</div>
+      <p class="pip-desc">Map content against a real calendar. What goes first, what builds momentum, when to push hard</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">🚀</div>
+      <div class="pip-label">Launch</div>
+      <p class="pip-desc">Execute across the right channels at the right time with the right message for the right person</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">📊</div>
+      <div class="pip-label">Measure</div>
+      <p class="pip-desc">Pull the data, sit with it, ask why. Not just what moved but what it means</p>
+    </div>
+    <div class="pip-step">
+      <div class="pip-icon">🔁</div>
+      <div class="pip-label">Refine</div>
+      <p class="pip-desc">Change one thing, test again. The work doesn't end at launch. That's where it starts getting interesting</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2 class="section-title">Experience</h2>
+  <p class="section-sub">Places I've worked and things I actually got done</p>
+  <div class="exp-list">
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Marketing Coordinator</div>
+        <div class="exp-period">Sept 2025 to June 2026</div>
+      </div>
+      <div class="exp-co">iStash<span class="dot">·</span>Chicago, IL</div>
+      <ul class="exp-ul">
+        <li>Ran campaigns across social, email, and search. A lot of testing, a lot of iteration, and eventually a 10% lift that felt earned</li>
+        <li>Pulled apart our acquisition funnel to figure out where people were falling off. Fixed those gaps, activation came up 8%</li>
+        <li>Tested different messages against each other. Some changes seemed tiny but the 9% engagement lift made them worth it</li>
+        <li>Built the social creative myself: static posts, carousels, motion graphics for LinkedIn and Instagram, from brief to final file, usually within the same week</li>
+      </ul>
+      <div class="exp-tags"><span class="tag tr">Campaign Management</span><span class="tag tb">Analytics</span><span class="tag tg">Email Marketing</span><span class="tag tr">A/B Testing</span><span class="tag tr">SEO</span><span class="tag ta">Content Creation</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Director of Social Strategy</div>
+        <div class="exp-period">Sept 2025 to June 2026</div>
+      </div>
+      <div class="exp-co">Kellstadt Marketing Group (KMG)<span class="dot">·</span>Student Organisation, Part time<span class="dot">·</span>Chicago, IL</div>
+      <ul class="exp-ul">
+        <li>Planned 3 to 4 posts a week across Instagram and LinkedIn, balancing event content, thought leadership, and things people would actually want to share</li>
+        <li>Ran email campaigns to 200+ members on Mailchimp. Learned very quickly that subject lines matter more than almost everything else</li>
+        <li>Grew the account from ~790 to 878 followers. Not overnight, just consistently showing up with content that was worth something</li>
+        <li>Designed everything myself in Canva: event flyers, motion graphics, carousels, static posts. Then looked at the data and figured out what to do differently next time</li>
+        <li>Ran the social strategy for the annual Marketer's Nexus symposium: pre event hype, live coverage, post event recap, the whole arc</li>
+      </ul>
+      <div class="exp-tags"><span class="tag tg">Social Media</span><span class="tag tg">Hootsuite</span><span class="tag tg">Mailchimp</span><span class="tag ta">Canva</span><span class="tag ta">Content Creation</span><span class="tag tb">Analytics</span><span class="tag ta">Content Strategy</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Digital Marketing &amp; Campaign Analyst</div>
+        <div class="exp-period">May to July 2024</div>
+      </div>
+      <div class="exp-co">Vadilal Industries<span class="dot">·</span>Ahmedabad, India</div>
+      <ul class="exp-ul">
+        <li>Ran 20+ Google and Meta campaigns and pushed reach up 25%, engagement up 15%, mostly by getting more precise about who we were actually targeting</li>
+        <li>Spent real time in the research: understanding who the customer was before deciding how to talk to them</li>
+        <li>Put together segmentation analyses and campaign reports that the team actually used to make decisions, not just documents that got filed away</li>
+      </ul>
+      <div class="exp-tags"><span class="tag tr">Google Ads</span><span class="tag tr">Meta Ads</span><span class="tag tb">Consumer Research</span><span class="tag tb">Campaign Reporting</span><span class="tag tb">Segmentation</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Content Marketing &amp; Design Associate</div>
+        <div class="exp-period">Sept 2023 to Apr 2024</div>
+      </div>
+      <div class="exp-co">Init Design Studio<span class="dot">·</span>Ahmedabad, India</div>
+      <ul class="exp-ul">
+        <li>Grew organic client acquisition by 20%, mostly through content that was actually useful, not just keyword stuffed</li>
+        <li>Worked across 5+ client accounts at once: content, campaigns, brand assets. Learned to context switch fast and keep quality consistent fast and keep quality consistent</li>
+        <li>Designed brand identity systems, packaging, and print collateral for clients in wellness and lifestyle. This is where I got serious about design-led thinking</li>
+        <li>Worked closely with account managers to make sure creative actually matched the brief, and pushed back when it didn't</li>
+      </ul>
+      <div class="exp-tags"><span class="tag ta">Content Strategy</span><span class="tag tb">SEO</span><span class="tag ta">Graphic Design</span><span class="tag tg">Campaign Management</span><span class="tag ta">Brand Identity</span></div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Marketing &amp; Design Intern</div>
+        <div class="exp-period">Apr to July 2023</div>
+      </div>
+      <div class="exp-co">Ting Works LLP<span class="dot">·</span>Mumbai, India</div>
+      <ul class="exp-ul">
+        <li>Worked on SEO content for 10+ brands: WordPress, copywriting, on page optimization. Grew organic traffic by 10% across accounts</li>
+        <li>Wrote branded copy for social channels, product pages, and campaigns. This is where I figured out that good copy sounds like a person, not a press release</li>
+        <li>Designed social graphics, merchandising visuals, and promotional assets using Adobe Creative Suite and Canva. My first real taste of doing design and marketing at the same time</li>
+        <li>Managed content calendars for multiple brands simultaneously. Learned that consistency beats brilliance almost every time</li>
+      </ul>
+      <div class="exp-tags"><span class="tag tb">SEO</span><span class="tag ta">WordPress</span><span class="tag ta">Copywriting</span><span class="tag ta">Graphic Design</span><span class="tag ta">Creative Assets</span><span class="tag tg">Social Media</span><span class="tag tgr">Merchandising</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTENT WORK -->
+<div class="alt-wrap">
+<section id="content" class="section">
+  <h2 class="section-title">Content Work</h2>
+  <p class="section-sub">Social media and content highlights</p>
+  <div class="cw-grid">
+    <div class="cw-card">
+      <div class="cw-brand-tag">KMG · Kellstadt Marketing Group</div>
+      <h3>Social Strategy &amp; Content</h3>
+      <p class="cw-role">Director of Social Strategy · Sept 2025 to June 2026</p>
+      <div class="cw-metrics">
+        <div><div class="metric-num">13.7K+</div><div class="metric-label">Impressions</div></div>
+        <div><div class="metric-num">242+</div><div class="metric-label">Reactions</div></div>
+        <div><div class="metric-num">878</div><div class="metric-label">Followers</div></div>
+        <div><div class="metric-num">+11%</div><div class="metric-label">Follower Growth</div></div>
+      </div>
+      <p class="cw-types">Event campaigns, symposium promos, thought leadership graphics, motion graphics, Mailchimp newsletters to 200+ members</p>
+    </div>
+    <div class="cw-card">
+      <div class="cw-brand-tag">iStash · Digital Payments Platform</div>
+      <h3>Campaign &amp; Creative Assets</h3>
+      <p class="cw-role">Marketing Coordinator · Sept 2025 to June 2026</p>
+      <div class="cw-metrics">
+        <div><div class="metric-num">+10%</div><div class="metric-label">Campaign Performance</div></div>
+        <div><div class="metric-num">+8%</div><div class="metric-label">Activation Rate</div></div>
+        <div><div class="metric-num">+9%</div><div class="metric-label">Engagement Lift</div></div>
+      </div>
+      <p class="cw-types">Flyers, static posts, carousel posts, social graphics, motion graphics, email campaigns, A/B tested messaging</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- WORK SAMPLES -->
+<section id="work" class="section">
+  <h2 class="section-title">Work Samples</h2>
+  <p class="section-sub">Creative assets and campaign materials</p>
+
+  <div class="gallery-filters">
+    <button class="gf-btn active" data-filter="all">All</button>
+    <button class="gf-btn" data-filter="istash">iStash</button>
+    <button class="gf-btn" data-filter="kmg">KMG</button>
+    <button class="gf-btn" data-filter="init">INIT Design Studio</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- iSTASH -->
+    <div class="gallery-item" data-cat="istash">
+      <div class="g-thumb-wrap">
+        <img src="work/istash-flyer.jpg" alt="iStash Flyer" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#030d0c,#071f1b,#0a2922);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px;text-align:left;">
+          <div><div style="font-size:8px;font-weight:800;letter-spacing:.18em;color:#00d68f;text-transform:uppercase;margin-bottom:5px;">DIGITAL PAYMENTS</div><div style="font-size:26px;font-weight:900;color:#fff;line-height:1.0;letter-spacing:-0.5px;">iStash</div><div style="font-size:11px;font-weight:600;color:rgba(0,214,143,0.85);margin-top:4px;line-height:1.45;">Zero Fee<br>Merchant Wallet</div></div>
+          <div style="background:rgba(0,214,143,0.08);border:1px solid rgba(0,214,143,0.25);border-radius:6px;padding:10px 12px;"><div style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.06em;margin-bottom:3px;">GROW YOUR BUSINESS</div><div style="font-size:9px;color:rgba(255,255,255,0.5);line-height:1.4;">Chicago's Future of Digital Payments</div></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">iStash · Flyer</div><div class="gc-name">Product Launch Flyer</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="istash">
+      <div class="g-thumb-wrap">
+        <img src="work/istash-static.jpg" alt="iStash Static" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#040f0e,#081e1b);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:20px;gap:9px;">
+          <div style="font-size:9px;font-weight:700;letter-spacing:.15em;color:#00d68f;text-transform:uppercase;">Merchant Network</div>
+          <div style="font-size:20px;font-weight:900;color:#fff;line-height:1.1;">JOIN OUR<br>MERCHANT<br>NETWORK</div>
+          <div style="width:32px;height:2px;background:#00d68f;border-radius:2px;"></div>
+          <div style="font-size:10px;color:rgba(255,255,255,0.5);line-height:1.55;">Drive more customers,<br>earn more revenue.</div>
+          <div style="padding:6px 14px;background:rgba(0,214,143,0.12);border:1px solid rgba(0,214,143,0.3);border-radius:4px;font-size:9.5px;font-weight:700;color:#00d68f;">istash.shop →</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">iStash · Static Post</div><div class="gc-name">Merchant Acquisition Post</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="istash">
+      <div class="g-thumb-wrap">
+        <img src="work/istash-carousel.jpg" alt="iStash Carousel" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#040f0e,#081e1b);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:18px;">
+          <div><div style="font-size:8px;font-weight:800;letter-spacing:.14em;color:#00d68f;text-transform:uppercase;margin-bottom:6px;">HOW ISTASH WORKS</div><div style="font-size:11px;font-weight:800;color:#fff;">SLIDE 1 / 4</div></div>
+          <div style="display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:center;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:rgba(0,214,143,0.2);border:1.5px solid #00d68f;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:#00d68f;flex-shrink:0;">1</div><div style="font-size:10px;color:rgba(255,255,255,0.85);">Sign up as a merchant</div></div><div style="display:flex;align-items:center;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:rgba(0,214,143,0.08);border:1.5px solid rgba(0,214,143,0.25);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:rgba(0,214,143,0.45);flex-shrink:0;">2</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Go live on the platform</div></div><div style="display:flex;align-items:center;gap:8px;"><div style="width:20px;height:20px;border-radius:50%;background:rgba(0,214,143,0.08);border:1.5px solid rgba(0,214,143,0.25);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:rgba(0,214,143,0.45);flex-shrink:0;">3</div><div style="font-size:10px;color:rgba(255,255,255,0.45);">Earn more, zero fees</div></div></div>
+          <div style="display:flex;gap:4px;justify-content:center;"><div style="width:18px;height:3px;border-radius:2px;background:#00d68f;"></div><div style="width:6px;height:3px;border-radius:2px;background:rgba(255,255,255,0.18);"></div><div style="width:6px;height:3px;border-radius:2px;background:rgba(255,255,255,0.18);"></div><div style="width:6px;height:3px;border-radius:2px;background:rgba(255,255,255,0.18);"></div></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">iStash · Carousel</div><div class="gc-name">Feature Highlight Series</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="istash">
+      <div class="g-thumb-wrap">
+        <img src="work/istash-social.jpg" alt="iStash Social" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#040f0e,#071a18,#0a2420);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;gap:8px;">
+          <div style="font-size:19px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-.5px;">DIGITAL PAYMENTS.<br>REIMAGINED.</div>
+          <div style="width:36px;height:2px;background:#00d68f;border-radius:2px;margin:3px 0;"></div>
+          <div style="font-size:9.5px;color:rgba(255,255,255,0.5);line-height:1.65;">Zero Fees · Real Growth · Built for Merchants</div>
+          <div style="position:absolute;bottom:13px;font-size:8.5px;font-weight:700;color:#00d68f;">#iStash #Fintech #Chicago</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">iStash · Social Graphic</div><div class="gc-name">Brand Campaign Graphic</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="istash">
+      <div class="g-thumb-wrap">
+        <img src="work/istash-motion.jpg" alt="iStash Motion" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(135deg,#040f0e,#071a18);position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <div style="width:50px;height:50px;border-radius:50%;border:2px solid #00d68f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:16px solid #00d68f;margin-left:3px;"></div></div>
+          <div style="font-size:10.5px;font-weight:700;color:#00d68f;letter-spacing:.12em;text-transform:uppercase;">Motion Graphic</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.3);">Animated Social Content</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">iStash · Motion Graphic</div><div class="gc-name">Animated Social Content</div></div>
+    </div>
+
+    <!-- KMG -->
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-symposium-promo.jpg" alt="Symposium Promo" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#080f20,#060c1a);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div><div style="font-size:7px;font-weight:800;letter-spacing:.14em;color:#ff2d87;text-transform:uppercase;margin-bottom:3px;">17TH ANNUAL MARKETING SYMPOSIUM</div><div style="font-size:13px;font-weight:900;color:#00cfff;letter-spacing:.04em;line-height:1.15;">THE MARKETER'S<br>NEXUS</div></div>
+          <div><div style="font-size:17px;font-weight:900;color:#00cfff;letter-spacing:.01em;line-height:0.95;text-transform:uppercase;">PRODUCT<br>MARKETING</div><div style="font-size:11px;font-weight:700;color:#fff;line-height:1.2;margin-top:5px;">THE MOST VERSATILE<br>ROLE RIGHT NOW</div></div>
+          <div style="display:flex;gap:8px;border-top:1px solid rgba(0,207,255,0.18);padding-top:8px;"><span style="font-size:8px;font-weight:700;color:#00cfff;">9TH MAY</span><span style="font-size:8px;color:rgba(255,255,255,0.3);">·</span><span style="font-size:8px;font-weight:700;color:#00cfff;">8AM to 6PM</span><span style="font-size:8px;color:rgba(255,255,255,0.3);">·</span><span style="font-size:8px;font-weight:700;color:#00cfff;">DPC 8005</span></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Event Flyer</div><div class="gc-name">Product Marketing: The Most Versatile Role Right Now</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-social-customer.jpg" alt="Understanding The Customer" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#080f20);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:10px;">
+          <div style="font-size:20px;font-weight:900;color:#00cfff;letter-spacing:.04em;text-align:center;line-height:0.95;text-transform:uppercase;">UNDERSTANDING</div>
+          <div style="font-size:15px;font-weight:800;color:#fff;text-align:center;line-height:0.95;">THE CUSTOMER</div>
+          <div style="width:36px;height:1px;background:rgba(0,207,255,0.3);margin:4px 0;"></div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(0,207,255,0.15);border-radius:6px;padding:8px 12px;display:flex;align-items:center;gap:8px;width:100%;"><div style="font-size:14px;flex-shrink:0;">🧠</div><div style="font-size:9px;color:rgba(255,255,255,0.6);line-height:1.45;">We turn data into deep<br>customer understanding</div></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Understanding The Customer</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-social-room.jpg" alt="The Room You Don't Want To Miss" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#0a0f22);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div style="font-size:7px;font-weight:800;letter-spacing:.14em;color:rgba(0,207,255,0.55);text-transform:uppercase;">THE MARKETER'S NEXUS</div>
+          <div><div style="font-size:20px;font-weight:900;color:#00cfff;line-height:0.9;text-transform:uppercase;">THE ROOM</div><div style="font-size:14px;font-weight:900;color:#fff;line-height:1.0;text-transform:uppercase;margin-top:3px;">YOU DON'T WANT<br>TO MISS</div><div style="font-size:8px;color:#ffd700;font-weight:600;margin-top:6px;font-style:italic;">Because opportunities don't come twice</div><div style="font-size:10px;font-weight:800;color:#fff;margin-top:7px;">WILL YOU BE THERE?</div></div>
+          <div style="display:flex;gap:7px;border-top:1px solid rgba(255,255,255,0.08);padding-top:7px;font-size:7.5px;color:#00cfff;font-weight:700;"><span>DPC 8005</span><span style="color:rgba(255,255,255,0.25);">|</span><span>MAY 9TH</span><span style="color:rgba(255,255,255,0.25);">|</span><span>8:00 AM to 6PM</span></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">The Room You Don't Want To Miss</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-networking.jpg" alt="Networking Graphic" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#080414,#100a22);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:14px;">
+          <div><div style="font-size:6.5px;font-weight:700;letter-spacing:.13em;color:#ff2d87;text-transform:uppercase;margin-bottom:3px;">KMG MARKETING SYMPOSIUM PRESENTS:</div><div style="font-size:10px;font-weight:700;color:#fff;">THE</div><div style="font-size:17px;font-weight:900;color:#fff;line-height:0.85;">MARKETER'S</div><div style="font-size:21px;font-weight:900;color:#00cfff;line-height:0.9;">NEXUS</div><div style="font-size:7.5px;font-weight:700;color:#ff2d87;margin-top:5px;text-transform:uppercase;">THE NETWORKING YOU CAN'T MISS!</div></div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;"><div style="background:rgba(255,255,255,0.07);border-radius:3px;height:20px;display:flex;align-items:center;justify-content:center;font-size:6.5px;font-weight:800;color:rgba(255,255,255,0.55);">3M</div><div style="background:rgba(255,255,255,0.07);border-radius:3px;height:20px;display:flex;align-items:center;justify-content:center;font-size:6.5px;font-weight:800;color:rgba(255,255,255,0.55);">KIND</div><div style="background:rgba(255,255,255,0.07);border-radius:3px;height:20px;display:flex;align-items:center;justify-content:center;font-size:6.5px;font-weight:800;color:rgba(255,255,255,0.55);">McD's</div><div style="background:rgba(255,255,255,0.07);border-radius:3px;height:20px;display:flex;align-items:center;justify-content:center;font-size:6.5px;font-weight:800;color:rgba(255,255,255,0.55);">+8</div></div>
+          <div style="font-size:7px;color:#00cfff;font-weight:700;text-align:center;">Where the Modern Marketer is built!</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Event Promotion</div><div class="gc-name">The Networking You Can't Miss</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-mixer.jpg" alt="Kellstadt Mixer" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#0c1230,#101840);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div style="display:flex;align-items:center;gap:6px;"><div style="width:20px;height:20px;background:linear-gradient(135deg,#e8c84a,#c9a430);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900;color:#fff;">K</div><div style="font-size:7px;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:.08em;text-transform:uppercase;">Kellstadt Marketing Group</div></div>
+          <div><div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.65);">Connect with us</div><div style="font-size:20px;font-weight:900;color:#e8c84a;line-height:0.95;text-transform:uppercase;">AT KELLSTADT<br>MIXER</div></div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.5);line-height:1.5;">Inviting all KGSB Graduate Students, Alumni &amp; Faculty</div>
+          <div style="display:flex;gap:7px;"><div style="background:rgba(255,255,255,0.07);border-radius:4px;padding:5px 8px;font-size:7.5px;color:rgba(255,255,255,0.65);">📅 Jan 13 · 4:30 to 6PM</div><div style="background:rgba(255,255,255,0.07);border-radius:4px;padding:5px 8px;font-size:7.5px;color:rgba(255,255,255,0.65);">📍 DePaul Center</div></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Event Flyer</div><div class="gc-name">Connect With Us at Kellstadt Mixer</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-social-data.jpg" alt="You Don't Just Look At Data" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#080f20);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div style="font-size:16px;font-weight:900;color:#fff;line-height:0.95;">YOU DON'T JUST<br>LOOK AT <span style="color:#00cfff;">DATA</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;"><div style="display:flex;align-items:center;gap:7px;font-size:9.5px;color:rgba(255,255,255,0.8);font-weight:600;"><span style="color:#00cfff;">📈</span> CAMPAIGN METRICS</div><div style="display:flex;align-items:center;gap:7px;font-size:9.5px;color:rgba(255,255,255,0.8);font-weight:600;">🖱️ WEBSITE TRAFFIC</div><div style="display:flex;align-items:center;gap:7px;font-size:9.5px;color:rgba(255,255,255,0.8);font-weight:600;">👥 USER BEHAVIOR</div><div style="display:flex;align-items:center;gap:7px;font-size:9.5px;color:rgba(255,255,255,0.8);font-weight:600;">💲 ROI</div></div>
+          <div style="background:rgba(0,0,0,0.3);border-radius:5px;padding:7px 10px;font-size:8.5px;font-weight:700;color:#ffd700;line-height:1.4;">It starts with data, but doesn't end there</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Social Graphic</div><div class="gc-name">You Don't Just Look At Data</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-social-campaign.jpg" alt="Every Campaign" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#080f20);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div style="font-size:15px;font-weight:900;color:#fff;line-height:0.95;">EVERY <span style="color:#00cfff;">CAMPAIGN</span><br>BECOMES A <span style="color:#00cfff;">QUESTION</span></div>
+          <div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid rgba(255,45,135,0.35);border-radius:5px;padding:5px 10px;font-size:9px;color:rgba(255,255,255,0.72);max-width:82%;">Why did this perform better?</div><div style="border:1px solid rgba(255,45,135,0.35);border-radius:5px;padding:5px 10px;font-size:9px;color:rgba(255,255,255,0.72);max-width:82%;align-self:flex-end;">Where are we losing users?</div><div style="border:1px solid rgba(255,45,135,0.35);border-radius:5px;padding:5px 10px;font-size:9px;color:rgba(255,255,255,0.72);max-width:82%;">What drove conversions?</div></div>
+          <div style="background:rgba(0,0,0,0.3);border-radius:5px;padding:7px 10px;font-size:8.5px;font-weight:700;color:#ffd700;line-height:1.4;">We dig deep to find the why behind the numbers</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Every Campaign Becomes A Question</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <img src="work/kmg-social-insights.jpg" alt="Insights Decision Impact" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#060b18,#080f20);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:16px;">
+          <div><div style="font-size:23px;font-weight:900;color:#fff;line-height:0.9;">INSIGHTS.</div><div style="font-size:23px;font-weight:900;color:#00cfff;line-height:0.9;">DECISION.</div><div style="font-size:23px;font-weight:900;color:#fff;line-height:0.9;">IMPACT.</div></div>
+          <div style="display:flex;flex-direction:column;gap:7px;"><div><div style="font-size:8px;font-weight:800;color:#fff;letter-spacing:.08em;">DATA SPEAKS,</div><div style="font-size:7.5px;font-style:italic;color:rgba(255,255,255,0.45);">YOU TRANSLATE IT</div></div><div><div style="font-size:8px;font-weight:800;color:#fff;letter-spacing:.08em;">INSIGHTS DRIVE,</div><div style="font-size:7.5px;font-style:italic;color:rgba(255,255,255,0.45);">SMARTER DECISIONS</div></div><div><div style="font-size:8px;font-weight:800;color:#fff;letter-spacing:.08em;">BETTER DECISIONS,</div><div style="font-size:7.5px;font-style:italic;color:rgba(255,255,255,0.45);">CREATE REAL IMPACT</div></div></div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Insights. Decision. Impact.</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <video class="g-thumb" autoplay muted loop playsinline><source src="work/kmg-motion-event.mp4" type="video/mp4"></video>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Motion Graphic</div><div class="gc-name">This Event Is For You</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="kmg">
+      <div class="g-thumb-wrap">
+        <video class="g-thumb" autoplay muted loop playsinline><source src="work/kmg-motion-case.mp4" type="video/mp4"></video>
+      </div>
+      <div class="g-caption"><div class="gc-brand">KMG · Motion Graphic</div><div class="gc-name">Case Competition Promo</div></div>
+    </div>
+
+    <!-- INIT Design Studio -->
+    <div class="gallery-item" data-cat="init">
+      <div class="g-thumb-wrap">
+        <img src="work/init-stationary.jpg" alt="AyurvedaWorks Stationery" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#f5f0e8,#ede5d6);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;">
+          <div style="font-size:13px;font-weight:800;color:#1a3b36;text-align:center;">AyurvedaWorks</div>
+          <div style="font-size:9px;color:#4a7a6a;letter-spacing:.1em;text-transform:uppercase;">Branding Collaterals</div>
+          <div style="width:36px;height:1.5px;background:#1a3b36;border-radius:2px;"></div>
+          <div style="font-size:9px;color:#8a6a50;text-align:center;line-height:1.5;">Stationery · Business Cards<br>Letterhead · Envelopes</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">INIT Design Studio · Branding</div><div class="gc-name">AyurvedaWorks: Brand Stationery System</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="init">
+      <div class="g-thumb-wrap">
+        <img src="work/init-office.jpg" alt="AyurvedaWorks Office" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#1a3b36,#22504a);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;">
+          <div style="font-size:22px;font-weight:300;color:#fff;font-style:italic;text-align:center;">Within you</div>
+          <div style="width:30px;height:1.5px;background:rgba(255,255,255,0.4);"></div>
+          <div style="font-size:8.5px;font-weight:700;letter-spacing:.14em;color:rgba(255,255,255,0.6);text-transform:uppercase;text-align:center;">Environmental Branding</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">INIT Design Studio · Environmental</div><div class="gc-name">AyurvedaWorks: Office and Signage</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="init">
+      <div class="g-thumb-wrap">
+        <img src="work/init-logo-system.jpg" alt="THNX Logo System" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:#f8f8f8;position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;">
+          <div style="font-size:32px;font-weight:700;color:#111;letter-spacing:-.5px;line-height:1;">thnx.</div>
+          <div style="width:36px;height:1.5px;background:#111;border-radius:2px;"></div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:.14em;color:#888;text-transform:uppercase;text-align:center;">Brand Identity System<br>Logo Guidelines</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">INIT Design Studio · Identity</div><div class="gc-name">THNX: Brand Identity and Logo Guidelines</div></div>
+    </div>
+
+    <div class="gallery-item" data-cat="init">
+      <div class="g-thumb-wrap">
+        <img src="work/init-packaging-sun.jpg" alt="THNX Packaging" class="g-thumb" onerror="this.style.display='none';">
+        <div class="g-placeholder" style="background:linear-gradient(160deg,#f0ece4,#e8e2d6);position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;">
+          <div style="font-size:11px;font-weight:800;letter-spacing:.14em;color:#555;text-transform:uppercase;">SHEAMUKHI</div>
+          <div style="font-size:18px;font-weight:700;color:#111;text-align:center;line-height:1.1;">thnx.</div>
+          <div style="font-size:8.5px;letter-spacing:.08em;color:#888;text-transform:uppercase;">Sunscreen SPF 50</div>
+          <div style="width:30px;height:1px;background:#aaa;"></div>
+          <div style="font-size:8px;color:#999;text-align:center;">Packaging Design · 100 ML</div>
+        </div>
+      </div>
+      <div class="g-caption"><div class="gc-brand">INIT Design Studio · Packaging</div><div class="gc-name">THNX: Skincare Packaging Design</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<div class="alt-wrap">
+<section id="casestudy" class="section">
+  <h2 class="section-title">Case Study</h2>
+  <p class="section-sub">One project, the full story</p>
+
+  <div class="cs-wrap">
+    <div class="cs-label">Social Media Strategy · Content Creation · Event Marketing</div>
+    <h3 class="cs-title">KMG Marketer's Nexus: Building a Social Presence That Actually Did Something</h3>
+    <p class="cs-sub">Kellstadt Marketing Group · Director of Social Strategy · Sept 2025 to June 2026</p>
+
+    <div class="cs-block">
+      <div class="cs-block-h">The Brief</div>
+      <p>KMG is a graduate marketing student organization at DePaul, and like most student orgs, the social presence was inconsistent. Posts went up when someone remembered. There was no real strategy, no consistent voice, and the accounts weren't doing much to grow membership or drive event attendance.</p>
+      <p>My role was Director of Social Strategy, and the job was bigger than just posting more often. It was about making KMG visible as an organization, building a brand that people actually wanted to associate with, and driving real attendance to events all year. Not just the account, but the organization itself.</p>
+      <p>The biggest project of the year was the annual KMG symposium. We were the ones who named it the Marketer's Nexus. That name came from our team. We decided it, built the event identity around it, and put together a full sponsorship proposal to bring companies in as partners. I was coordinating with other teams throughout, following up to keep things moving, and showing up at every event to capture live content, videos and photos on the ground, so we had real material to work with, not just graphics. Analytics and PR were part of it too. I tracked what performed and made sure the right people knew who KMG was.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I Was Thinking</div>
+      <p>Most student org social accounts make the same mistake. They only post when there's an event to promote. That means your audience only hears from you when you want something from them. I wanted to fix that ratio. If we post five times and three of those are event promotions, we're asking too much and giving too little.</p>
+      <p>So I organized the content into three buckets: event content (pre, during, post, every event got its own arc), community content (marketing tips, insights, things people would actually save or share), and culture content (who KMG is, what it's like to be part of it). The ratio shifted. People started following because the account was worth following, not just because they wanted the event details.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">The Events I Covered</div>
+      <div class="cs-events">
+        <div class="cs-event">Marketer's Nexus Symposium</div>
+        <div class="cs-event">International Student Success Panel</div>
+        <div class="cs-event">Kellstadt Mixer</div>
+        <div class="cs-event">Involvement Fair</div>
+        <div class="cs-event">Speaker Series: Text Analytics</div>
+        <div class="cs-event">KMG Bonding</div>
+        <div class="cs-event">KMG Meet and Greet</div>
+      </div>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I Built</div>
+      <p>I designed everything in Canva: static posts, motion graphics, event flyers, carousels, countdown content. For the Marketer's Nexus, I built a full campaign arc from the ground up. That included writing the sponsorship proposal we used to bring in company partners, which meant treating the event like a real marketing product. Teaser posts went out two weeks early. Countdown content kept the energy up the week before. On the day of, I was physically there with my phone, capturing video and photos, getting real content in real time instead of just scheduling graphics from a desk.</p>
+      <p>That applied to every event. Whether it was the Kellstadt Mixer, the International Student Success Panel, or a bonding night, I showed up and covered it. Real photos and videos, not stock. Post-event recaps that extended the conversation past the room. I also ran Mailchimp email campaigns to 200+ members alongside the social content so the messaging was consistent across channels, and I tracked performance to understand what was actually moving the needle.</p>
+    </div>
+
+    <div class="cs-nums">
+      <div class="cs-num"><div class="cs-n">13.7K+</div><div class="cs-nl">Total impressions</div></div>
+      <div class="cs-num"><div class="cs-n">242+</div><div class="cs-nl">Post reactions</div></div>
+      <div class="cs-num"><div class="cs-n">+11%</div><div class="cs-nl">Follower growth</div></div>
+      <div class="cs-num"><div class="cs-n">200+</div><div class="cs-nl">Email subscribers</div></div>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I'd Do Differently</div>
+      <div class="cs-honest">I'd start building content earlier for the flagship event. I had good material but I was often working a week ahead instead of two or three. For the Marketer's Nexus specifically, starting the teaser campaign earlier would have given us more runway to build anticipation. I'd also lean more into Instagram Stories. We used them, but not consistently, and the data suggested they were working well when we did. More systematic, less reactive.</div>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid var(--border); margin:56px 0 0;"></div>
+
+  <div class="cs-wrap" style="margin-top:52px;">
+    <div class="cs-label">Campaign Management · Content Creation · Field Marketing</div>
+    <h3 class="cs-title">iStash: Marketing a Fintech Startup From the Ground Up</h3>
+    <p class="cs-sub">iStash · Marketing Coordinator · Sept 2025 to June 2026</p>
+
+    <div class="cs-block">
+      <div class="cs-block-h">The Brief</div>
+      <p>iStash is a digital payments startup. Zero-fee merchant wallet, built for small businesses in Chicago. When I came in, the product existed but the marketing didn't have a real system behind it. There was no clear content strategy, no consistent brand voice on social, and the sales pipeline needed work. The goal was to grow the brand, bring merchants onto the platform, and make people actually understand what iStash was and why it was worth using.</p>
+      <p>It was a startup, which meant my days looked nothing like a typical coordinator role. I was texting the founder in the morning, going out to meet merchants in person by afternoon, and designing assets in the evening. Everything was hands on and nothing waited.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I Was Doing Day to Day</div>
+      <p>A big part of the job was field marketing, which meant physically going out to businesses, talking to owners, explaining the product, and getting them onboarded. That kind of work teaches you something classroom marketing doesn't: you learn very fast what messaging works when you're standing in front of a real person who has three seconds to decide if this is worth their time.</p>
+      <p>Once merchants were onboarded, I built assets for them and for the iStash brand itself. Instagram was the main channel, with some LinkedIn. I handled everything: captions, static posts, carousels, flyers, motion graphics, promotional content. When we had an offer or a push, I built the whole campaign: the creative, the copy, the timing, the call to action.</p>
+      <p>Alongside the organic work, I was running paid campaigns on Google and Meta, running A/B tests on messaging, and tracking what was converting. When activation rates felt low, I went into the funnel and looked for where people were dropping off. That process of going from field to campaign to data and back again became the rhythm of the role.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I Built</div>
+      <div class="cs-events">
+        <div class="cs-event">Instagram Content Strategy</div>
+        <div class="cs-event">Static Posts and Carousels</div>
+        <div class="cs-event">Motion Graphics</div>
+        <div class="cs-event">Promotional Flyers</div>
+        <div class="cs-event">Google and Meta Campaigns</div>
+        <div class="cs-event">Field Marketing</div>
+        <div class="cs-event">Merchant Onboarding</div>
+        <div class="cs-event">A/B Testing</div>
+      </div>
+    </div>
+
+    <div class="cs-nums">
+      <div class="cs-num"><div class="cs-n">+10%</div><div class="cs-nl">Overall campaign performance</div></div>
+      <div class="cs-num"><div class="cs-n">+8%</div><div class="cs-nl">Activation rate lift</div></div>
+      <div class="cs-num"><div class="cs-n">+9%</div><div class="cs-nl">Customer engagement lift</div></div>
+      <div class="cs-num"><div class="cs-n">10+</div><div class="cs-nl">Clients onboarded in person</div></div>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-block-h">What I'd Do Differently</div>
+      <div class="cs-honest">I'd build more of a feedback loop between the field work and the content strategy. When I was out talking to merchants, I was hearing objections and questions that never made it back into the marketing in a systematic way. The things people asked me in person were exactly what should have been addressed in the social content and ads, but I wasn't capturing those insights formally. If I did it again, I'd keep a running log of what I heard in the field and use it to directly shape messaging. That's where the real audience research was happening.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- BEHIND THE WORK -->
+<section id="behindthework" class="section">
+  <h2 class="section-title">Behind the Work</h2>
+  <p class="section-sub">The rooms, events, and people that made it real</p>
+  <div class="btw-grid">
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-istash-field-2.jpg" alt="iStash field marketing" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">iStash · Field Marketing</div><div class="btw-caption">Onboarding merchants at a partner event</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-istash-field-2.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-istash-field-1.jpg" alt="iStash booth" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">iStash · Partner Events</div><div class="btw-caption">In conversation at the iStash booth</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-istash-field-1.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-istash-event.jpg" alt="iStash event" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">iStash · Live Event</div><div class="btw-caption">Walking attendees through the product</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-istash-event.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-kmg-panel.jpg" alt="KMG Marketing Analytics Panel" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">KMG · Marketing Analytics Panel</div><div class="btw-caption">Managing the panel at the Marketer's Nexus</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-kmg-panel.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-kmg-team.jpg" alt="KMG team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">KMG · Symposium</div><div class="btw-caption">Post-event with the KMG team</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-kmg-team.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-google.jpg" alt="Google Chicago office" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">Google · Chicago Office</div><div class="btw-caption">Site visit that inspired the LinkedIn article</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-google.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-hoop-team.jpg" alt="Hoop App team presentation" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">Hoop · Final Presentation</div><div class="btw-caption">Presenting the smart real estate platform</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-hoop-team.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-kmg-nexus-team.jpg" alt="KMG Nexus team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">KMG · Event Team</div><div class="btw-caption">The team behind the Marketer's Nexus</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-kmg-nexus-team.jpg</div>
+    </div>
+
+    <div class="btw-photo" onclick="openBtwPhoto(this)">
+      <img src="work/photo-kmg-event-team.jpg" alt="KMG event team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
+      <div class="btw-overlay"><div><div class="btw-label">KMG · Full Team</div><div class="btw-caption">Everyone who made it happen</div></div></div>
+      <div class="btw-placeholder" style="display:none;">📸 photo-kmg-event-team.jpg</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="alt-wrap">
+<section id="projects" class="section">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-sub">Strategy, creative, and research projects</p>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <div class="proj-tag">Event Marketing</div>
+      <h3>The Marketer's Nexus: KMG Annual Symposium</h3>
+      <ul class="proj-ul">
+        <li>Managed social promotion before the event, live coverage, and post event engagement across Instagram and LinkedIn</li>
+        <li>Emailed 200+ members and created branded assets that helped drive record event attendance</li>
+      </ul>
+      <div class="tag-row"><span class="tag tg">Social Media</span><span class="tag tg">Email Marketing</span><span class="tag ta">Event Strategy</span></div>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag">Ad Research</div>
+      <h3>Digital Ad Performance Analysis: McDonald's</h3>
+      <ul class="proj-ul">
+        <li>Used iMotions eye tracking to compare emotion forward and product forward digital ads and found the Vampire Effect at play in their creative</li>
+        <li>Recommended a hybrid strategy to improve product recall and boost engagement at the same time</li>
+      </ul>
+      <div class="tag-row"><span class="tag tb">iMotions</span><span class="tag tb">Consumer Research</span><span class="tag tr">Ad Creative</span></div>
+      <a href="work/mcdonalds-neuromarketing.pdf" target="_blank" class="rc-link">📄 View Project</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag">Brand Strategy</div>
+      <h3>Brand Campaign Strategy: Google Pixel</h3>
+      <ul class="proj-ul">
+        <li>Designed #CatchYourPixels as a UGC campaign and The Pixel Effect as a mini-series, both grounded in audience targeting analysis</li>
+        <li>Projected 25.6% market share growth through brand repositioning and an ecosystem bundling strategy</li>
+      </ul>
+      <div class="tag-row"><span class="tag tr">Campaign Strategy</span><span class="tag tb">Audience Analysis</span><span class="tag ta">UGC</span></div>
+      <a href="work/google-pixel.pdf" target="_blank" class="rc-link">📄 View Project</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag">Product Strategy</div>
+      <h3>Hoop App: Smart Real Estate Platform</h3>
+      <ul class="proj-ul">
+        <li>Conceptualized a video first rental discovery platform built for students and young professionals in a $4T+ US rental market, combining short form video with smart AI powered search</li>
+        <li>Designed natural language search, a scrollable apartment video feed, an agent portal, and a verified marketplace with built-in monetization</li>
+        <li>Built the go to market strategy around independent agents and university communities, with a Chicago launch targeted for 2026</li>
+      </ul>
+      <div class="tag-row"><span class="tag tt">Product Marketing</span><span class="tag tt">GTM Strategy</span><span class="tag tt">UX Research</span><span class="tag tt">Monetization</span></div>
+      <a href="work/hoop-app.pdf" target="_blank" class="rc-link">📄 View Project</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag">Graduation Project · B.Design</div>
+      <h3>THNX: Identity, Branding &amp; Packaging Design</h3>
+      <ul class="proj-ul">
+        <li>Completed a 166 page brand design thesis at GLS Institute of Design, sponsored by INIT Design Studio, developing the full brand identity for THNX, a skincare and personal care company</li>
+        <li>Designed the logo system, visual identity guidelines, color palette, typography, and brand voice from scratch, ensuring cohesion across all brand expressions</li>
+        <li>Created end to end packaging design for THNX skincare products including sunscreen, serums, and exfoliants, balancing shelf appeal with premium positioning</li>
+        <li>Produced stationery, marketing collateral, environmental signage, and packaging that were adopted by the studio client and guided by Prof. Hardik Shiroya, GLS University</li>
+      </ul>
+      <div class="tag-row"><span class="tag ta">Brand Identity</span><span class="tag ta">Packaging Design</span><span class="tag ta">Graphic Design</span><span class="tag tgr">Visual Strategy</span></div>
+      <a href="work/thnx.pdf" target="_blank" class="rc-link">📄 View Project</a>
+    </div>
+
+    <div class="proj-card">
+      <div class="proj-tag">Retail Analytics</div>
+      <h3>Planogram Redesign: Walmart Dishwasher Detergent</h3>
+      <ul class="proj-ul">
+        <li>Redesigned a Walmart shelf planogram for the dishwasher detergent category using eye level focus, brand blocking between Finish and Cascade, and cross-sell placement</li>
+        <li>Drove a $92 lift in total dollars and significant unit increases for additive SKUs by repositioning them on Shelf 3</li>
+        <li>Found that placing additives next to core tabs was the highest impact lever and recommended increasing facings for best sellers to sustain the gains</li>
+      </ul>
+      <div class="tag-row"><span class="tag tb">Retail Analytics</span><span class="tag tg">Shelf Strategy</span><span class="tag tr">Data Analysis</span><span class="tag ta">Planogram Design</span></div>
+      <a href="work/walmart-planogram.pdf" target="_blank" class="rc-link">📄 View Project</a>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- RESEARCH -->
+<section id="research" class="section">
+  <h2 class="section-title">Research</h2>
+  <p class="section-sub">Papers and case studies that changed how I think about marketing</p>
+  <div class="research-grid">
+
+    <div class="rc">
+      <div class="rc-tag">Strategic Marketing Research</div>
+      <h3>Netflix Strategy Plan Part A: Company Overview &amp; SWOT</h3>
+      <p class="rc-body">Conducted a comprehensive analysis of Netflix as a global entertainment platform with 230M+ subscribers across 190 countries. Examined the company's streaming subscription model, original content strategy, and evolving product portfolio including gaming and interactive storytelling. Delivered a full SWOT analysis identifying key strengths such as global reach, smart recommendation algorithms, and competitive pricing; weaknesses including rising content costs and declining subscriber growth in saturated markets; opportunities in emerging markets across Asia and Africa and ad supported monetization; and threats from Disney+, Amazon Prime, and HBO Max as well as data privacy regulations limiting global expansion.</p>
+      <div class="tag-row"><span class="tag tgr">SWOT Analysis</span><span class="tag tb">Market Research</span><span class="tag tt">Strategic Analysis</span><span class="tag tgr">Business Analysis</span></div>
+      <a href="work/netflix-a.docx" target="_blank" class="rc-link">📄 View Document</a>
+    </div>
+
+    <div class="rc">
+      <div class="rc-tag">Strategic Marketing Research</div>
+      <h3>Netflix Strategy Plan Part B: Issues, Value Creation &amp; Strategy Assessment</h3>
+      <p class="rc-body">Identified and ranked Netflix's critical business challenges by projected impact on long term viability, including intensifying competition, password sharing crackdowns, rising content costs, and the shift toward ad supported and short form video consumption. Analyzed Netflix's value creation process across three pillars: original content, recommendation technology, and global distribution. Assessed the company's marketing mix including pricing strategy risks, regulatory complexity across 190 markets, and content-licensing dependency. Proposed hybrid content formats, tiered pricing, and local compliance frameworks to sustain market dominance in an increasingly fragmented streaming landscape.</p>
+      <div class="tag-row"><span class="tag tgr">Business Strategy</span><span class="tag tt">Competitive Analysis</span><span class="tag tb">Marketing Mix</span><span class="tag tgr">Value Creation</span></div>
+      <a href="work/netflix-b.docx" target="_blank" class="rc-link">📄 View Document</a>
+    </div>
+
+    <div class="rc">
+      <div class="rc-tag">Product Life Cycle Analysis</div>
+      <h3>Arm and Hammer: Extending the Product Life Cycle of Baking Soda</h3>
+      <p class="rc-body">Analyzed how Arm &amp; Hammer has sustained a 170+ year product through strategic product diversification, brand extension, and packaging innovation. Reviewed past PLC extension tactics including repositioning baking soda as a deodorizer, cleaner, and personal care ingredient, and the introduction of extensions like laundry detergent, toothpaste, and cat litter. Assessed current strategies including health and wellness alignment, sustainability marketing, and digital consumer education. Proposed future opportunities around e-commerce subscriptions, international expansion, sustainability certifications, and entering adjacent sectors such as agriculture and B2B industrial cleaning.</p>
+      <div class="tag-row"><span class="tag tgr">Product Life Cycle</span><span class="tag tb">Market Strategy</span><span class="tag tt">Brand Extension</span><span class="tag tgr">Sustainability</span></div>
+      <a href="work/arm-hammer.pdf" target="_blank" class="rc-link">📄 View PDF</a>
+    </div>
+
+    <div class="rc">
+      <div class="rc-tag">STP Analysis</div>
+      <h3>Peloton "Something is Everything": Segmentation, Targeting &amp; Positioning</h3>
+      <p class="rc-body">Conducted a full STP analysis of Peloton's "Something is Everything" commercial, breaking down how the brand uses behavioral, demographic, and psychographic segmentation to reach tech savvy, fitness-conscious earners aged 25 to 45. Identified Peloton's targeting strategy as segment marketing focused on Achievers and Innovators within the VALS framework. Assessed Peloton's differentiated positioning as a premium lifestyle brand combining live classes, leaderboards, and community rather than just fitness equipment. Evaluated their pricing, product differentiation, and lifestyle branding strategies and how they create a high-perceived-value offering that justifies a premium price point.</p>
+      <div class="tag-row"><span class="tag tb">Segmentation</span><span class="tag tt">Targeting</span><span class="tag tgr">Brand Positioning</span><span class="tag tr">Consumer Behavior</span></div>
+      <a href="work/peloton.pdf" target="_blank" class="rc-link">📄 View PDF</a>
+    </div>
+
+    <div class="rc">
+      <div class="rc-tag">Business Ethics Case Study</div>
+      <h3>EpiPen Pricing Crisis: Ethics, Policy &amp; Corporate Strategy</h3>
+      <p class="rc-body">Analyzed the Mylan EpiPen pricing controversy, examining how the price of a life saving epinephrine device rose from approximately $100 to over $600 per two-pack between 2007 and 2016, triggering public outrage and congressional scrutiny. Investigated the political connections that delayed generic approvals, benefiting Mylan's monopoly. Assessed CEO Heather Bresch's congressional testimony and her introduction of a generic alternative to counter public sentiment. Evaluated corporate responsibility frameworks, proposed solutions including price transparency measures, non-profit manufacturing models, insurance subsidies, and regulatory reform. Concluded with recommendations for restoring consumer trust and balancing pharmaceutical innovation incentives with public health access.</p>
+      <div class="tag-row"><span class="tag tgr">Business Ethics</span><span class="tag tt">Strategic Analysis</span><span class="tag tb">Public Policy</span><span class="tag tgr">Corporate Strategy</span></div>
+      <a href="work/epipen.pdf" target="_blank" class="rc-link">📄 View PDF</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WRITING -->
+<div class="alt-wrap">
+<section id="writing" class="section">
+  <h2 class="section-title">Writing</h2>
+  <p class="section-sub">Things I've written when I couldn't stop thinking about something, <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">all on LinkedIn ↗</a></p>
+  <div class="writing-grid">
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="wc">
+      <div class="wc-tag">Marketing Analytics</div>
+      <div class="wc-title">Why Every Campaign Should Start With a Question</div>
+      <div class="wc-desc">The mindset shift from reporting metrics to asking the right analytical questions and how that one change transforms campaign outcomes.</div>
+    </a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="wc">
+      <div class="wc-tag">Content Strategy</div>
+      <div class="wc-title">The Content Calendar That Actually Gets Used</div>
+      <div class="wc-desc">How I built a sustainable posting cadence at KMG that drove 11% follower growth and the tools that made it work consistently.</div>
+    </a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="wc">
+      <div class="wc-tag">Research</div>
+      <div class="wc-title">The Vampire Effect in Digital Advertising</div>
+      <div class="wc-desc">My eye tracking research on McDonald's ads found that emotion forward creative can overshadow the product entirely. Here's what the data revealed.</div>
+    </a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="wc">
+      <div class="wc-tag">SEO &amp; Organic</div>
+      <div class="wc-title">Organic Growth Across 10 Brands: What Actually Moved the Needle</div>
+      <div class="wc-desc">Lessons from managing SEO content for multiple client accounts at once. What worked, what didn't, and why consistency almost always wins.</div>
+    </a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="wc">
+      <div class="wc-tag">Reflection · LinkedIn · 5,332 Impressions</div>
+      <div class="wc-title">What the Google Office Taught Me About Scalable Growth</div>
+      <div class="wc-desc">High performing teams move fast because alignment is clear. A reflection on disciplined thinking, measurable impact, and how scalable growth is built from the inside out.</div>
+    </a>
+  </div>
+</section>
+</div>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <h2 class="section-title">Education</h2>
+  <div class="edu-list">
+    <div class="edu-card">
+      <div>
+        <div class="edu-school">DePaul University</div>
+        <div class="edu-degree">Master of Science in Marketing Analytics</div>
+        <div class="edu-note">🏆 Recipient of the C.V. Starr Endowed Merit Award</div>
+      </div>
+      <div class="edu-period">Sept 2024 to June 2026 · Chicago, IL</div>
+    </div>
+    <div class="edu-card">
+      <div>
+        <div class="edu-school">GLS Institute of Design</div>
+        <div class="edu-degree">Bachelor in Visual Communication, Graphic Design</div>
+        <div class="edu-note">Graduation Project: Identity &amp; Branding for THNX, sponsored by INIT Design Studio</div>
+      </div>
+      <div class="edu-period">June 2020 to 2024 · Ahmedabad, India</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<div class="alt-wrap">
+<section id="certifications" class="section">
+  <h2 class="section-title">Certifications</h2>
+  <p class="section-sub">Professional credentials, <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">verify on LinkedIn ↗</a></p>
+  <div class="cert-grid">
+    <a href="https://skillshop.credential.net/ede2b5a5-6337-43d7-9b7c-e9544d260f67" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon">🤖</div><div class="cert-name">AI-Powered Performance Ads Certified</div><div class="cert-issuer">Google Digital Academy · 2026</div><span class="cert-verify">Verify ↗</span></a>
+<div class="cert-card"><div class="cert-icon">✉️</div><div class="cert-name">HubSpot Inbound Marketing Certified</div><div class="cert-issuer">HubSpot Academy</div></div>
+    <a href="https://app.hubspot.com/academy/achievements/2cw9wyms/en/1/disha-surati/seo-certified" target="_blank" rel="noopener" class="cert-card"><div class="cert-icon">🔍</div><div class="cert-name">SEO Certified</div><div class="cert-issuer">HubSpot Academy · Jun 2026</div><span class="cert-verify">Verify ↗</span></a>
+  </div>
+</section>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">Get In Touch</h2>
+  <p class="section-sub">Open to full time roles. Chicago is home but remote works too</p>
+  <div class="contact-wrap">
+    <div class="ci">
+      <h3>Let's talk</h3>
+      <p>I'm actively looking for digital marketing roles: coordinator, campaigns, content, anything where I get to do real work. If something on this portfolio caught your eye, I'd genuinely love to hear from you. I respond fast and I'm easy to talk to.</p>
+      <div class="contact-links">
+        <a href="mailto:suratidisha@gmail.com" class="cl">
+          <span class="cl-icon">✉️</span>
+          <div><span class="cl-lbl">Email</span><span class="cl-val">suratidisha@gmail.com</span></div>
+        </a>
+        <a href="tel:+13125126120" class="cl">
+          <span class="cl-icon">📞</span>
+          <div><span class="cl-lbl">Phone</span><span class="cl-val">(312) 512-6120</span></div>
+        </a>
+        <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="cl">
+          <span class="cl-icon">🔗</span>
+          <div><span class="cl-lbl">LinkedIn</span><span class="cl-val">linkedin.com/in/dishasurati</span></div>
+        </a>
+        <a href="Disha_Surati_Resume.pdf" download class="cl">
+          <span class="cl-icon">📄</span>
+          <div><span class="cl-lbl">Resume</span><span class="cl-val">Download PDF</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row"><label class="form-lbl">Name</label><input type="text" class="form-input" placeholder="Your name"></div>
+      <div class="form-row"><label class="form-lbl">Email</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+      <div class="form-row"><label class="form-lbl">Message</label><textarea class="form-ta" placeholder="Tell me about the role or project..."></textarea></div>
+      <button class="form-submit" onclick="window.location.href='mailto:suratidisha@gmail.com'">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#casestudy">Case Study</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:suratidisha@gmail.com">Email</a>
+    <a href="tel:+13125126120">(312) 512-6120</a>
+  </div>
+  <p>Disha Surati · Chicago, IL · <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">linkedin.com/in/dishasurati</a></p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lbOverlay">
+  <div class="lb-inner" id="lbInner">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <div id="lbMedia"></div>
+    <div class="lb-caption" id="lbCaption"></div>
+  </div>
+</div>
+
+<script>
+// Custom cursor
+(function(){
+  const dot = document.createElement('div');
+  dot.className = 'cursor-dot';
+  const ring = document.createElement('div');
+  ring.className = 'cursor-ring';
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    dot.style.left=mx+'px'; dot.style.top=my+'px';
+  });
+  (function loop(){
+    rx+=(mx-rx)*0.15; ry+=(my-ry)*0.15;
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button,.gallery-item,.proj-card,.gf-btn,.chip').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
+  });
+  document.addEventListener('mouseleave',()=>{dot.style.opacity='0';ring.style.opacity='0';});
+  document.addEventListener('mouseenter',()=>{dot.style.opacity='1';ring.style.opacity='1';});
+})();
+
+// Lightbox
+(function(){
+  const overlay=document.getElementById('lbOverlay');
+  const media=document.getElementById('lbMedia');
+  const caption=document.getElementById('lbCaption');
+  const closeBtn=document.getElementById('lbClose');
+
+  document.querySelectorAll('.gallery-item').forEach(item=>{
+    item.style.cursor='pointer';
+    item.addEventListener('click',()=>{
+      const img=item.querySelector('img');
+      const vid=item.querySelector('video');
+      const placeholder=item.querySelector('.g-placeholder');
+      const brand=item.querySelector('.gc-brand');
+      const name=item.querySelector('.gc-name');
+
+      media.innerHTML='';
+      if(img && img.complete && img.naturalWidth>0){
+        const i=document.createElement('img');
+        i.src=img.src; i.alt=img.alt;
+        media.appendChild(i);
+      } else if(vid){
+        const v=document.createElement('video');
+        v.autoplay=true; v.muted=true; v.loop=true; v.playsInline=true;
+        v.innerHTML=vid.innerHTML;
+        media.appendChild(v);
+      } else if(placeholder){
+        const clone=placeholder.cloneNode(true);
+        clone.className='lb-graphic';
+        clone.style.position='relative';
+        clone.style.inset='auto';
+        media.appendChild(clone);
+      }
+
+      caption.innerHTML=(brand?'<div class="gc-brand">'+brand.innerHTML+'</div>':'')+(name?'<div class="gc-name">'+name.innerHTML+'</div>':'');
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+    });
+  });
+
+  function closeLb(){
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+    media.innerHTML='';
+  }
+  closeBtn.addEventListener('click',closeLb);
+  overlay.addEventListener('click',e=>{ if(e.target===overlay) closeLb(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
+
+  // Behind the Work photo opener (reuses the same lightbox)
+  window.openBtwPhoto=function(el){
+    const img=el.querySelector('img');
+    const cap=el.querySelector('.btw-caption');
+    const lbl=el.querySelector('.btw-label');
+    media.innerHTML='';
+    if(img && img.complete && img.naturalWidth>0){
+      const i=document.createElement('img'); i.src=img.src; i.alt=img.alt; media.appendChild(i);
+    }
+    caption.innerHTML=(lbl?'<div class="gc-brand">'+lbl.innerHTML+'</div>':'')+(cap?'<div class="gc-name">'+cap.innerHTML+'</div>':'');
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+  };
+})();
+
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileMenu');
+if(ham && mob){
+  ham.addEventListener('click',()=> mob.classList.toggle('open'));
+  mob.querySelectorAll('a').forEach(a=> a.addEventListener('click',()=> mob.classList.remove('open')));
+}
+
+const gfBtns = document.querySelectorAll('.gf-btn');
+const gItems = document.querySelectorAll('.gallery-item');
+gfBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    gfBtns.forEach(b=> b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    gItems.forEach(item=>{
+      if(f==='all'||item.dataset.cat===f){ item.removeAttribute('data-hidden'); }
+      else{ item.setAttribute('data-hidden',''); }
+    });
+  });
+});
+
+const secs = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a[href^="#"]');
+window.addEventListener('scroll',()=>{
+  const y = window.scrollY + 80;
+  secs.forEach(s=>{
+    if(y >= s.offsetTop && y < s.offsetTop + s.offsetHeight){
+      navAs.forEach(a=> a.classList.remove('active'));
+      const a = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+      if(a) a.classList.add('active');
+    }
+  });
+},{passive:true});
+</script>
+</body>
+</html>
