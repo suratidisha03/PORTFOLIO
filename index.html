@@ -39,7 +39,7 @@ body{
 .cursor-ring{ width:30px; height:30px; border-radius:50%; border:1.5px solid rgba(139,90,43,0.4); position:fixed; pointer-events:none; z-index:99998; transform:translate(-50%,-50%); transition:left .08s ease,top .08s ease,width .2s ease,height .2s ease,border-color .2s; }
 .cursor-ring.hovered{ width:48px; height:48px; border-color:var(--accent); }
 @media(hover:none){ *{ cursor:auto!important; } .cursor-dot,.cursor-ring{ display:none; } }
-
+ 
 /* Lightbox */
 .lb-overlay{ display:none; position:fixed; inset:0; background:rgba(20,10,4,0.88); z-index:9990; align-items:center; justify-content:center; padding:24px; backdrop-filter:blur(6px); }
 .lb-overlay.open{ display:flex; }
@@ -51,7 +51,7 @@ body{
 .lb-caption .gc-name{ font-size:15px; font-weight:600; color:var(--text); }
 .lb-close{ position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; background:rgba(20,10,4,0.55); border:1px solid rgba(255,255,255,0.15); color:#fff; font-size:18px; display:flex; align-items:center; justify-content:center; z-index:10; line-height:1; }
 .gallery-item{ cursor:none!important; }
-
+ 
 /* Fine grain */
 body::after{
   content:'';
@@ -75,7 +75,7 @@ body::before{
     repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,90,43,0.12) 2px, rgba(139,90,43,0.12) 3px),
     repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(139,90,43,0.08) 2px, rgba(139,90,43,0.08) 3px);
 }
-
+ 
 /* NAV */
 nav{ position:sticky; top:0; z-index:100; background:rgba(253,248,242,0.96); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
 .nav-inner{ max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; height:56px; gap:6px; }
@@ -93,7 +93,7 @@ nav{ position:sticky; top:0; z-index:100; background:rgba(253,248,242,0.96); bac
 .mobile-menu a{ color:var(--text-light); text-decoration:none; font-size:14px; padding:10px 8px; border-bottom:1px solid var(--border); }
 .mobile-menu a:last-child{ border-bottom:none; }
 @media(max-width:860px){ .nav-links{ display:none; } .hamburger{ display:flex; } }
-
+ 
 /* LAYOUT */
 .section{ padding:72px 24px; max-width:1100px; margin:0 auto; }
 .alt-wrap{
@@ -106,7 +106,7 @@ nav{ position:sticky; top:0; z-index:100; background:rgba(253,248,242,0.96); bac
 h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4vw,30px); font-weight:700; margin-bottom:8px; }
 .section-sub{ color:var(--text-light); font-size:14px; margin-bottom:40px; }
 .section-sub a{ color:var(--accent); text-decoration:none; }
-
+ 
 /* HERO */
 #hero{ padding:80px 24px 72px; max-width:1100px; margin:0 auto; position:relative; }
 #hero::before{ content:''; position:absolute; top:-20px; right:0; width:420px; height:420px; background:radial-gradient(ellipse, rgba(139,90,43,0.06) 0%, transparent 70%); pointer-events:none; z-index:0; }
@@ -125,7 +125,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .hero-stats{ display:flex; gap:36px; flex-wrap:wrap; padding-top:24px; border-top:1px solid var(--border); }
 .stat-num{ font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; line-height:1; color:var(--text); }
 .stat-label{ font-size:12px; color:var(--text-light); margin-top:4px; }
-
+ 
 /* SERVICES */
 .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .svc-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.06); }
@@ -135,7 +135,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .svc-card p{ font-size:13px; color:var(--text-light); line-height:1.6; }
 @media(max-width:760px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
 @media(max-width:480px){ .services-grid{ grid-template-columns:1fr; } }
-
+ 
 /* ABOUT */
 .about-grid{ display:grid; grid-template-columns:260px 1fr; gap:52px; align-items:start; }
 .photo-ring{ width:220px; height:220px; border-radius:50%; border:3px solid var(--accent); padding:4px; margin:0 auto; }
@@ -148,7 +148,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .chip{ background:var(--bg-alt); border:1px solid var(--border); border-radius:999px; padding:7px 16px; font-size:13px; color:var(--text-light); }
 .chip b{ color:var(--text); font-weight:600; }
 @media(max-width:760px){ .about-grid{ grid-template-columns:1fr; } .photo-ring{ width:180px; height:180px; } }
-
+ 
 /* TOOLKIT */
 .toolkit-groups{ display:flex; flex-direction:column; gap:22px; }
 .tg-label{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--text-light); margin-bottom:10px; }
@@ -160,7 +160,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .tt{ background:var(--tag-teal-bg); color:var(--tag-teal-text); border-color:rgba(26,64,64,0.15); }
 .tr{ background:var(--tag-rose-bg); color:var(--tag-rose-text); border-color:rgba(106,37,24,0.15); }
 .tgr{ background:var(--tag-gray-bg); color:var(--tag-gray-text); border-color:rgba(74,58,42,0.15); }
-
+ 
 /* EXPERIENCE */
 .exp-list{ display:flex; flex-direction:column; gap:20px; }
 .exp-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px 30px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.05), inset 0 1px 0 rgba(255,255,255,0.6); background-image:radial-gradient(ellipse at top left, rgba(255,253,249,0.8) 0%, transparent 60%); }
@@ -175,7 +175,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .exp-ul li::before{ content:'→'; position:absolute; left:0; color:var(--accent); font-size:11px; top:4px; }
 .aside-note{ background:var(--bg-alt); border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:14px 18px; font-size:13.5px; color:var(--text-light); line-height:1.7; margin-top:20px; font-style:italic; }
 .exp-tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; }
-
+ 
 /* CONTENT WORK */
 .cw-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .cw-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:0 1px 4px rgba(44,26,14,0.05); }
@@ -187,7 +187,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .metric-label{ font-size:11px; color:var(--text-light); margin-top:2px; }
 .cw-types{ font-size:13px; color:var(--text-light); line-height:1.65; }
 @media(max-width:760px){ .cw-grid{ grid-template-columns:1fr; } }
-
+ 
 /* GALLERY */
 .gallery-filters{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
 .gf-btn{ padding:8px 20px; border-radius:999px; border:1px solid var(--border); background:transparent; font-size:13px; font-weight:600; color:var(--text-light); cursor:pointer; transition:all .15s; font-family:'Inter',sans-serif; }
@@ -203,7 +203,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .gc-brand{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-bottom:4px; }
 .gc-name{ font-size:14px; font-weight:600; line-height:1.35; color:var(--text); }
 @media(max-width:760px){ .gallery-grid{ grid-template-columns:repeat(2,1fr); } }
-
+ 
 /* PROJECTS */
 .proj-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .proj-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:12px; transition:border-color .15s,box-shadow .15s; box-shadow:0 1px 4px rgba(44,26,14,0.05); }
@@ -215,7 +215,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .proj-ul li::before{ content:'·'; position:absolute; left:4px; color:var(--accent); font-size:16px; top:-1px; }
 @media(max-width:900px){ .proj-grid{ grid-template-columns:repeat(2,1fr); } }
 @media(max-width:560px){ .proj-grid{ grid-template-columns:1fr; } }
-
+ 
 /* RESEARCH */
 .research-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 @media(min-width:900px){ .research-grid{ grid-template-columns:1fr 1fr; } }
@@ -226,7 +226,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .rc-meta{ font-size:12px; color:var(--text-light); font-weight:600; }
 .rc-body{ font-size:13.5px; color:var(--text-light); line-height:1.7; flex:1; }
 @media(max-width:680px){ .research-grid{ grid-template-columns:1fr; } }
-
+ 
 /* WRITING */
 .writing-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
 .wc{ background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:22px 24px; text-decoration:none; display:block; transition:border-color .15s,transform .15s,box-shadow .15s; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
@@ -235,7 +235,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .wc-title{ font-family:'Space Grotesk',sans-serif; font-size:16px; font-weight:700; color:var(--text); line-height:1.3; margin-bottom:8px; }
 .wc-desc{ font-size:13px; color:var(--text-light); line-height:1.6; }
 @media(max-width:600px){ .writing-grid{ grid-template-columns:1fr; } }
-
+ 
 /* EDUCATION */
 .edu-list{ display:flex; flex-direction:column; gap:14px; }
 .edu-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:24px 28px; display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
@@ -243,7 +243,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .edu-degree{ font-size:14px; color:var(--text-light); margin-bottom:4px; }
 .edu-note{ font-size:12px; color:var(--accent); font-weight:600; }
 .edu-period{ font-size:12px; color:var(--text-light); background:var(--bg-alt); border:1px solid var(--border); padding:4px 10px; border-radius:999px; white-space:nowrap; flex-shrink:0; }
-
+ 
 /* BEHIND THE WORK */
 .btw-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 .btw-photo{ border-radius:12px; overflow:hidden; position:relative; aspect-ratio:4/3; border:1px solid var(--border); background:var(--bg-alt); cursor:pointer; }
@@ -256,15 +256,15 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 .btw-placeholder{ width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--bg-alt);color:var(--text-light);font-size:12px;font-style:italic;text-align:center;padding:16px; }
 @media(max-width:860px){ .btw-grid{ grid-template-columns:repeat(2,1fr); } }
 @media(max-width:480px){ .btw-grid{ grid-template-columns:1fr; } }
-
+ 
 /* Research PDF link */
 .rc-link{ display:inline-flex; align-items:center; gap:5px; margin-top:12px; font-size:12px; font-weight:600; color:var(--accent); text-decoration:none; border:1px solid var(--border); border-radius:6px; padding:5px 12px; transition:border-color .15s,background .15s; }
 .rc-link:hover{ border-color:var(--accent); background:var(--accent-soft); }
-
+ 
 /* Case study photo */
 .cs-photo{ width:100%; border-radius:12px; overflow:hidden; margin:24px 0; border:1px solid var(--border); }
 .cs-photo img{ width:100%; display:block; max-height:360px; object-fit:cover; object-position:center top; }
-
+ 
 /* CERTIFICATIONS */
 .cert-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 .cert-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:18px 14px; text-align:center; box-shadow:0 1px 3px rgba(44,26,14,0.05); }
@@ -276,7 +276,7 @@ h2.section-title{ font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,4
 a.cert-card{ text-decoration:none; color:inherit; }
 a.cert-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba(139,90,43,0.07); }
 @media(max-width:760px){ .cert-grid{ grid-template-columns:repeat(2,1fr); } }
-
+ 
 /* CONTACT */
 .contact-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
 .ci h3{ font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700; margin-bottom:10px; }
@@ -296,7 +296,7 @@ a.cert-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba
 .form-submit{ width:100%; background:var(--accent); color:#fffdf9; font-weight:700; font-size:14px; padding:13px; border-radius:8px; border:none; cursor:pointer; font-family:'Inter',sans-serif; transition:opacity .15s; margin-top:4px; }
 .form-submit:hover{ opacity:.86; }
 @media(max-width:760px){ .contact-wrap{ grid-template-columns:1fr; } }
-
+ 
 /* PIPELINE */
 .pipeline{ display:grid; grid-template-columns:repeat(7,1fr); gap:0; position:relative; margin-top:8px; }
 .pipeline::before{ content:''; position:absolute; top:28px; left:calc(100%/14); right:calc(100%/14); height:2px; background:var(--border); z-index:0; }
@@ -307,7 +307,7 @@ a.cert-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba
 .pip-desc{ font-size:12px; color:var(--text-light); line-height:1.55; }
 @media(max-width:860px){ .pipeline{ grid-template-columns:repeat(4,1fr); gap:20px; } .pipeline::before{ display:none; } }
 @media(max-width:540px){ .pipeline{ grid-template-columns:repeat(2,1fr); } }
-
+ 
 /* CASE STUDY */
 .cs-wrap{ max-width:800px; }
 .cs-label{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
@@ -326,7 +326,7 @@ a.cert-card:hover{ border-color:rgba(139,90,43,0.35); box-shadow:0 4px 16px rgba
 .cs-event{ background:var(--bg-alt); border:1px solid var(--border); border-radius:8px; padding:8px 14px; font-size:13px; color:var(--text); font-weight:500; }
 .cs-honest{ background:var(--bg-alt); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:18px 22px; font-size:14px; color:var(--text-light); line-height:1.75; font-style:italic; margin-top:8px; }
 @media(max-width:640px){ .cs-nums{ grid-template-columns:repeat(2,1fr); } .cs-num:nth-child(2){ border-right:none; } .cs-num:nth-child(1),.cs-num:nth-child(2){ border-bottom:1px solid var(--border); } }
-
+ 
 /* FOOTER */
 footer{ border-top:1px solid var(--border); padding:32px 24px; text-align:center; background:var(--bg); }
 .footer-links{ display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-bottom:12px; }
@@ -337,7 +337,7 @@ footer a{ color:var(--accent); text-decoration:none; }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -375,7 +375,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     <a href="Disha_Surati_Resume.pdf" download>Resume ↓</a>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-eyebrow">Yes, I built this myself.</div>
@@ -394,7 +394,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     <div><div class="stat-num">10+</div><div class="stat-label">Client accounts managed</div></div>
   </div>
 </section>
-
+ 
 <!-- SERVICES -->
 <div class="alt-wrap">
 <section id="services" class="section">
@@ -410,7 +410,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- ABOUT -->
 <section id="about" class="section">
   <h2 class="section-title">About Me</h2>
@@ -441,7 +441,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     </div>
   </div>
 </section>
-
+ 
 <!-- TOOLKIT -->
 <div class="alt-wrap">
 <section id="toolkit" class="section">
@@ -458,7 +458,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- HOW I WORK -->
 <div class="alt-wrap">
 <section id="process" class="section">
@@ -503,13 +503,13 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience" class="section">
   <h2 class="section-title">Experience</h2>
   <p class="section-sub">Places I've worked and things I actually got done</p>
   <div class="exp-list">
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Marketing Coordinator</div>
@@ -524,7 +524,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="exp-tags"><span class="tag tr">Campaign Management</span><span class="tag tb">Analytics</span><span class="tag tg">Email Marketing</span><span class="tag tr">A/B Testing</span><span class="tag tr">SEO</span><span class="tag ta">Content Creation</span></div>
     </div>
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Director of Social Strategy</div>
@@ -540,7 +540,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="exp-tags"><span class="tag tg">Social Media</span><span class="tag tg">Hootsuite</span><span class="tag tg">Mailchimp</span><span class="tag ta">Canva</span><span class="tag ta">Content Creation</span><span class="tag tb">Analytics</span><span class="tag ta">Content Strategy</span></div>
     </div>
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Digital Marketing &amp; Campaign Analyst</div>
@@ -554,7 +554,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="exp-tags"><span class="tag tr">Google Ads</span><span class="tag tr">Meta Ads</span><span class="tag tb">Consumer Research</span><span class="tag tb">Campaign Reporting</span><span class="tag tb">Segmentation</span></div>
     </div>
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Content Marketing &amp; Design Associate</div>
@@ -569,7 +569,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="exp-tags"><span class="tag ta">Content Strategy</span><span class="tag tb">SEO</span><span class="tag ta">Graphic Design</span><span class="tag tg">Campaign Management</span><span class="tag ta">Brand Identity</span></div>
     </div>
-
+ 
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Marketing &amp; Design Intern</div>
@@ -584,10 +584,10 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="exp-tags"><span class="tag tb">SEO</span><span class="tag ta">WordPress</span><span class="tag ta">Copywriting</span><span class="tag ta">Graphic Design</span><span class="tag ta">Creative Assets</span><span class="tag tg">Social Media</span><span class="tag tgr">Merchandising</span></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- CONTENT WORK -->
 <div class="alt-wrap">
 <section id="content" class="section">
@@ -620,21 +620,21 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- WORK SAMPLES -->
 <section id="work" class="section">
   <h2 class="section-title">Work Samples</h2>
   <p class="section-sub">Creative assets and campaign materials</p>
-
+ 
   <div class="gallery-filters">
     <button class="gf-btn active" data-filter="all">All</button>
     <button class="gf-btn" data-filter="istash">iStash</button>
     <button class="gf-btn" data-filter="kmg">KMG</button>
     <button class="gf-btn" data-filter="init">INIT Design Studio</button>
   </div>
-
+ 
   <div class="gallery-grid" id="galleryGrid">
-
+ 
     <!-- iSTASH -->
     <div class="gallery-item" data-cat="istash">
       <div class="g-thumb-wrap">
@@ -646,7 +646,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">iStash · Flyer</div><div class="gc-name">Product Launch Flyer</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="istash">
       <div class="g-thumb-wrap">
         <img src="work/istash-static.jpg" alt="iStash Static" class="g-thumb" onerror="this.style.display='none';">
@@ -660,7 +660,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">iStash · Static Post</div><div class="gc-name">Merchant Acquisition Post</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="istash">
       <div class="g-thumb-wrap">
         <img src="work/istash-carousel.jpg" alt="iStash Carousel" class="g-thumb" onerror="this.style.display='none';">
@@ -672,7 +672,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">iStash · Carousel</div><div class="gc-name">Feature Highlight Series</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="istash">
       <div class="g-thumb-wrap">
         <img src="work/istash-social.jpg" alt="iStash Social" class="g-thumb" onerror="this.style.display='none';">
@@ -685,7 +685,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">iStash · Social Graphic</div><div class="gc-name">Brand Campaign Graphic</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="istash">
       <div class="g-thumb-wrap">
         <img src="work/istash-motion.jpg" alt="iStash Motion" class="g-thumb" onerror="this.style.display='none';">
@@ -697,7 +697,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">iStash · Motion Graphic</div><div class="gc-name">Animated Social Content</div></div>
     </div>
-
+ 
     <!-- KMG -->
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
@@ -710,7 +710,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Event Flyer</div><div class="gc-name">Product Marketing: The Most Versatile Role Right Now</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-social-customer.jpg" alt="Understanding The Customer" class="g-thumb" onerror="this.style.display='none';">
@@ -723,7 +723,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Understanding The Customer</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-social-room.jpg" alt="The Room You Don't Want To Miss" class="g-thumb" onerror="this.style.display='none';">
@@ -735,7 +735,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">The Room You Don't Want To Miss</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-networking.jpg" alt="Networking Graphic" class="g-thumb" onerror="this.style.display='none';">
@@ -747,7 +747,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Event Promotion</div><div class="gc-name">The Networking You Can't Miss</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-mixer.jpg" alt="Kellstadt Mixer" class="g-thumb" onerror="this.style.display='none';">
@@ -760,7 +760,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Event Flyer</div><div class="gc-name">Connect With Us at Kellstadt Mixer</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-social-data.jpg" alt="You Don't Just Look At Data" class="g-thumb" onerror="this.style.display='none';">
@@ -772,7 +772,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Social Graphic</div><div class="gc-name">You Don't Just Look At Data</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-social-campaign.jpg" alt="Every Campaign" class="g-thumb" onerror="this.style.display='none';">
@@ -784,7 +784,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Every Campaign Becomes A Question</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <img src="work/kmg-social-insights.jpg" alt="Insights Decision Impact" class="g-thumb" onerror="this.style.display='none';">
@@ -795,21 +795,21 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Static Post</div><div class="gc-name">Insights. Decision. Impact.</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <video class="g-thumb" autoplay muted loop playsinline><source src="work/kmg-motion-event.mp4" type="video/mp4"></video>
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Motion Graphic</div><div class="gc-name">This Event Is For You</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="kmg">
       <div class="g-thumb-wrap">
         <video class="g-thumb" autoplay muted loop playsinline><source src="work/kmg-motion-case.mp4" type="video/mp4"></video>
       </div>
       <div class="g-caption"><div class="gc-brand">KMG · Motion Graphic</div><div class="gc-name">Case Competition Promo</div></div>
     </div>
-
+ 
     <!-- INIT Design Studio -->
     <div class="gallery-item" data-cat="init">
       <div class="g-thumb-wrap">
@@ -823,7 +823,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">INIT Design Studio · Branding</div><div class="gc-name">AyurvedaWorks: Brand Stationery System</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="init">
       <div class="g-thumb-wrap">
         <img src="work/init-office.jpg" alt="AyurvedaWorks Office" class="g-thumb" onerror="this.style.display='none';">
@@ -835,7 +835,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">INIT Design Studio · Environmental</div><div class="gc-name">AyurvedaWorks: Office and Signage</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="init">
       <div class="g-thumb-wrap">
         <img src="work/init-logo-system.jpg" alt="THNX Logo System" class="g-thumb" onerror="this.style.display='none';">
@@ -847,7 +847,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">INIT Design Studio · Identity</div><div class="gc-name">THNX: Brand Identity and Logo Guidelines</div></div>
     </div>
-
+ 
     <div class="gallery-item" data-cat="init">
       <div class="g-thumb-wrap">
         <img src="work/init-packaging-sun.jpg" alt="THNX Packaging" class="g-thumb" onerror="this.style.display='none';">
@@ -861,34 +861,34 @@ footer a{ color:var(--accent); text-decoration:none; }
       </div>
       <div class="g-caption"><div class="gc-brand">INIT Design Studio · Packaging</div><div class="gc-name">THNX: Skincare Packaging Design</div></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- CASE STUDY -->
 <div class="alt-wrap">
 <section id="casestudy" class="section">
   <h2 class="section-title">Case Study</h2>
   <p class="section-sub">One project, the full story</p>
-
+ 
   <div class="cs-wrap">
     <div class="cs-label">Social Media Strategy · Content Creation · Event Marketing</div>
     <h3 class="cs-title">KMG Marketer's Nexus: Building a Social Presence That Actually Did Something</h3>
     <p class="cs-sub">Kellstadt Marketing Group · Director of Social Strategy · Sept 2025 to June 2026</p>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">The Brief</div>
       <p>KMG is a graduate marketing student organization at DePaul, and like most student orgs, the social presence was inconsistent. Posts went up when someone remembered. There was no real strategy, no consistent voice, and the accounts weren't doing much to grow membership or drive event attendance.</p>
       <p>My role was Director of Social Strategy, and the job was bigger than just posting more often. It was about making KMG visible as an organization, building a brand that people actually wanted to associate with, and driving real attendance to events all year. Not just the account, but the organization itself.</p>
       <p>The biggest project of the year was the annual KMG symposium. We were the ones who named it the Marketer's Nexus. That name came from our team. We decided it, built the event identity around it, and put together a full sponsorship proposal to bring companies in as partners. I was coordinating with other teams throughout, following up to keep things moving, and showing up at every event to capture live content, videos and photos on the ground, so we had real material to work with, not just graphics. Analytics and PR were part of it too. I tracked what performed and made sure the right people knew who KMG was.</p>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I Was Thinking</div>
       <p>Most student org social accounts make the same mistake. They only post when there's an event to promote. That means your audience only hears from you when you want something from them. I wanted to fix that ratio. If we post five times and three of those are event promotions, we're asking too much and giving too little.</p>
       <p>So I organized the content into three buckets: event content (pre, during, post, every event got its own arc), community content (marketing tips, insights, things people would actually save or share), and culture content (who KMG is, what it's like to be part of it). The ratio shifted. People started following because the account was worth following, not just because they wanted the event details.</p>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">The Events I Covered</div>
       <div class="cs-events">
@@ -901,46 +901,46 @@ footer a{ color:var(--accent); text-decoration:none; }
         <div class="cs-event">KMG Meet and Greet</div>
       </div>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I Built</div>
       <p>I designed everything in Canva: static posts, motion graphics, event flyers, carousels, countdown content. For the Marketer's Nexus, I built a full campaign arc from the ground up. That included writing the sponsorship proposal we used to bring in company partners, which meant treating the event like a real marketing product. Teaser posts went out two weeks early. Countdown content kept the energy up the week before. On the day of, I was physically there with my phone, capturing video and photos, getting real content in real time instead of just scheduling graphics from a desk.</p>
       <p>That applied to every event. Whether it was the Kellstadt Mixer, the International Student Success Panel, or a bonding night, I showed up and covered it. Real photos and videos, not stock. Post-event recaps that extended the conversation past the room. I also ran Mailchimp email campaigns to 200+ members alongside the social content so the messaging was consistent across channels, and I tracked performance to understand what was actually moving the needle.</p>
     </div>
-
+ 
     <div class="cs-nums">
       <div class="cs-num"><div class="cs-n">13.7K+</div><div class="cs-nl">Total impressions</div></div>
       <div class="cs-num"><div class="cs-n">242+</div><div class="cs-nl">Post reactions</div></div>
       <div class="cs-num"><div class="cs-n">+11%</div><div class="cs-nl">Follower growth</div></div>
       <div class="cs-num"><div class="cs-n">200+</div><div class="cs-nl">Email subscribers</div></div>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I'd Do Differently</div>
       <div class="cs-honest">I'd start building content earlier for the flagship event. I had good material but I was often working a week ahead instead of two or three. For the Marketer's Nexus specifically, starting the teaser campaign earlier would have given us more runway to build anticipation. I'd also lean more into Instagram Stories. We used them, but not consistently, and the data suggested they were working well when we did. More systematic, less reactive.</div>
     </div>
   </div>
-
+ 
   <div style="border-top:1px solid var(--border); margin:56px 0 0;"></div>
-
+ 
   <div class="cs-wrap" style="margin-top:52px;">
     <div class="cs-label">Campaign Management · Content Creation · Field Marketing</div>
     <h3 class="cs-title">iStash: Marketing a Fintech Startup From the Ground Up</h3>
     <p class="cs-sub">iStash · Marketing Coordinator · Sept 2025 to June 2026</p>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">The Brief</div>
       <p>iStash is a digital payments startup. Zero-fee merchant wallet, built for small businesses in Chicago. When I came in, the product existed but the marketing didn't have a real system behind it. There was no clear content strategy, no consistent brand voice on social, and the sales pipeline needed work. The goal was to grow the brand, bring merchants onto the platform, and make people actually understand what iStash was and why it was worth using.</p>
       <p>It was a startup, which meant my days looked nothing like a typical coordinator role. I was texting the founder in the morning, going out to meet merchants in person by afternoon, and designing assets in the evening. Everything was hands on and nothing waited.</p>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I Was Doing Day to Day</div>
       <p>A big part of the job was field marketing, which meant physically going out to businesses, talking to owners, explaining the product, and getting them onboarded. That kind of work teaches you something classroom marketing doesn't: you learn very fast what messaging works when you're standing in front of a real person who has three seconds to decide if this is worth their time.</p>
       <p>Once merchants were onboarded, I built assets for them and for the iStash brand itself. Instagram was the main channel, with some LinkedIn. I handled everything: captions, static posts, carousels, flyers, motion graphics, promotional content. When we had an offer or a push, I built the whole campaign: the creative, the copy, the timing, the call to action.</p>
       <p>Alongside the organic work, I was running paid campaigns on Google and Meta, running A/B tests on messaging, and tracking what was converting. When activation rates felt low, I went into the funnel and looked for where people were dropping off. That process of going from field to campaign to data and back again became the rhythm of the role.</p>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I Built</div>
       <div class="cs-events">
@@ -954,14 +954,14 @@ footer a{ color:var(--accent); text-decoration:none; }
         <div class="cs-event">A/B Testing</div>
       </div>
     </div>
-
+ 
     <div class="cs-nums">
       <div class="cs-num"><div class="cs-n">+10%</div><div class="cs-nl">Overall campaign performance</div></div>
       <div class="cs-num"><div class="cs-n">+8%</div><div class="cs-nl">Activation rate lift</div></div>
       <div class="cs-num"><div class="cs-n">+9%</div><div class="cs-nl">Customer engagement lift</div></div>
       <div class="cs-num"><div class="cs-n">10+</div><div class="cs-nl">Clients onboarded in person</div></div>
     </div>
-
+ 
     <div class="cs-block">
       <div class="cs-block-h">What I'd Do Differently</div>
       <div class="cs-honest">I'd build more of a feedback loop between the field work and the content strategy. When I was out talking to merchants, I was hearing objections and questions that never made it back into the marketing in a systematic way. The things people asked me in person were exactly what should have been addressed in the social content and ads, but I wasn't capturing those insights formally. If I did it again, I'd keep a running log of what I heard in the field and use it to directly shape messaging. That's where the real audience research was happening.</div>
@@ -969,77 +969,77 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- BEHIND THE WORK -->
 <section id="behindthework" class="section">
   <h2 class="section-title">Behind the Work</h2>
   <p class="section-sub">The rooms, events, and people that made it real</p>
   <div class="btw-grid">
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-istash-field-2.jpg" alt="iStash field marketing" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">iStash · Field Marketing</div><div class="btw-caption">Onboarding merchants at a partner event</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-istash-field-2.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-istash-field-1.jpg" alt="iStash booth" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">iStash · Partner Events</div><div class="btw-caption">In conversation at the iStash booth</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-istash-field-1.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-istash-event.jpg" alt="iStash event" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">iStash · Live Event</div><div class="btw-caption">Walking attendees through the product</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-istash-event.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-kmg-panel.jpg" alt="KMG Marketing Analytics Panel" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">KMG · Marketing Analytics Panel</div><div class="btw-caption">Managing the panel at the Marketer's Nexus</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-kmg-panel.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-kmg-team.jpg" alt="KMG team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">KMG · Symposium</div><div class="btw-caption">Post-event with the KMG team</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-kmg-team.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-google.jpg" alt="Google Chicago office" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">Google · Chicago Office</div><div class="btw-caption">Site visit that inspired the LinkedIn article</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-google.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-hoop-team.jpg" alt="Hoop App team presentation" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">Hoop · Final Presentation</div><div class="btw-caption">Presenting the smart real estate platform</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-hoop-team.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-kmg-nexus-team.jpg" alt="KMG Nexus team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">KMG · Event Team</div><div class="btw-caption">The team behind the Marketer's Nexus</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-kmg-nexus-team.jpg</div>
     </div>
-
+ 
     <div class="btw-photo" onclick="openBtwPhoto(this)">
       <img src="work/photo-kmg-event-team.jpg" alt="KMG event team" onerror="this.style.display='none';this.nextElementSibling.style.display='none';this.parentElement.querySelector('.btw-placeholder').style.display='flex';">
       <div class="btw-overlay"><div><div class="btw-label">KMG · Full Team</div><div class="btw-caption">Everyone who made it happen</div></div></div>
       <div class="btw-placeholder" style="display:none;">📸 photo-kmg-event-team.jpg</div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <div class="alt-wrap">
 <section id="projects" class="section">
   <h2 class="section-title">Projects</h2>
   <p class="section-sub">Strategy, creative, and research projects</p>
   <div class="proj-grid">
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Event Marketing</div>
       <h3>The Marketer's Nexus: KMG Annual Symposium</h3>
@@ -1049,7 +1049,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       </ul>
       <div class="tag-row"><span class="tag tg">Social Media</span><span class="tag tg">Email Marketing</span><span class="tag ta">Event Strategy</span></div>
     </div>
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Ad Research</div>
       <h3>Digital Ad Performance Analysis: McDonald's</h3>
@@ -1060,7 +1060,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tb">iMotions</span><span class="tag tb">Consumer Research</span><span class="tag tr">Ad Creative</span></div>
       <a href="work/mcdonalds-neuromarketing.pdf" target="_blank" class="rc-link">📄 View Project</a>
     </div>
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Brand Strategy</div>
       <h3>Brand Campaign Strategy: Google Pixel</h3>
@@ -1071,7 +1071,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tr">Campaign Strategy</span><span class="tag tb">Audience Analysis</span><span class="tag ta">UGC</span></div>
       <a href="work/google-pixel.pdf" target="_blank" class="rc-link">📄 View Project</a>
     </div>
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Product Strategy</div>
       <h3>Hoop App: Smart Real Estate Platform</h3>
@@ -1081,9 +1081,9 @@ footer a{ color:var(--accent); text-decoration:none; }
         <li>Built the go to market strategy around independent agents and university communities, with a Chicago launch targeted for 2026</li>
       </ul>
       <div class="tag-row"><span class="tag tt">Product Marketing</span><span class="tag tt">GTM Strategy</span><span class="tag tt">UX Research</span><span class="tag tt">Monetization</span></div>
-      <a href="work/hoop-app.pdf" target="_blank" class="rc-link">📄 View Project</a>
+      <a href="work/Hoop%20App%20-%20Smart%20Real%20Estate%20platform%20-%20Final.pdf" target="_blank" class="rc-link">📄 View Project</a>
     </div>
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Graduation Project · B.Design</div>
       <h3>THNX: Identity, Branding &amp; Packaging Design</h3>
@@ -1094,9 +1094,9 @@ footer a{ color:var(--accent); text-decoration:none; }
         <li>Produced stationery, marketing collateral, environmental signage, and packaging that were adopted by the studio client and guided by Prof. Hardik Shiroya, GLS University</li>
       </ul>
       <div class="tag-row"><span class="tag ta">Brand Identity</span><span class="tag ta">Packaging Design</span><span class="tag ta">Graphic Design</span><span class="tag tgr">Visual Strategy</span></div>
-      <a href="work/thnx.pdf" target="_blank" class="rc-link">📄 View Project</a>
+      <a href="work/GP%20Documentation.pdf" target="_blank" class="rc-link">📄 View Project</a>
     </div>
-
+ 
     <div class="proj-card">
       <div class="proj-tag">Retail Analytics</div>
       <h3>Planogram Redesign: Walmart Dishwasher Detergent</h3>
@@ -1108,17 +1108,17 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tb">Retail Analytics</span><span class="tag tg">Shelf Strategy</span><span class="tag tr">Data Analysis</span><span class="tag ta">Planogram Design</span></div>
       <a href="work/walmart-planogram.pdf" target="_blank" class="rc-link">📄 View Project</a>
     </div>
-
+ 
   </div>
 </section>
 </div>
-
+ 
 <!-- RESEARCH -->
 <section id="research" class="section">
   <h2 class="section-title">Research</h2>
   <p class="section-sub">Papers and case studies that changed how I think about marketing</p>
   <div class="research-grid">
-
+ 
     <div class="rc">
       <div class="rc-tag">Strategic Marketing Research</div>
       <h3>Netflix Strategy Plan Part A: Company Overview &amp; SWOT</h3>
@@ -1126,7 +1126,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tgr">SWOT Analysis</span><span class="tag tb">Market Research</span><span class="tag tt">Strategic Analysis</span><span class="tag tgr">Business Analysis</span></div>
       <a href="work/netflix-a.docx" target="_blank" class="rc-link">📄 View Document</a>
     </div>
-
+ 
     <div class="rc">
       <div class="rc-tag">Strategic Marketing Research</div>
       <h3>Netflix Strategy Plan Part B: Issues, Value Creation &amp; Strategy Assessment</h3>
@@ -1134,7 +1134,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tgr">Business Strategy</span><span class="tag tt">Competitive Analysis</span><span class="tag tb">Marketing Mix</span><span class="tag tgr">Value Creation</span></div>
       <a href="work/netflix-b.docx" target="_blank" class="rc-link">📄 View Document</a>
     </div>
-
+ 
     <div class="rc">
       <div class="rc-tag">Product Life Cycle Analysis</div>
       <h3>Arm and Hammer: Extending the Product Life Cycle of Baking Soda</h3>
@@ -1142,7 +1142,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tgr">Product Life Cycle</span><span class="tag tb">Market Strategy</span><span class="tag tt">Brand Extension</span><span class="tag tgr">Sustainability</span></div>
       <a href="work/arm-hammer.pdf" target="_blank" class="rc-link">📄 View PDF</a>
     </div>
-
+ 
     <div class="rc">
       <div class="rc-tag">STP Analysis</div>
       <h3>Peloton "Something is Everything": Segmentation, Targeting &amp; Positioning</h3>
@@ -1150,7 +1150,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tb">Segmentation</span><span class="tag tt">Targeting</span><span class="tag tgr">Brand Positioning</span><span class="tag tr">Consumer Behavior</span></div>
       <a href="work/peloton.pdf" target="_blank" class="rc-link">📄 View PDF</a>
     </div>
-
+ 
     <div class="rc">
       <div class="rc-tag">Business Ethics Case Study</div>
       <h3>EpiPen Pricing Crisis: Ethics, Policy &amp; Corporate Strategy</h3>
@@ -1158,10 +1158,10 @@ footer a{ color:var(--accent); text-decoration:none; }
       <div class="tag-row"><span class="tag tgr">Business Ethics</span><span class="tag tt">Strategic Analysis</span><span class="tag tb">Public Policy</span><span class="tag tgr">Corporate Strategy</span></div>
       <a href="work/epipen.pdf" target="_blank" class="rc-link">📄 View PDF</a>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- WRITING -->
 <div class="alt-wrap">
 <section id="writing" class="section">
@@ -1196,7 +1196,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- EDUCATION -->
 <section id="education" class="section">
   <h2 class="section-title">Education</h2>
@@ -1219,7 +1219,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     </div>
   </div>
 </section>
-
+ 
 <!-- CERTIFICATIONS -->
 <div class="alt-wrap">
 <section id="certifications" class="section">
@@ -1232,7 +1232,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
 </section>
 </div>
-
+ 
 <!-- CONTACT -->
 <section id="contact" class="section">
   <h2 class="section-title">Get In Touch</h2>
@@ -1268,7 +1268,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
@@ -1285,7 +1285,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   </div>
   <p>Disha Surati · Chicago, IL · <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">linkedin.com/in/dishasurati</a></p>
 </footer>
-
+ 
 <!-- Lightbox -->
 <div class="lb-overlay" id="lbOverlay">
   <div class="lb-inner" id="lbInner">
@@ -1294,7 +1294,7 @@ footer a{ color:var(--accent); text-decoration:none; }
     <div class="lb-caption" id="lbCaption"></div>
   </div>
 </div>
-
+ 
 <script>
 // Custom cursor
 (function(){
@@ -1321,14 +1321,14 @@ footer a{ color:var(--accent); text-decoration:none; }
   document.addEventListener('mouseleave',()=>{dot.style.opacity='0';ring.style.opacity='0';});
   document.addEventListener('mouseenter',()=>{dot.style.opacity='1';ring.style.opacity='1';});
 })();
-
+ 
 // Lightbox
 (function(){
   const overlay=document.getElementById('lbOverlay');
   const media=document.getElementById('lbMedia');
   const caption=document.getElementById('lbCaption');
   const closeBtn=document.getElementById('lbClose');
-
+ 
   document.querySelectorAll('.gallery-item').forEach(item=>{
     item.style.cursor='pointer';
     item.addEventListener('click',()=>{
@@ -1337,7 +1337,7 @@ footer a{ color:var(--accent); text-decoration:none; }
       const placeholder=item.querySelector('.g-placeholder');
       const brand=item.querySelector('.gc-brand');
       const name=item.querySelector('.gc-name');
-
+ 
       media.innerHTML='';
       if(img && img.complete && img.naturalWidth>0){
         const i=document.createElement('img');
@@ -1355,13 +1355,13 @@ footer a{ color:var(--accent); text-decoration:none; }
         clone.style.inset='auto';
         media.appendChild(clone);
       }
-
+ 
       caption.innerHTML=(brand?'<div class="gc-brand">'+brand.innerHTML+'</div>':'')+(name?'<div class="gc-name">'+name.innerHTML+'</div>':'');
       overlay.classList.add('open');
       document.body.style.overflow='hidden';
     });
   });
-
+ 
   function closeLb(){
     overlay.classList.remove('open');
     document.body.style.overflow='';
@@ -1370,7 +1370,7 @@ footer a{ color:var(--accent); text-decoration:none; }
   closeBtn.addEventListener('click',closeLb);
   overlay.addEventListener('click',e=>{ if(e.target===overlay) closeLb(); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
-
+ 
   // Behind the Work photo opener (reuses the same lightbox)
   window.openBtwPhoto=function(el){
     const img=el.querySelector('img');
@@ -1385,14 +1385,14 @@ footer a{ color:var(--accent); text-decoration:none; }
     document.body.style.overflow='hidden';
   };
 })();
-
+ 
 const ham = document.getElementById('hamburger');
 const mob = document.getElementById('mobileMenu');
 if(ham && mob){
   ham.addEventListener('click',()=> mob.classList.toggle('open'));
   mob.querySelectorAll('a').forEach(a=> a.addEventListener('click',()=> mob.classList.remove('open')));
 }
-
+ 
 const gfBtns = document.querySelectorAll('.gf-btn');
 const gItems = document.querySelectorAll('.gallery-item');
 gfBtns.forEach(btn=>{
@@ -1406,7 +1406,7 @@ gfBtns.forEach(btn=>{
     });
   });
 });
-
+ 
 const secs = document.querySelectorAll('section[id]');
 const navAs = document.querySelectorAll('.nav-links a[href^="#"]');
 window.addEventListener('scroll',()=>{
@@ -1422,3 +1422,6 @@ window.addEventListener('scroll',()=>{
 </script>
 </body>
 </html>
+ 
+
+
