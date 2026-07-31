@@ -120,8 +120,13 @@ h1 .mark,h2 .mark,h3 .mark,h4 .mark{ color:var(--moss); }
 [data-reveal="mask"] .reveal-line{
   display:inline-block; transform:translateY(100%); opacity:0;
   transition:transform .55s var(--ease), opacity .55s var(--ease);
+  /* Pure-CSS safety net: if motion.js fails to load or run for any
+     reason, this forces the line visible after 2.5s so content is
+     never permanently hidden. Harmless no-op once JS reveals it sooner. */
+  animation:reveal-fallback 0.01s linear 2.5s forwards;
 }
 [data-reveal="mask"].is-revealed .reveal-line{ transform:translateY(0); opacity:1; }
+@keyframes reveal-fallback{ to{ transform:translateY(0); opacity:1; } }
 
 /* ---- page hero (About / Work / Marketing Edit / Research) ---- */
 .page-hero{ padding:88px 0 64px; border-bottom:1px solid var(--border); }

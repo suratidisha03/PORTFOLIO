@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Disha Surati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .notfound {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-md);
+  }
+  .notfound .label { margin-bottom: 1rem; }
+  .notfound h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: var(--clay);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .notfound p { color: var(--text-soft); max-width: 420px; margin-bottom: var(--space-md); }
+  .notfound a { text-decoration: none; color: var(--text); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; border-bottom: 1px solid var(--graphite); padding-bottom: 2px; }
+</style>
+</head>
+<body>
+  <div class="notfound">
+    <span class="label clay">Lost in the funnel</span>
+    <h1>404</h1>
+    <p>This page dropped off somewhere between research and execution. Let's get you back to something that converts.</p>
+    <a href="/PORTFOLIO/">Back to the homepage</a>
+  </div>
+</body>
+</html>
