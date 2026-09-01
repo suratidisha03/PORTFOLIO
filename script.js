@@ -66,4 +66,62 @@ document.addEventListener('DOMContentLoaded', function () {
     sections.forEach(function (s) { navObserver.observe(s); });
   }
 
+  // ---- proof-strip count-up (counts once on scroll, then stops) ----
+  var counters = document.querySelectorAll('.proof-num[data-count]');
+  if (counters.length) {
+    var animateCounter = function (el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var suffix = el.getAttribute('data-suffix') || '';
+      var decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+      var duration = 900;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var value = target * eased;
+        el.textContent = value.toFixed(decimals) + suffix;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          el.textContent = target.toFixed(decimals) + suffix;
+        }
+      }
+      window.requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { counterObserver.observe(el); });
+    } else {
+      counters.forEach(function (el) { animateCounter(el); });
+    }
+  }
+
+  // ---- selected work filters ----
+  var filterBar = document.getElementById('workFilters');
+  var workGrid = document.getElementById('workGrid');
+  if (filterBar && workGrid) {
+    var filterButtons = filterBar.querySelectorAll('button');
+    var cards = workGrid.querySelectorAll('[data-cat]');
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('button');
+      if (!btn) return;
+      filterButtons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        var cats = (card.getAttribute('data-cat') || '').split(' ');
+        var show = filter === 'all' || cats.indexOf(filter) !== -1;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
 });
