@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1470 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1470" height="630" fill="#172033"/>
+
+  <!-- faint vertical grid -->
+  <g stroke="#F5F1E9" stroke-width="1" opacity="0.05">
+    <line x1="120" y1="60" x2="120" y2="570"/>
+    <line x1="360" y1="60" x2="360" y2="570"/>
+    <line x1="600" y1="60" x2="600" y2="570"/>
+    <line x1="840" y1="60" x2="840" y2="570"/>
+    <line x1="1080" y1="60" x2="1080" y2="570"/>
+    <line x1="1320" y1="60" x2="1320" y2="570"/>
+  </g>
+
+  <!-- split marker -->
+  <line x1="735" y1="90" x2="735" y2="540" stroke="#F5F1E9" stroke-width="1" stroke-dasharray="2 6" opacity="0.35"/>
+  <circle cx="735" cy="345" r="4" fill="#F5F1E9" opacity="0.6"/>
+
+  <!-- shared path before the split -->
+  <path d="M 120 420 C 300 420, 480 400, 735 345" fill="none" stroke="#EAE4D8" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- diverging path A: raw view count, rises sharply -->
+  <path d="M 735 345 C 900 300, 1050 200, 1320 110" fill="none" stroke="#C9674F" stroke-width="3.5"/>
+  <circle cx="1320" cy="110" r="7" fill="#C9674F"/>
+
+  <!-- diverging path B: engaged views, stays nearly flat -->
+  <path d="M 735 345 C 900 355, 1050 360, 1320 350" fill="none" stroke="#EAE4D8" stroke-width="2" opacity="0.6"/>
+  <circle cx="1320" cy="350" r="5" fill="#EAE4D8" opacity="0.7"/>
+
+  <!-- start point -->
+  <circle cx="120" cy="420" r="5" fill="#EAE4D8" opacity="0.7"/>
+
+  <text x="1320" y="95" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#C9674F">VIEWS</text>
+  <text x="1320" y="372" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#EAE4D8" opacity="0.7">ENGAGED VIEWS</text>
+
+  <text x="120" y="592" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#F5F1E9">THE MARKETING EDIT</text>
+  <text x="1320" y="592" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11" letter-spacing="1.2" fill="#9AA0AC">MEASUREMENT &#183; CONTENT ANALYTICS</text>
+</svg>
