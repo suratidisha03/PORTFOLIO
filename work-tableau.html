@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost of Living &amp; Tax Analysis | Disha Surati</title>
+<meta name="description" content="An interactive Tableau dashboard comparing income, cost of living, and tax burden across states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Disha Surati</a>
+    <ul class="nav-links">
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="marketing-edit.html">The Edit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="pad-sm">
+    <div class="wrap">
+      <a href="work.html" class="case-back">← All work</a>
+      <div class="case-cover frame"></div>
+      <div class="case-header">
+        <span class="label olive">Tableau / Data Visualization / Data Storytelling</span>
+        <h1 data-reveal="mask" style="margin-top:14px;"><span class="reveal-line">Cost of Living &amp; Tax Analysis</span></h1>
+        <p class="case-meta">Independent data visualization project · Tableau</p>
+        <div class="hero-proof">Interactive dashboard · state comparison · Income-to-Cost ratio · what-if affordability model.</div>
+        <p class="case-role"><strong>Role:</strong> Sourced and organized the underlying data, built the calculated fields, and designed the full interactive dashboard.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad-sm">
+    <div class="wrap case-body">
+      <nav class="case-index">
+        <a href="#question">01 Question</a>
+        <a href="#context">02 Context</a>
+        <a href="#data">03 Data</a>
+        <a href="#method">04 Method</a>
+        <a href="#finding">05 Finding</a>
+        <a href="#decision">06 Decision</a>
+        <a href="#impact">07 Impact</a>
+        <a href="#behind">08 Behind the Work</a>
+        <a href="#reflection">09 Reflection</a>
+      </nav>
+      <div>
+
+        <div class="component" id="question">
+          <span class="component-label">01 / Question</span>
+          <h3>Where does income actually go furthest, once cost of living and taxes are accounted for?</h3>
+        </div>
+
+        <div class="component" id="context">
+          <span class="component-label">02 / Context</span>
+          <div class="body">
+            <p>Raw income comparisons across states are common, but they miss the other half of the equation: what that income actually buys once housing, food, healthcare, and state tax burden are factored in. This independent project set out to build a tool that could answer the affordability question properly, not just the income question.</p>
+          </div>
+        </div>
+
+        <div class="component" id="data">
+          <span class="component-label">03 / Data</span>
+          <div class="body">
+            <p>State-level data on median income, housing cost, food cost, healthcare cost, and state tax burden, organized into a single model for cross-state comparison.</p>
+          </div>
+        </div>
+
+        <div class="component" id="method">
+          <span class="component-label">04 / Method</span>
+          <div class="body">
+            <p>Built a calculated Income-to-Cost ratio in Tableau to combine income and the major cost categories into one comparable measure, then designed an interactive dashboard around it: a state comparison map, an affordability ranking chart, and a what-if model that lets a viewer adjust income and see how the ratio shifts.</p>
+          </div>
+        </div>
+
+        <div class="component" id="finding">
+          <span class="component-label">05 / Finding</span>
+          <div class="finding-visual">
+            <div class="finding-metric-row">
+              <div class="finding-metric"><div class="num">4</div><div class="lbl">Cost categories modeled</div></div>
+              <div class="finding-metric"><div class="num">1</div><div class="lbl">Combined ratio</div></div>
+              <div class="finding-metric" style="min-width:180px;"><div class="num" style="font-size:20px;">Interactive</div><div class="lbl">State comparison map</div></div>
+            </div>
+            <span class="illustrative">Dashboard preview: illustrative, not a live embed of the published Tableau workbook</span>
+          </div>
+          <h3>Raw income is a poor predictor of affordability on its own.</h3>
+          <div class="body">
+            <p>Once cost of living and tax burden were factored into the ratio, states that looked strongest on income alone didn't always come out ahead, and states with more modest incomes sometimes ranked better once real affordability was accounted for. The ratio made that gap visible in a way a plain income comparison never could.</p>
+          </div>
+        </div>
+
+        <div class="component" id="decision">
+          <span class="component-label">06 / Decision</span>
+          <div class="body">
+            <p>Designed the dashboard so the Income-to-Cost ratio, not raw income, is the default lens a viewer sees first, with the what-if model letting anyone test their own income against any state's cost structure, rather than relying on a single static ranking.</p>
+          </div>
+        </div>
+
+        <div class="component" id="impact">
+          <span class="component-label">07 / Impact</span>
+          <div class="body">
+            <p>This is a personal data-storytelling project, not a client or business engagement, so the impact is the tool itself: a working, interactive dashboard that turns four separate cost variables into one usable affordability answer.</p>
+          </div>
+        </div>
+
+        <div class="evidence-strip">
+          <span class="es-label">Project evidence</span>
+          <div class="evidence-tags"><span>Working Files</span><span>Research Output</span></div>
+        </div>
+
+        <div class="component" id="behind">
+          <span class="component-label">08 / Behind the Work</span>
+          <div class="body"><p>The build behind the published dashboard.</p></div>
+          <div class="behind-work-grid">
+            <div class="bw-photo tall"><div class="bw-pending"><span class="bw-icon">◻</span>Dashboard build working file</div></div>
+            <div class="bw-photo"><div class="bw-pending"><span class="bw-icon">◻</span>Calculated-field setup screen</div></div>
+            <div class="bw-photo"><div class="bw-pending"><span class="bw-icon">◻</span>Published workbook screenshot</div></div>
+          </div>
+          <div class="bw-caption">COST OF LIVING &amp; TAX ANALYSIS · TABLEAU WORKING FILE</div>
+        </div>
+
+        <div class="component" id="reflection">
+          <span class="component-label">09 / Reflection</span>
+          <div class="body">
+            <p>This project pushed me past static charts into thinking about interactivity as part of the storytelling itself. The next iteration I'd want to build is a time dimension, so the ratio could be tracked year over year instead of as a single snapshot.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="case-nav">
+      <a href="work-thnx.html">← THNX</a>
+      <a href="work.html">Back to Selected Work →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="nav-logo">Disha Surati</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="marketing-edit.html">The Edit</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="mailto:suratidisha@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Disha Surati · Chicago, IL</p>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

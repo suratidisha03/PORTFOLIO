@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Disha Surati, Marketing Analyst</title>
+<meta name="description" content="Let's talk about the next marketing question worth solving. Reach Disha Surati by email or LinkedIn, or send a message directly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Disha Surati</a>
+    <ul class="nav-links">
+      <li><a href="work.html">Work</a></li>
+      <li><a href="marketing-edit.html">The Edit</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section class="contact-page">
+    <div class="wrap">
+      <span class="label">Contact</span>
+      <h1 data-reveal="mask" style="margin-top:14px; font-size:clamp(30px,4.6vw,50px); max-width:720px;"><span class="reveal-line">Let's talk about the next marketing question <em>worth solving.</em></span></h1>
+
+      <div class="contact-split">
+        <div class="contact-intro">
+          <p>I'm currently exploring opportunities across marketing analytics, consumer insights, CRM, and digital marketing.</p>
+
+          <div class="contact-rows">
+            <div class="contact-row">
+              <span class="cr-label">Email</span>
+              <a href="mailto:suratidisha@gmail.com" class="cr-value">suratidisha@gmail.com <span class="arrow">↗</span></a>
+            </div>
+            <div class="contact-row">
+              <span class="cr-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener" class="cr-value">linkedin.com/in/dishasurati <span class="arrow">↗</span></a>
+            </div>
+            <div class="contact-row">
+              <span class="cr-label">Based in</span>
+              <span class="cr-value">Chicago, IL</span>
+            </div>
+            <div class="contact-row">
+              <span class="cr-label">Resume</span>
+              <a href="Disha_Surati_Resume.pdf" target="_blank" rel="noopener" class="cr-value">View resume <span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" action="mailto:suratidisha@gmail.com" method="post" enctype="text/plain">
+          <div class="form-field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message ↗</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="nav-logo">Disha Surati</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="marketing-edit.html">The Edit</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="mailto:suratidisha@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Disha Surati · Chicago, IL</p>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>
