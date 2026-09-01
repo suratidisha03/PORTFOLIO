@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work | Disha Surati, Marketing Case Studies</title>
-<meta name="description" content="Five projects in social strategy, campaign management, brand systems and go-to-market work, told the way I actually think about them.">
+<title>Selected Work | Disha Surati, Marketing Analyst</title>
+<meta name="description" content="Professional and academic work across campaign analytics, consumer research, experimentation, digital marketing, and brand strategy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,13 +17,12 @@
     <a href="index.html" class="nav-logo">Disha Surati</a>
     <ul class="nav-links">
       <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="marketing-edit.html">The Edit</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="marketing-edit.html">Marketing Edit</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Résumé ↓</a>
+      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
       <button class="nav-toggle" aria-label="Open menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
       </button>
@@ -35,73 +34,96 @@
 
   <section class="page-hero">
     <div class="wrap">
-      <span class="label clay">Work</span>
-      <h1 data-reveal="mask"><span class="reveal-line">Five projects, told the way I <span class="mark">actually think</span> about them.</span></h1>
-      <p>Real client and org work alongside academic strategy projects, each one broken into the challenge, the thinking, and what happened.</p>
+      <span class="label olive">Case Studies</span>
+      <h1 data-reveal="mask"><span class="reveal-line">Marketing questions <em>I've investigated.</em></span></h1>
+      <p>Campaign performance, consumer behavior, positioning, and experimentation, explored through data, research, and real marketing work. Every case study distinguishes observed results from projected recommendations.</p>
+      <div class="work-filters" id="workFilters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="campaign-analytics">Campaign Analytics</button>
+        <button data-filter="consumer-insights">Consumer Insights</button>
+        <button data-filter="crm-digital">CRM &amp; Digital</button>
+        <button data-filter="strategy">Strategy</button>
+        <button data-filter="data-viz">Data Visualization</button>
+      </div>
     </div>
   </section>
 
-  <section class="pad work-index">
+  <section class="pad-sm work-index">
     <div class="wrap">
+      <div class="work-index-grid" id="workGrid">
 
-      <a href="work-kmg.html" class="teaser">
-        <div class="teaser-img"><img src="work/kmg-symposium-promo.jpg" alt="KMG Marketer's Nexus symposium promo"></div>
-        <div>
-          <span class="teaser-num">01</span>
-          <h3 data-reveal="mask"><span class="reveal-line">Building a social presence that actually did something</span></h3>
-          <p>Kellstadt Marketing Group · Director of Social Strategy · Sept 2025–June 2026</p>
-          <span class="tag">Social strategy · Event marketing</span>
-        </div>
-      </a>
+        <a href="work-istash.html" class="wp-card feature" data-cat="campaign-analytics crm-digital">
+          <div class="wp-cover frame"></div>
+          <span class="wp-num">01</span>
+          <span class="cat label olive">Campaign Analytics · CRM · Acquisition</span>
+          <h3>iStash: Campaign Performance / Portfolio Reconstruction</h3>
+          <p class="q">What makes a campaign perform better?</p>
+          <div class="proof">+9% engagement · 5+ tests · 6 merchants</div>
+        </a>
 
-      <a href="work-istash.html" class="teaser">
-        <div class="teaser-img"><img src="work/istash-social.jpg" alt="iStash social campaign"></div>
-        <div>
-          <span class="teaser-num">02</span>
-          <h3 data-reveal="mask"><span class="reveal-line">Marketing a fintech startup from the ground up</span></h3>
-          <p>iStash · Marketing Coordinator · Sept 2025–June 2026</p>
-          <span class="tag">Campaign management · Field marketing</span>
-        </div>
-      </a>
+        <a href="work-mcdonalds.html" class="wp-card" data-cat="consumer-insights">
+          <div class="wp-cover frame"></div>
+          <span class="wp-num">02</span>
+          <span class="cat label olive">Consumer Research · Neuromarketing</span>
+          <h3>McDonald's Neuromarketing Study</h3>
+          <p class="q">What captures attention isn't always what consumers remember.</p>
+          <div class="proof">67% vs. 0% recall · 100% vs. 67% logo ID</div>
+        </a>
 
-      <a href="work-google-pixel.html" class="teaser">
-        <div class="teaser-img"><img src="disha.jpg" alt="Google Pixel campaign strategy"></div>
-        <div>
-          <span class="teaser-num">03</span>
-          <h3 data-reveal="mask"><span class="reveal-line">#CatchYourPixels: a brand repositioning campaign</span></h3>
-          <p>Academic strategy project</p>
-          <span class="tag">Brand strategy · Audience analysis</span>
-        </div>
-      </a>
+        <a href="work-google-pixel.html" class="wp-card" data-cat="consumer-insights strategy">
+          <div class="wp-cover frame"></div>
+          <span class="wp-num">03</span>
+          <span class="cat label olive">Positioning · Conjoint · Consumer Preference</span>
+          <h3>Google Pixel Repositioning</h3>
+          <p class="q">What would make consumers choose Pixel?</p>
+          <div class="proof">35 respondents · $800 price point · 25.6% projected share</div>
+        </a>
 
-      <a href="work-init.html" class="teaser">
-        <div class="teaser-img"><img src="work/init-logo-system.jpg" alt="INIT Design Studio brand systems"></div>
-        <div>
-          <span class="teaser-num">04</span>
-          <h3 data-reveal="mask"><span class="reveal-line">Content and brand systems across five clients at once</span></h3>
-          <p>INIT Design Studio · Content Marketing &amp; Design Associate · Sept 2023–Apr 2024</p>
-          <span class="tag">Content strategy · Design</span>
-        </div>
-      </a>
+        <a href="work-walmart.html" class="wp-card compact" data-cat="consumer-insights strategy">
+          <div class="wp-cover frame"></div>
+          <span class="wp-num">04</span>
+          <span class="cat label olive">Retail Analytics · Experimentation</span>
+          <h3>Walmart × InContext</h3>
+          <p class="q">Which merchandising decisions actually move sales?</p>
+          <div class="proof">216-person study · +2.1% projected lift</div>
+        </a>
 
-      <a href="work-hoop.html" class="teaser">
-        <div class="teaser-img"><img src="work/photo-hoop-team.jpg" alt="Hoop App go-to-market presentation"></div>
-        <div>
-          <span class="teaser-num">05</span>
-          <h3 data-reveal="mask"><span class="reveal-line">Go-to-market for a smart real estate platform</span></h3>
-          <p>Academic product strategy project</p>
-          <span class="tag">Product marketing · GTM strategy</span>
-        </div>
-      </a>
+        <a href="work-vadilal.html" class="wp-card feature" data-cat="campaign-analytics">
+          <div class="wp-cover frame"></div>
+          <span class="wp-num">05</span>
+          <span class="cat label olive">Paid Media · Campaign Reporting · Portfolio Reconstruction</span>
+          <h3>Vadilal Industries: Turning campaign reporting into the next targeting decision</h3>
+          <p class="q">Where should targeting and creative strategy change based on campaign performance?</p>
+          <div class="proof">Reporting framework across 5 Google Ads &amp; Meta campaigns</div>
+        </a>
 
-    </div>
-  </section>
+        <div style="grid-column:1/-1; padding-top:20px; border-top:1px solid var(--border);"><span class="label oxblood">More work</span></div>
 
-  <section class="contact-block divider">
-    <div class="wrap">
-      <span class="label moss">A few more</span>
-      <h2 data-reveal="mask"><span class="reveal-line">Projects that didn't <span class="mark">make the five</span> above</span></h2>
-      <p>A McDonald's eye-tracking ad study, a 166-page brand identity thesis for THNX, and a Walmart shelf planogram redesign, all in <a href="research.html" style="text-decoration:underline; color:var(--text);">Research</a>.</p>
+        <a href="work-kmg.html" class="wp-card compact" data-cat="crm-digital campaign-analytics">
+          <div class="wp-cover frame"></div>
+          <span class="cat label oxblood">Social Analytics / Content Strategy / Email / Events</span>
+          <h3>Kellstadt Marketing Group</h3>
+          <p class="q">The Marketer's Nexus: growing a 200+ member graduate marketing community through content performance.</p>
+          <div class="proof">+11% following · 40+ assets</div>
+        </a>
+
+        <a href="work-thnx.html" class="wp-card compact" data-cat="strategy">
+          <div class="wp-cover frame"></div>
+          <span class="cat label oxblood">Graduation Project / Brand Identity / Packaging</span>
+          <h3>THNX</h3>
+          <p class="q">From an idea to a complete brand experience.</p>
+          <div class="proof">166-page thesis · sponsored by INIT Design Studio</div>
+        </a>
+
+        <a href="work-tableau.html" class="wp-card compact" data-cat="data-viz">
+          <div class="wp-cover frame"></div>
+          <span class="cat label olive">Tableau / Data Visualization / Data Storytelling</span>
+          <h3>Cost of Living &amp; Tax Analysis</h3>
+          <p class="q">Turning analysis into a decision someone can actually read.</p>
+          <div class="proof">Interactive dashboard · state comparison</div>
+        </a>
+
+      </div>
     </div>
   </section>
 
@@ -113,11 +135,10 @@
       <span class="nav-logo">Disha Surati</span>
       <div class="footer-links">
         <a href="work.html">Work</a>
+        <a href="marketing-edit.html">The Edit</a>
+        <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        <a href="marketing-edit.html">Marketing Edit</a>
-        <a href="research.html">Research</a>
         <a href="mailto:suratidisha@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/dishasurati/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
     <p class="footer-meta">© <span id="year"></span> Disha Surati · Chicago, IL</p>

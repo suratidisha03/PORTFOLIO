@@ -587,10 +587,10 @@ a.logo-tile:hover{ background:var(--surface); }
    ABOUT PAGE : UNO-editorial-inspired asymmetric layout
    ========================================================= */
 .about-hero{ padding:64px 0 0; }
-.about-split{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
-.about-split-img{ aspect-ratio:4/5; background:var(--surface); }
-.about-split-img img{ width:100%; height:100%; object-fit:cover; }
-.about-split-copy{ padding:56px 48px; display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--border); }
+.about-split{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:0; align-items:start; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.about-split-img{ aspect-ratio:4/5; max-height:600px; background:var(--surface); position:relative; }
+.about-split-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+.about-split-copy{ padding:56px 48px; display:flex; flex-direction:column; justify-content:flex-start; border-left:1px solid var(--border); }
 .about-split-copy .label{ margin-bottom:18px; }
 .about-split-copy h2{ font-size:clamp(24px,3.2vw,34px); line-height:1.3; }
 .about-split-copy h2 em{ color:var(--cobalt); }
