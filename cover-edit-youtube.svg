@@ -1,37 +1,39 @@
 <svg viewBox="0 0 1470 630" xmlns="http://www.w3.org/2000/svg">
   <rect width="1470" height="630" fill="#172033"/>
 
-  <!-- faint vertical grid -->
-  <g stroke="#F5F1E9" stroke-width="1" opacity="0.05">
-    <line x1="120" y1="60" x2="120" y2="570"/>
-    <line x1="360" y1="60" x2="360" y2="570"/>
-    <line x1="600" y1="60" x2="600" y2="570"/>
-    <line x1="840" y1="60" x2="840" y2="570"/>
-    <line x1="1080" y1="60" x2="1080" y2="570"/>
-    <line x1="1320" y1="60" x2="1320" y2="570"/>
-  </g>
+  <!-- panel labels -->
+  <text x="270" y="105" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#8A8F98">BEFORE</text>
+  <text x="985" y="105" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#8A8F98">AFTER</text>
 
-  <!-- split marker -->
-  <line x1="735" y1="90" x2="735" y2="540" stroke="#F5F1E9" stroke-width="1" stroke-dasharray="2 6" opacity="0.35"/>
-  <circle cx="735" cy="345" r="4" fill="#F5F1E9" opacity="0.6"/>
+  <!-- vertical divider -->
+  <line x1="560" y1="90" x2="560" y2="400" stroke="#F5F1E9" stroke-width="1" opacity="0.08"/>
 
-  <!-- shared path before the split -->
-  <path d="M 120 420 C 300 420, 480 400, 735 345" fill="none" stroke="#EAE4D8" stroke-width="2.5" opacity="0.9"/>
+  <!-- ===== BEFORE ===== -->
+  <text x="270" y="180" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">SHORT STARTS</text>
+  <line x1="270" y1="196" x2="270" y2="248" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <path d="M 264 242 L 270 252 L 276 242" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <text x="270" y="288" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">QUALIFIED WATCHING</text>
+  <line x1="270" y1="304" x2="270" y2="356" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <path d="M 264 350 L 270 360 L 276 350" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <text x="270" y="396" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">VIEW</text>
 
-  <!-- diverging path A: raw view count, rises sharply -->
-  <path d="M 735 345 C 900 300, 1050 200, 1320 110" fill="none" stroke="#C9674F" stroke-width="3.5"/>
-  <circle cx="1320" cy="110" r="7" fill="#C9674F"/>
+  <!-- ===== AFTER ===== -->
+  <text x="650" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">SHORT STARTS</text>
+  <line x1="850" y1="174" x2="1290" y2="174" stroke="#C9674F" stroke-width="1.5"/>
+  <path d="M 1281 168 L 1291 174 L 1281 180" fill="none" stroke="#C9674F" stroke-width="1.5"/>
+  <text x="1310" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="0.5" fill="#C9674F">VIEW</text>
 
-  <!-- diverging path B: engaged views, stays nearly flat -->
-  <path d="M 735 345 C 900 355, 1050 360, 1320 350" fill="none" stroke="#EAE4D8" stroke-width="2" opacity="0.6"/>
-  <circle cx="1320" cy="350" r="5" fill="#EAE4D8" opacity="0.7"/>
+  <line x1="655" y1="196" x2="655" y2="248" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <path d="M 649 242 L 655 252 L 661 242" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <text x="650" y="288" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">CONTINUED WATCHING</text>
+  <line x1="655" y1="304" x2="655" y2="356" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <path d="M 649 350 L 655 360 L 661 350" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
+  <text x="650" y="396" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">ENGAGED VIEW</text>
 
-  <!-- start point -->
-  <circle cx="120" cy="420" r="5" fill="#EAE4D8" opacity="0.7"/>
+  <!-- divider above punchline -->
+  <line x1="270" y1="450" x2="1200" y2="450" stroke="#F5F1E9" stroke-width="1" opacity="0.08"/>
 
-  <text x="1320" y="95" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#C9674F">VIEWS</text>
-  <text x="1320" y="372" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#EAE4D8" opacity="0.7">ENGAGED VIEWS</text>
-
-  <text x="120" y="592" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#F5F1E9">THE MARKETING EDIT</text>
-  <text x="1320" y="592" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11" letter-spacing="1.2" fill="#9AA0AC">MEASUREMENT &#183; CONTENT ANALYTICS</text>
+  <!-- punchline -->
+  <text x="735" y="510" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#F5F1E9">THE METRIC CHANGED.</text>
+  <text x="735" y="550" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#F5F1E9">THE CONTENT DIDN'T.</text>
 </svg>
