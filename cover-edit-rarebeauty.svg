@@ -1,0 +1,15 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#EAE4D8"/>
+  <line x1="70" y1="270" x2="700" y2="270" stroke="#172033" stroke-width="1.5" opacity="0.35"/>
+  <g fill="#172033" opacity="0.4">
+    <circle cx="130" cy="270" r="4"/>
+    <circle cx="230" cy="270" r="4"/>
+    <circle cx="330" cy="270" r="4"/>
+    <circle cx="430" cy="270" r="4"/>
+    <circle cx="530" cy="270" r="4"/>
+  </g>
+  <circle cx="640" cy="270" r="16" fill="#C9674F"/>
+  <circle cx="640" cy="270" r="30" fill="none" stroke="#C9674F" stroke-width="1.5" opacity="0.5"/>
+  <text x="60" y="450" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1.2" fill="#172033">SIX YEARS, ONE MOMENT</text>
+  <text x="740" y="450" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="10" letter-spacing="1.2" fill="#585C62">CONSUMER PSYCHOLOGY</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#EAE4D8"/>
+  <line x1="70" y1="410" x2="730" y2="410" stroke="#172033" stroke-width="1" opacity="0.3"/>
+  <rect x="180" y="150" width="70" height="260" fill="#172033" opacity="0.75"/>
+  <rect x="330" y="230" width="70" height="180" fill="#172033" opacity="0.3"/>
+  <rect x="480" y="110" width="70" height="300" fill="#C9674F"/>
+  <text x="215" y="435" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="9" letter-spacing="1" fill="#585C62">MARKET SHARE</text>
+  <text x="515" y="435" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="9" letter-spacing="1" fill="#C9674F">MINDSHARE</text>
+  <text x="60" y="470" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1.2" fill="#172033">PAID VS. EARNED</text>
+  <text x="740" y="470" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="10" letter-spacing="1.2" fill="#585C62">SPONSORSHIP ANALYTICS</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#EAE4D8"/>
+  <circle cx="330" cy="250" r="130" fill="none" stroke="#172033" stroke-width="2" opacity="0.55"/>
+  <circle cx="470" cy="250" r="130" fill="none" stroke="#C9674F" stroke-width="2.5"/>
+  <circle cx="400" cy="250" r="10" fill="#C9674F"/>
+  <text x="60" y="450" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1.2" fill="#172033">ACQUISITION</text>
+  <text x="740" y="450" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="10" letter-spacing="1.2" fill="#585C62">BRAND STRATEGY</text>
+</svg>
