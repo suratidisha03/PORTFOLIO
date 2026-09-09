@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Funnel, Segmentation &amp; Retention Analysis | Disha Surati</title>
+<meta name="description" content="SQL + Tableau analysis of 758K+ real Google Merchandise Store events: purchase funnel drop-off, customer segmentation, product/price conversion, and retention cohorts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Disha Surati</a>
+    <ul class="nav-links">
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="marketing-edit.html">The Edit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="pad-sm">
+    <div class="wrap">
+      <a href="work.html" class="case-back">← All work</a>
+      <div class="case-cover frame" data-cursor="VIEW ↗">
+        <img src="cover-ecommerce-dashboard.svg" alt="Purchase funnel: 15,132 add-to-cart sessions, 48.2% reach checkout, 29.4% complete purchase" style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div class="case-header">
+        <span class="label olive">SQL / Tableau / Customer Analytics</span>
+        <h1 data-reveal="mask" style="margin-top:14px;"><span class="reveal-line">Where the purchase funnel breaks down, and why customers don't come back.</span></h1>
+        <p class="case-meta">Personal Project · SQL + Tableau · Nov 2020&#8211;Jan 2021 transaction data</p>
+        <div class="hero-proof">758K+ events analyzed · 270K users · 1,380 products · 7-chart interactive Tableau dashboard</div>
+        <div class="disclosure">
+          <span class="d-label">Personal Project · Real Public Dataset</span>
+          <p>Independent analysis of the Google Merchandise Store's public sample transaction dataset, not affiliated with or endorsed by Google. The dataset has no marketing channel or spend data, so this is a funnel, segmentation and retention analysis, not a channel-ROI analysis. It also spans three months, so retention is measured at 30/60 days rather than long-term.</p>
+        </div>
+        <div class="hero-links" style="margin-top:24px;">
+          <a href="https://public.tableau.com/app/profile/disha.surati/viz/E-CommerceFunnelSegmentationRetentionAnalysis/Dashboard1" target="_blank" rel="noopener" class="cta-primary">View Live Dashboard ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIGNATURE DEVICE: THE QUESTION ============ -->
+  <section class="the-question">
+    <div class="wrap">
+      <span class="tq-label">The Question</span>
+      <h2 data-reveal="mask"><span class="reveal-line">Where does the funnel break down, which segments and products actually drive value, and do customers come back?</span></h2>
+    </div>
+  </section>
+
+  <section class="pad-sm">
+    <div class="wrap case-body">
+      <nav class="case-index">
+        <a href="#context">01 Business Problem</a>
+        <a href="#role">02 My Role</a>
+        <a href="#data">03 Data &amp; Inputs</a>
+        <a href="#approach">04 Method</a>
+        <a href="#analysis">05 Analysis</a>
+        <a href="#data-said">06 What the Data Said</a>
+        <a href="#meant">07 Finding &amp; Decision</a>
+        <a href="#recommendation">08 Recommendation</a>
+        <a href="#impact">09 Impact</a>
+        <a href="#dashboard">10 Tableau Build</a>
+        <a href="#reflection">11 Reflection</a>
+      </nav>
+      <div>
+
+        <div class="component" id="context">
+          <span class="component-label">01 / Business Problem</span>
+          <div class="body">
+            <p>Google Merchandise Store has real customer behavior data: cart activity, checkout, purchases, and lifetime value, but nothing connecting where customers drop off, which products and segments actually generate value, and whether customers come back. This project answers four questions with SQL, visualized in Tableau: where the purchase funnel breaks down, which customer segments (device, country) are worth the most, which products and price points convert versus get abandoned, and whether customers come back and buy again.</p>
+            <p>It extends the campaign reporting and audience segmentation work I did at Vadilal Industries: the same kind of business question, but answered from raw event-level data with SQL instead of ad-platform dashboards.</p>
+          </div>
+        </div>
+
+        <div class="component" id="role">
+          <span class="component-label">02 / My Role</span>
+          <div class="role-grid">
+            <div>
+              <p class="body" style="font-size:14.5px; color:var(--text-soft); margin:0;">Independent analyst and dashboard builder, end to end: loaded and modeled the raw data, wrote every SQL query, and designed and published the Tableau dashboard.</p>
+            </div>
+            <div class="component-tools">
+              <span>SQL (SQLite &amp; BigQuery)</span><span>Window Functions</span><span>CTEs</span><span>Cohort Analysis</span><span>Tableau</span><span>LOD Calculations</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="component" id="data">
+          <span class="component-label">03 / Data &amp; Inputs</span>
+          <div class="body">
+            <p>Three real tables, 758K+ events, 270K users, 1,380 products, covering Nov 2020&#8211;Jan 2021:</p>
+          </div>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Table</div><div class="dp-cell">Fields</div><div class="dp-cell">Role</div></div>
+            <div class="dp-row"><div class="dp-cell">events</div><div class="dp-cell">user_id, session_id, country, device, event type (add_to_cart / begin_checkout / purchase), item_id, date</div><div class="dp-cell">Funnel &amp; behavior</div></div>
+            <div class="dp-row"><div class="dp-cell">users</div><div class="dp-cell">id, lifetime value (LTV), signup date</div><div class="dp-cell">Segment value</div></div>
+            <div class="dp-row"><div class="dp-cell">items</div><div class="dp-cell">id, name, category, price</div><div class="dp-cell">Product &amp; price</div></div>
+          </div>
+          <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Known limitation: no marketing channel or spend data, so this is funnel + segmentation + retention analysis, not channel-ROI. Data spans three months, so retention is measured at 30/60 days, not long-term.</p>
+        </div>
+
+        <div class="component" id="approach">
+          <span class="component-label">04 / Method</span>
+          <div class="body">
+            <p>Loaded the three CSVs into a SQLite database and indexed the join keys (user_id, item_id). Wrote the funnel query using window functions (FIRST_VALUE, LAG) to get stage-to-stage drop-off in one query instead of four separate manual calculations. Built a per-user segment table with CTEs: each user's most common device and country (via ROW_NUMBER on frequency) joined to their LTV and first-purchase category. Joined events to items to get cart-to-purchase conversion by category and price band. Built a cohort table, grouping users by first-purchase month, then measured what percentage repurchased in month +1 and +2 using date math. Exported each result as a clean CSV and loaded it into Tableau. The published dashboard was rebuilt against the BigQuery-hosted version of the same data, with the retention heatmap using a FIXED level-of-detail calculation to show true retention percentage per cohort rather than raw active-user counts.</p>
+          </div>
+        </div>
+
+        <div class="component" id="analysis">
+          <span class="component-label">05 / Analysis</span>
+
+          <h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:24px 0 0;">Analysis 01 · Funnel</h4>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Stage</div><div class="dp-cell">% of cart adds</div><div class="dp-cell">Pattern</div></div>
+            <div class="dp-row"><div class="dp-cell">Add to cart</div><div class="dp-cell">15,132 sessions</div><div class="dp-cell">Baseline</div></div>
+            <div class="dp-row"><div class="dp-cell">Checkout</div><div class="dp-cell">48.2%</div><div class="dp-cell">Consistent across device (28&#8211;30%) &amp; country (26&#8211;34%)</div></div>
+            <div class="dp-row"><div class="dp-cell">Purchase</div><div class="dp-cell">29.4%</div><div class="dp-cell">Consistent pattern everywhere</div></div>
+          </div>
+          <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Because the drop-off holds almost identically across every device and country, it reads as a checkout-flow problem, not a targeting problem.</p>
+
+          <h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:32px 0 0;">Analysis 02 · Segments</h4>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Segment</div><div class="dp-cell">Avg. LTV</div><div class="dp-cell">Note</div></div>
+            <div class="dp-row"><div class="dp-cell">Desktop</div><div class="dp-cell">~$25.84</div><div class="dp-cell">Nearly identical to mobile</div></div>
+            <div class="dp-row"><div class="dp-cell">Mobile</div><div class="dp-cell">~$25.84</div><div class="dp-cell">Nearly identical to desktop</div></div>
+            <div class="dp-row"><div class="dp-cell">Tablet</div><div class="dp-cell">$20.25</div><div class="dp-cell">Lower, but small volume</div></div>
+            <div class="dp-row"><div class="dp-cell">Spain</div><div class="dp-cell">$31.50</div><div class="dp-cell">Highest-value country</div></div>
+            <div class="dp-row"><div class="dp-cell">Taiwan</div><div class="dp-cell">$17.54</div><div class="dp-cell">Lowest, despite meaningful volume</div></div>
+          </div>
+
+          <h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:32px 0 0;">Analysis 03 · Products &amp; price</h4>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Category / band</div><div class="dp-cell">Conversion</div><div class="dp-cell">Note</div></div>
+            <div class="dp-row"><div class="dp-cell">Apparel</div><div class="dp-cell">1,631 first-time buyers</div><div class="dp-cell">Volume engine · $100.68 avg. LTV</div></div>
+            <div class="dp-row"><div class="dp-cell">Notebooks &amp; Journals</div><div class="dp-cell">0.2%</div><div class="dp-cell">16,560 cart adds, near-total abandonment</div></div>
+            <div class="dp-row"><div class="dp-cell">Gift Cards</div><div class="dp-cell">31.2%</div><div class="dp-cell">Low volume, highest LTV of any category</div></div>
+            <div class="dp-row"><div class="dp-cell">Under $15</div><div class="dp-cell">4.1%</div><div class="dp-cell">Highest-converting price band</div></div>
+            <div class="dp-row"><div class="dp-cell">$15&#8211;30</div><div class="dp-cell">1.4%</div><div class="dp-cell">Lower than $30&#8211;50 band</div></div>
+            <div class="dp-row"><div class="dp-cell">$30&#8211;50</div><div class="dp-cell">2.5%</div><div class="dp-cell">Non-linear exception</div></div>
+            <div class="dp-row"><div class="dp-cell">$50+</div><div class="dp-cell">1.0%</div><div class="dp-cell">Lowest-converting band</div></div>
+          </div>
+          <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Conversion generally drops as price increases, with one exception: $30&#8211;50 converts better than $15&#8211;30, so the relationship isn't purely linear.</p>
+
+          <h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:32px 0 0;">Analysis 04 · Retention</h4>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Cohort</div><div class="dp-cell">Month +1</div><div class="dp-cell">Month +2</div></div>
+            <div class="dp-row"><div class="dp-cell">November</div><div class="dp-cell">6.2%</div><div class="dp-cell">0.7%</div></div>
+            <div class="dp-row"><div class="dp-cell">December</div><div class="dp-cell">2.0%</div><div class="dp-cell">&#8211;</div></div>
+          </div>
+          <p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Repeat-purchase rate is the weakest part of the business across both cohorts measured.</p>
+        </div>
+
+        <div class="evidence-strip">
+          <span class="es-label">Project evidence</span>
+          <div class="evidence-tags"><span>758K+ Events Analyzed</span><span>51.8% Checkout Drop-off</span><span>Under 7% Repeat Purchase Rate</span></div>
+        </div>
+
+        <div class="component" id="data-said">
+          <span class="component-label">06 / What the Data Said</span>
+          <div class="body">
+            <p>The checkout drop-off is consistent across every device and country, which points to a structural checkout problem rather than a targeting or audience problem. Apparel is the clear volume and value engine, while Notebooks &amp; Journals shows near-total cart abandonment despite high cart volume, a pattern that looks like friction (price display, shipping cost, stock) rather than normal demand softness. Conversion falls as price rises, but not in a straight line. And whatever drives a first purchase isn't translating into a second one: retention is the weakest part of the funnel.</p>
+          </div>
+        </div>
+
+        <!-- ============ SIGNATURE DEVICE: FINDING → DECISION ============ -->
+        <div class="component" id="meant">
+          <span class="component-label">07 / Finding &amp; Decision</span>
+          <div class="finding-decision">
+            <div class="fd-col fd-finding">
+              <span class="fd-label">What I Found</span>
+              <div class="fd-row"><p class="fd-item">Checkout drop-off is nearly identical across every device and country, so it's a checkout-flow problem, not a targeting problem.</p></div>
+              <div class="fd-row"><p class="fd-item">Notebooks &amp; Journals has high cart volume but near-zero conversion, a friction signal, not a demand signal.</p></div>
+              <div class="fd-row"><p class="fd-item">Repeat purchase rate is under 7% at one month and under 1% at two months across both measurable cohorts.</p></div>
+            </div>
+            <div class="fd-arrow">↗</div>
+            <div class="fd-col fd-decision">
+              <span class="fd-label">What I'd Do</span>
+              <div class="fd-row"><p class="fd-item">Fix the checkout flow before spending more to acquire traffic, since the leak is structural and present everywhere.</p></div>
+              <div class="fd-row"><p class="fd-item">Investigate Notebooks &amp; Journals directly: price display, shipping cost, and stock status, rather than assuming low demand.</p></div>
+              <div class="fd-row"><p class="fd-item">Prioritize retention over acquisition: a targeted post-purchase email or remarketing push, especially toward Apparel buyers.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="component decision-block" id="recommendation">
+          <span class="component-label">08 / Recommendation</span>
+          <div class="body">
+            <p>Checkout drop-off is consistent across every segment, which points to a structural checkout problem worth fixing before spending more to acquire traffic. Notebooks &amp; Journals should be investigated directly: near-zero conversion on high cart volume is a friction issue, not a demand issue. Given how low repeat-purchase rates are across the board, retention, not acquisition, is the bigger opportunity: a targeted post-purchase email or remarketing push toward Apparel buyers (highest volume, strong LTV) is likely to return more value than further top-of-funnel spend.</p>
+          </div>
+        </div>
+
+        <div class="component" id="impact">
+          <span class="component-label">09 / Impact</span>
+          <div class="body">
+            <p>Applied SQL to analyze 758K+ real e-commerce events across the purchase funnel, customer segments, and product performance; identified a consistent checkout drop-off and under 7% two-month repeat-purchase rate; and published an interactive 7-chart Tableau dashboard, extending the campaign and audience analysis work from Vadilal Industries into raw-data-driven customer analytics.</p>
+          </div>
+        </div>
+
+        <div class="component" id="dashboard">
+          <span class="component-label">10 / Tableau Build</span>
+          <div class="body">
+            <p>The published dashboard combines seven sheets into one view: the funnel at top, segment and product performance in the middle, and the retention cohort heatmap at the bottom.</p>
+          </div>
+          <div class="diagnostic-panel">
+            <div class="dp-row"><div class="dp-cell">Section</div><div class="dp-cell">Sheets</div><div class="dp-cell">Source</div></div>
+            <div class="dp-row"><div class="dp-cell">Funnel</div><div class="dp-cell">Overall, by device, by country</div><div class="dp-cell">funnel_*.csv</div></div>
+            <div class="dp-row"><div class="dp-cell">Segment value</div><div class="dp-cell">LTV by device, country, first category</div><div class="dp-cell">ltv_*.csv</div></div>
+            <div class="dp-row"><div class="dp-cell">Product / price</div><div class="dp-cell">Conversion by category, by price band</div><div class="dp-cell">conversion_*.csv</div></div>
+            <div class="dp-row"><div class="dp-cell">Retention</div><div class="dp-cell">Cohort heatmap (FIXED LOD)</div><div class="dp-cell">retention_cohort.csv</div></div>
+          </div>
+          <div class="hero-links" style="margin-top:24px;">
+            <a href="https://public.tableau.com/app/profile/disha.surati/viz/E-CommerceFunnelSegmentationRetentionAnalysis/Dashboard1" target="_blank" rel="noopener" class="cta-secondary">View Live Dashboard ↗</a>
+          </div>
+        </div>
+
+        <div class="component" id="reflection">
+          <span class="component-label">11 / Reflection</span>
+          <div class="body">
+            <p>This project pushed me to answer a business question from raw event data instead of a pre-built ad-platform report, which meant writing the aggregation logic myself: window functions for the funnel, CTEs for segmentation, date math for cohorts. The most useful discipline was resisting the urge to explain every number the same way twice: the checkout drop-off, the Notebooks &amp; Journals abandonment, and the retention gap all needed a different kind of investigation, not one blanket recommendation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="case-nav">
+      <a href="work-tableau.html">← Cost of Living &amp; Tax Analysis</a>
+      <a href="work.html">Back to Selected Work →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="nav-logo">Disha Surati</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="marketing-edit.html">The Edit</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="mailto:suratidisha@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Disha Surati · Chicago, IL</p>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

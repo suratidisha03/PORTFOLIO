@@ -1,39 +1,39 @@
 <svg viewBox="0 0 1470 630" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1470" height="630" fill="#172033"/>
+  <rect width="1470" height="630" fill="#17243D"/>
 
   <!-- panel labels -->
   <text x="270" y="105" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#8A8F98">BEFORE</text>
   <text x="985" y="105" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="2" fill="#8A8F98">AFTER</text>
 
   <!-- vertical divider -->
-  <line x1="560" y1="90" x2="560" y2="400" stroke="#F5F1E9" stroke-width="1" opacity="0.08"/>
+  <line x1="560" y1="90" x2="560" y2="400" stroke="#C8D5E3" stroke-width="1" opacity="0.08"/>
 
   <!-- ===== BEFORE ===== -->
-  <text x="270" y="180" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">SHORT STARTS</text>
-  <line x1="270" y1="196" x2="270" y2="248" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <path d="M 264 242 L 270 252 L 276 242" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <text x="270" y="288" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">QUALIFIED WATCHING</text>
-  <line x1="270" y1="304" x2="270" y2="356" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <path d="M 264 350 L 270 360 L 276 350" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <text x="270" y="396" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">VIEW</text>
+  <text x="270" y="180" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">SHORT STARTS</text>
+  <line x1="270" y1="196" x2="270" y2="248" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <path d="M 264 242 L 270 252 L 276 242" fill="none" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <text x="270" y="288" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">QUALIFIED WATCHING</text>
+  <line x1="270" y1="304" x2="270" y2="356" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <path d="M 264 350 L 270 360 L 276 350" fill="none" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <text x="270" y="396" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">VIEW</text>
 
   <!-- ===== AFTER ===== -->
-  <text x="650" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">SHORT STARTS</text>
-  <line x1="850" y1="174" x2="1290" y2="174" stroke="#C9674F" stroke-width="1.5"/>
-  <path d="M 1281 168 L 1291 174 L 1281 180" fill="none" stroke="#C9674F" stroke-width="1.5"/>
-  <text x="1310" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="0.5" fill="#C9674F">VIEW</text>
+  <text x="650" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">SHORT STARTS</text>
+  <line x1="850" y1="174" x2="1290" y2="174" stroke="#C66543" stroke-width="1.5"/>
+  <path d="M 1281 168 L 1291 174 L 1281 180" fill="none" stroke="#C66543" stroke-width="1.5"/>
+  <text x="1310" y="180" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="0.5" fill="#C66543">VIEW</text>
 
-  <line x1="655" y1="196" x2="655" y2="248" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <path d="M 649 242 L 655 252 L 661 242" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <text x="650" y="288" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">CONTINUED WATCHING</text>
-  <line x1="655" y1="304" x2="655" y2="356" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <path d="M 649 350 L 655 360 L 661 350" fill="none" stroke="#F5F1E9" stroke-width="1" opacity="0.5"/>
-  <text x="650" y="396" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#F5F1E9">ENGAGED VIEW</text>
+  <line x1="655" y1="196" x2="655" y2="248" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <path d="M 649 242 L 655 252 L 661 242" fill="none" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <text x="650" y="288" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">CONTINUED WATCHING</text>
+  <line x1="655" y1="304" x2="655" y2="356" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <path d="M 649 350 L 655 360 L 661 350" fill="none" stroke="#C8D5E3" stroke-width="1" opacity="0.5"/>
+  <text x="650" y="396" text-anchor="start" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="600" font-size="17" letter-spacing="0.5" fill="#C8D5E3">ENGAGED VIEW</text>
 
   <!-- divider above punchline -->
-  <line x1="270" y1="450" x2="1200" y2="450" stroke="#F5F1E9" stroke-width="1" opacity="0.08"/>
+  <line x1="270" y1="450" x2="1200" y2="450" stroke="#C8D5E3" stroke-width="1" opacity="0.08"/>
 
   <!-- punchline -->
-  <text x="735" y="510" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#F5F1E9">THE METRIC CHANGED.</text>
-  <text x="735" y="550" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#F5F1E9">THE CONTENT DIDN'T.</text>
+  <text x="735" y="510" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#C8D5E3">THE METRIC CHANGED.</text>
+  <text x="735" y="550" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="26" letter-spacing="0.5" fill="#C8D5E3">THE CONTENT DIDN'T.</text>
 </svg>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" fill="#E2E9EF"/>
+
+  <!-- faint analytical grid -->
+  <g stroke="#17243D" stroke-width="1" opacity="0.05">
+    <line x1="60" y1="60" x2="60" y2="480"/>
+    <line x1="240" y1="60" x2="240" y2="480"/>
+    <line x1="420" y1="60" x2="420" y2="480"/>
+    <line x1="600" y1="60" x2="600" y2="480"/>
+    <line x1="780" y1="60" x2="780" y2="480"/>
+    <line x1="960" y1="60" x2="960" y2="480"/>
+    <line x1="1140" y1="60" x2="1140" y2="480"/>
+  </g>
+
+  <!-- baseline axis -->
+  <line x1="60" y1="480" x2="1140" y2="480" stroke="#17243D" stroke-width="1.2" opacity="0.28"/>
+  <g stroke="#17243D" stroke-width="1.2" opacity="0.3">
+    <line x1="60" y1="480" x2="60" y2="488"/>
+    <line x1="240" y1="480" x2="240" y2="488"/>
+    <line x1="420" y1="480" x2="420" y2="488"/>
+    <line x1="600" y1="480" x2="600" y2="488"/>
+    <line x1="780" y1="480" x2="780" y2="488"/>
+    <line x1="960" y1="480" x2="960" y2="488"/>
+    <line x1="1140" y1="480" x2="1140" y2="488"/>
+  </g>
+
+  <!-- guide drops from signal points -->
+  <g stroke="#17243D" stroke-width="1" opacity="0.14" stroke-dasharray="2 5">
+    <line x1="90" y1="420" x2="90" y2="480"/>
+    <line x1="340" y1="358" x2="340" y2="480"/>
+    <line x1="540" y1="258" x2="540" y2="480"/>
+    <line x1="742" y1="300" x2="742" y2="480"/>
+    <line x1="918" y1="184" x2="918" y2="480"/>
+    <line x1="1120" y1="108" x2="1120" y2="480"/>
+  </g>
+
+  <!-- journey path: wavy, net-ascending signal line -->
+  <path d="M 60 432
+           C 160 432, 220 372, 300 380
+           C 380 388, 300 366, 340 358
+           C 420 344, 470 300, 540 258
+           C 610 216, 690 328, 742 300
+           C 810 264, 860 210, 918 184
+           C 980 156, 1040 132, 1120 108"
+        fill="none" stroke="#17243D" stroke-width="2" opacity="0.85"/>
+
+  <!-- signal touchpoints -->
+  <circle cx="90" cy="420" r="6" fill="#C66543"/>
+  <circle cx="340" cy="358" r="5" fill="#C66543" opacity="0.85"/>
+  <circle cx="540" cy="258" r="8" fill="#C66543"/>
+  <circle cx="742" cy="300" r="5" fill="#C66543" opacity="0.85"/>
+  <circle cx="918" cy="184" r="7" fill="#C66543"/>
+  <circle cx="1120" cy="108" r="9" fill="#C66543"/>
+
+  <!-- caption, matches site micro-caption style -->
+  <text x="1140" y="518" text-anchor="end" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="11" letter-spacing="1.2" fill="#526C91">CAMPAIGN SIGNALS &#183; CUSTOMER JOURNEY</text>
+  <text x="60" y="518" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="1.2" fill="#17243D">ISTASH</text>
+</svg>
