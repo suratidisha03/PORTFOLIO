@@ -363,7 +363,7 @@ a.logo-tile:hover{ background:var(--surface); }
 .ed-landscape .ed-cover{ aspect-ratio:16/7; margin-top:28px; }
 
 .ed-split{ display:grid; grid-template-columns:0.85fr 1fr; gap:56px; align-items:center; }
-.ed-split .ed-cover{ aspect-ratio:3/4; }
+.ed-split .ed-cover{ aspect-ratio:4/3; }
 .ed-split .ed-copy{ order:2; }
 .ed-split.ed-reverse{ grid-template-columns:1fr 0.85fr; }
 .ed-split.ed-reverse .ed-cover{ order:2; }
