@@ -195,7 +195,7 @@ em{ font-style:italic; }
    HOME : SECTION 1: HERO
    ========================================================= */
 .hero{ padding:0; min-height:calc(100vh - var(--nav-height)); display:flex; align-items:center; }
-.hero-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:center; width:100%; padding:96px 0; }
+.hero-grid{ display:grid; grid-template-columns:1.6fr 1fr; gap:56px; align-items:center; width:100%; padding:96px 0; }
 
 /* ---- signature device: oversized animated name, shrinks toward the
    nav logo's scale as the visitor scrolls past the hero ---- */
@@ -216,7 +216,7 @@ body.scrolled-past-hero .signature-name .sig-line{ letter-spacing:0.04em; }
 .hero-avail{ margin-top:18px; }
 .hero-visual{ position:relative; aspect-ratio:4/5; background:var(--surface); border-radius:6px; overflow:hidden; max-width:100%; margin-left:auto; }
 .hero-visual img{ width:100%; height:100%; object-fit:cover; }
-.hero-visual-wrap{ position:relative; max-width:440px; margin-left:auto; }
+.hero-visual-wrap{ position:relative; max-width:300px; margin-left:auto; }
 .hero-portrait-caption{ margin-top:14px; font-family:var(--font-mono); font-size:10.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#B3AFA5; text-align:right; }
 
 /* ---- hero: Cloud Blue canvas, Deep Ink Blue oversized type ---- */
