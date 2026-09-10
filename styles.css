@@ -37,7 +37,7 @@
   --cobalt:var(--terracotta);
   --sage:var(--slate);
   --soft-grey:#D3C9BC;
-  --surface:var(--cloud);
+  --surface:#DDD5C6;
   --text-soft:var(--slate);
 
   --bg:var(--paper);
@@ -220,7 +220,7 @@ body.scrolled-past-hero .signature-name .sig-line{ letter-spacing:0.04em; }
 .hero-portrait-caption{ margin-top:14px; font-family:var(--font-mono); font-size:10.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#B3AFA5; text-align:right; }
 
 /* ---- hero: Cloud Blue canvas, Deep Ink Blue oversized type ---- */
-.bg-cloud{ background:var(--cloud); }
+.bg-cloud{ background:#F3EDE2; }
 .hero-blue{ background:var(--cloud); color:var(--ink-deep); }
 .hero-blue .signature-name .sig-line{ color:var(--ink-deep); }
 .hero-blue .signature-name .sig-line:nth-child(2){ color:var(--terracotta); }
@@ -481,7 +481,9 @@ a.logo-tile:hover{ background:var(--surface); }
 .work-index-grid .wp-card{ grid-column:span 3; }
 .work-index-grid .wp-card.feature{ grid-column:span 6; }
 .work-index-grid .wp-card.compact{ grid-column:span 2; }
-@media (max-width:900px){ .work-index-grid{ grid-template-columns:1fr 1fr; } .work-index-grid .wp-card,.work-index-grid .wp-card.feature,.work-index-grid .wp-card.compact{ grid-column:span 1; } }
+.work-index-grid .wp-card.compact .wp-cover,
+.work-index-grid .wp-card.wide .wp-cover{ aspect-ratio:auto; height:360px; }
+@media (max-width:900px){ .work-index-grid{ grid-template-columns:1fr 1fr; } .work-index-grid .wp-card,.work-index-grid .wp-card.feature,.work-index-grid .wp-card.compact,.work-index-grid .wp-card.wide{ grid-column:span 1; } .work-index-grid .wp-card.compact .wp-cover,.work-index-grid .wp-card.wide .wp-cover{ height:280px; } }
 
 /* =========================================================
    CASE STUDY: header + components (Question/Context/Data/
