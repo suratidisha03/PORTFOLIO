@@ -34,13 +34,14 @@
   <section class="pad-sm">
     <div class="wrap">
       <a href="work.html" class="case-back">← All work</a>
-      <div class="case-cover frame"></div>
+      <div class="case-cover frame" style="aspect-ratio:1.94; background:#fff;"><img src="tableau-cost-topbottom.png" alt="Top and bottom 10 states by cost of living, Tableau dashboard chart" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
       <div class="case-header">
         <span class="label olive">Tableau / Data Visualization / Data Storytelling</span>
         <h1 data-reveal="mask" style="margin-top:14px;"><span class="reveal-line">Cost of Living &amp; Tax Analysis</span></h1>
-        <p class="case-meta">Independent data visualization project · Tableau</p>
-        <div class="hero-proof">Interactive dashboard · state comparison · Income-to-Cost ratio · what-if affordability model.</div>
-        <p class="case-role"><strong>Role:</strong> Sourced and organized the underlying data, built the calculated fields, and designed the full interactive dashboard.</p>
+        <p class="case-meta">Independent data visualization project · MGT 586 Group Project · Tableau Public</p>
+        <div class="hero-proof">31,430 household-level cost estimates across 51 states · Washington, D.C. highest at ~$120,300/year · Mississippi lowest at ~$61,360/year.</div>
+        <p class="case-role"><strong>Role:</strong> Sourced and organized the underlying data, built the calculated Income-to-Cost ratio, and designed the full interactive Tableau dashboard.</p>
+        <a href="https://public.tableau.com/app/profile/disha.surati/viz/CostofLivingandTaxAnalysisU_S_StateComparison/CostofLivingandTaxAnalysis" target="_blank" rel="noopener" class="cta-primary" style="margin-top:20px; display:inline-flex;">View the live Tableau dashboard ↗</a>
       </div>
     </div>
   </section>
@@ -75,14 +76,14 @@
         <div class="component" id="data">
           <span class="component-label">03 / Data</span>
           <div class="body">
-            <p>State-level data on median income, housing cost, food cost, healthcare cost, and state tax burden, organized into a single model for cross-state comparison.</p>
+            <p>31,430 household-level cost-of-living estimates spanning housing, food, and healthcare across all 50 states plus D.C., paired with state median family income and average annual tax burden, organized into a single model for cross-state comparison.</p>
           </div>
         </div>
 
         <div class="component" id="method">
           <span class="component-label">04 / Method</span>
           <div class="body">
-            <p>Built a calculated Income-to-Cost ratio in Tableau to combine income and the major cost categories into one comparable measure, then designed an interactive dashboard around it: a state comparison map, an affordability ranking chart, and a what-if model that lets a viewer adjust income and see how the ratio shifts.</p>
+            <p>Averaged figures across all household compositions and metro/county records for each state, then built a calculated Income-to-Cost ratio in Tableau (median family income ÷ average total cost of living, where a ratio above 1.0 means income exceeds typical costs). Designed the dashboard around that ratio: a Top &amp; Bottom 10 cost comparison, a U.S. map, a cost/tax breakdown, and a what-if affordability model that lets a viewer adjust their own income assumptions and see how state rankings shift.</p>
           </div>
         </div>
 
@@ -90,46 +91,47 @@
           <span class="component-label">05 / Finding</span>
           <div class="finding-visual">
             <div class="finding-metric-row">
-              <div class="finding-metric"><div class="num">4</div><div class="lbl">Cost categories modeled</div></div>
-              <div class="finding-metric"><div class="num">1</div><div class="lbl">Combined ratio</div></div>
-              <div class="finding-metric" style="min-width:180px;"><div class="num" style="font-size:20px;">Interactive</div><div class="lbl">State comparison map</div></div>
+              <div class="finding-metric"><div class="num">$120.3K</div><div class="lbl">Highest avg. cost (D.C.)</div></div>
+              <div class="finding-metric"><div class="num">$61.4K</div><div class="lbl">Lowest avg. cost (Mississippi)</div></div>
+              <div class="finding-metric"><div class="num">0.81x</div><div class="lbl">Most strained ratio (Oregon)</div></div>
             </div>
-            <span class="illustrative">Dashboard preview: illustrative, not a live embed of the published Tableau workbook</span>
+            <img src="tableau-income-ratio.png" alt="Median family income versus cost of living ratio by state, income exceeds cost in green, falls short in red" style="width:100%; border-radius:6px; margin-top:18px; display:block;">
+            <span class="illustrative">Income-to-Cost ratio: real dashboard output</span>
           </div>
           <h3>Raw income is a poor predictor of affordability on its own.</h3>
           <div class="body">
-            <p>Once cost of living and tax burden were factored into the ratio, states that looked strongest on income alone didn't always come out ahead, and states with more modest incomes sometimes ranked better once real affordability was accounted for. The ratio made that gap visible in a way a plain income comparison never could.</p>
+            <p>Only six states in the comparison set, Connecticut, Iowa, New Jersey, Ohio, Texas, and (fractionally) Massachusetts, have a median family income that meets or exceeds the average cost of living. Oregon is the most strained: median income there covers only about 81% of average costs, followed by Mississippi (85%) and California (89%), meaning households in some of the most expensive states are earning below what living there actually requires. Higher cost of living and higher taxes also tend to move together: D.C., Hawaii, and Massachusetts carry both the largest total cost footprint and the highest average tax burden (over $15,000/year), while Tennessee stands out as an exception among the least-expensive states, combining a low cost of living with the lowest average tax burden in the comparison set ($4,343).</p>
           </div>
         </div>
 
         <div class="component" id="decision">
           <span class="component-label">06 / Decision</span>
           <div class="body">
-            <p>Designed the dashboard so the Income-to-Cost ratio, not raw income, is the default lens a viewer sees first, with the what-if model letting anyone test their own income against any state's cost structure, rather than relying on a single static ranking.</p>
+            <p>Designed the dashboard so the Income-to-Cost ratio, not raw income or raw cost, is the default lens a viewer sees first, with the what-if model letting anyone test their own income against any state's cost structure rather than relying on a single static ranking.</p>
           </div>
         </div>
 
         <div class="component" id="impact">
           <span class="component-label">07 / Impact</span>
           <div class="body">
-            <p>This is a personal data-storytelling project, not a client or business engagement, so the impact is the tool itself: a working, interactive dashboard that turns four separate cost variables into one usable affordability answer.</p>
+            <p>This is a personal data-storytelling project, not a client or business engagement, so the impact is the tool itself: a published, interactive Tableau Public dashboard that turns income, housing, food, healthcare, and tax data into one usable affordability answer, viewable and adjustable by anyone.</p>
           </div>
         </div>
 
         <div class="evidence-strip">
           <span class="es-label">Project evidence</span>
-          <div class="evidence-tags"><span>Working Files</span><span>Research Output</span></div>
+          <div class="evidence-tags"><span>Live Dashboard</span><span>Full Report</span></div>
         </div>
 
         <div class="component" id="behind">
           <span class="component-label">08 / Behind the Work</span>
-          <div class="body"><p>The build behind the published dashboard.</p></div>
-          <div class="behind-work-grid">
-            <div class="bw-photo tall"><div class="bw-pending"><span class="bw-icon">◻</span>Dashboard build working file</div></div>
-            <div class="bw-photo"><div class="bw-pending"><span class="bw-icon">◻</span>Calculated-field setup screen</div></div>
-            <div class="bw-photo"><div class="bw-pending"><span class="bw-icon">◻</span>Published workbook screenshot</div></div>
+          <div class="body"><p>The analysis behind the dashboard: the full cost-of-living breakdown and the cost/tax relationship by state.</p></div>
+          <div class="behind-work-grid grid-3">
+            <div class="bw-photo"><img src="tableau-cost-topbottom.png" alt="Top and bottom 10 states by cost of living" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
+            <div class="bw-photo"><img src="tableau-cost-tax.png" alt="Cost of living and taxes by state, top and bottom 10 comparison" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
+            <div class="bw-photo"><img src="tableau-income-ratio.png" alt="Median family income versus cost of living ratio by state" style="width:100%; height:100%; object-fit:contain; display:block;"></div>
           </div>
-          <div class="bw-caption">COST OF LIVING &amp; TAX ANALYSIS · TABLEAU WORKING FILE</div>
+          <div class="bw-caption">COST OF LIVING &amp; TAX ANALYSIS · TABLEAU PUBLIC DASHBOARD</div>
         </div>
 
         <div class="component" id="reflection">
