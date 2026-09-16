@@ -890,3 +890,70 @@ a.cr-value:hover .arrow{ transform:translate(3px,-3px); }
 /* ---- role / worked-with two-up ---- */
 .role-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
 @media (max-width:700px){ .role-grid{ grid-template-columns:1fr; gap:20px; } }
+
+/* =========================================================
+   TYPOGRAPHIC PROJECT COVERS
+   Replaces mixed photo/slide/chart card covers with one
+   consistent system: Deep Ink block, project name in the
+   shell sans, single headline number in Mist. No image
+   files, so covers stay crisp at any size and stay editable.
+   ========================================================= */
+.tcover{
+  width:100%; height:100%;
+  box-sizing:border-box;
+  background:var(--ink-deep);
+  display:flex; flex-direction:column; justify-content:space-between;
+  padding:26px 28px;
+  position:relative;
+  overflow:hidden;
+}
+.tcover::after{
+  content:"";
+  position:absolute; right:-70px; bottom:-90px;
+  width:230px; height:230px; border-radius:50%;
+  background:var(--slate); opacity:0.14;
+}
+.tc-eyebrow{
+  position:relative; z-index:1;
+  font-family:var(--font-display);
+  font-size:10.5px; font-weight:700;
+  letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--terracotta);
+}
+.tc-name{
+  position:relative; z-index:1;
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(23px,2.6vw,32px);
+  line-height:1.03; letter-spacing:-0.02em;
+  color:var(--sand);
+  margin:18px 0 0;
+  max-width:14ch;
+}
+.tc-name em{
+  font-family:var(--font-serif);
+  font-weight:400; font-style:italic;
+  letter-spacing:0; color:var(--mist);
+}
+.tc-metric{
+  position:relative; z-index:1;
+  margin-top:auto; padding-top:14px;
+  border-top:1px solid rgba(232,224,213,0.24);
+  font-family:var(--font-display);
+  font-size:11px; font-weight:600;
+  letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--mist);
+}
+/* size the name to the card it sits in */
+.work-index-grid .wp-card.feature .tc-name{ font-size:clamp(30px,4vw,54px); max-width:16ch; }
+.work-index-grid .wp-card.feature .tcover{ padding:34px 38px; }
+.work-index-grid .wp-card.compact .tc-name{ font-size:clamp(21px,2vw,27px); }
+.work-index-grid .wp-card.wide .tc-name{ font-size:clamp(23px,2.3vw,31px); }
+@media (max-width:900px){
+  .work-index-grid .wp-card.feature .tc-name{ font-size:clamp(26px,5.4vw,34px); }
+  .work-index-grid .wp-card.feature .tcover{ padding:26px 28px; }
+}
+@media (max-width:560px){
+  .tcover{ padding:22px 22px; }
+  .tc-name{ font-size:26px; }
+}
