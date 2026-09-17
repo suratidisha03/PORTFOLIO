@@ -1355,7 +1355,8 @@ h1,h2,h3,h4,h5,.nav-logo{ font-family:var(--font-display); }
 /* ---- hero: single column, precise, with an at-a-glance proof bar ---- */
 .p-hero.solo{ grid-template-columns:1fr; padding:120px 0 var(--s7); }
 .p-hero.solo h1{ max-width:17ch; font-size:clamp(40px,6vw,76px); }
-.p-hero.solo p{ max-width:52ch; font-size:18px; margin-top:var(--s3); }
+.p-hero.solo p{ max-width:64ch; font-size:18px; margin-top:var(--s3);
+                 text-wrap:balance; }
 .p-proof{
   display:grid; grid-template-columns:repeat(4,1fr); gap:var(--s4);
   padding:var(--s4) 0 var(--s7); border-top:1px solid var(--border);
@@ -1445,4 +1446,128 @@ h1,h2,h3,h4,h5,.nav-logo{ font-family:var(--font-display); }
 @media (max-width:860px){
   .skill-grid{ grid-template-columns:1fr; gap:var(--s4); }
   .skill-col p{ font-size:16px; max-width:none; }
+}
+
+/* =========================================================
+   CASE STUDIES : premium, navigable, detail-forward.
+   Content is untouched; this makes it explorable.
+   ========================================================= */
+
+/* hero band */
+.case-header{
+  background:var(--navy); color:var(--ivory);
+  border-radius:8px; padding:clamp(28px,4vw,56px);
+  margin-bottom:var(--s6);
+}
+.case-header .label{ color:var(--orange); }
+.case-header h1{
+  font-family:var(--font-display); font-weight:800;
+  font-size:clamp(28px,4.4vw,52px); line-height:1.08;
+  letter-spacing:-.032em; color:var(--ivory);
+  max-width:19ch; padding-bottom:.06em;
+}
+.case-header .case-meta{ color:var(--stone); font-size:13px; letter-spacing:.04em; }
+.case-header .hero-proof{
+  border-top:1px solid rgba(216,200,184,.28);
+  border-bottom:none; padding:var(--s3) 0 0; margin-top:var(--s4);
+  font-family:var(--font-display); font-size:clamp(16px,1.9vw,21px);
+  font-weight:700; letter-spacing:-.015em; color:var(--ivory); max-width:46ch;
+}
+.case-header .case-role{ color:#B9BFC8; font-size:14px; line-height:1.6; margin-top:var(--s3); max-width:60ch; }
+.case-header .case-role strong{ color:var(--stone); }
+.case-header .disclosure{
+  background:rgba(245,240,232,.07); border-color:rgba(216,200,184,.3);
+}
+.case-header .disclosure .d-label{ color:var(--orange); }
+.case-header .disclosure p{ color:#B9BFC8; }
+
+/* sticky in-page navigation: the detail stays explorable */
+.case-body{ position:relative; }
+@media (min-width:1080px){
+  .case-body{ display:grid; grid-template-columns:200px 1fr; gap:var(--s7); align-items:start; }
+  .case-index{
+    display:flex !important; flex-direction:column; gap:2px;
+    position:sticky; top:104px; padding-top:var(--s1);
+    border-left:1px solid var(--border);
+  }
+  .case-index a{
+    font-family:var(--font-display); font-size:12px; font-weight:600;
+    letter-spacing:.01em; color:var(--slate); text-decoration:none;
+    padding:7px 0 7px 16px; margin-left:-1px;
+    border-left:2px solid transparent; transition:color .2s var(--ease), border-color .2s var(--ease);
+  }
+  .case-index a:hover{ color:var(--burgundy); border-left-color:var(--burgundy); }
+  .case-index a:focus-visible{ outline:2px solid var(--orange); outline-offset:2px; }
+}
+
+/* narrative steps: burgundy numerals, clear rhythm */
+.component{ padding:var(--s6) 0; }
+.component-label{
+  font-family:var(--font-display); font-size:12px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--burgundy); margin-bottom:var(--s2);
+}
+.component h3{
+  font-family:var(--font-display); font-weight:700;
+  font-size:clamp(20px,2.4vw,28px); line-height:1.2;
+  letter-spacing:-.025em; color:var(--navy);
+}
+.component .body p{ font-size:16.5px; line-height:1.75; color:#3F4854; max-width:68ch; }
+
+/* evidence + disclosure */
+.evidence-strip{ border-color:var(--border); }
+.evidence-tags span{ color:var(--burgundy); }
+.disclosure{ border-color:var(--stone); background:rgba(216,200,184,.22); }
+.disclosure .d-label{ color:var(--burgundy); }
+.disclosure p{ color:#5A5044; }
+
+/* insight callout */
+.insight{
+  border-left:4px solid var(--burgundy); border-radius:0 8px 8px 0;
+  background:var(--stone); padding:var(--s3) var(--s4); margin:var(--s4) 0;
+}
+.insight b{ display:block; font-family:var(--font-display); font-weight:700;
+            font-size:19px; letter-spacing:-.02em; color:var(--navy); }
+.insight span{ display:block; margin-top:8px; font-size:14.5px; line-height:1.65; color:#5A5044; }
+
+/* figures */
+.finding-visual{ background:#fff; border-color:var(--border); border-radius:8px; }
+.bw-photo{ border:1px solid var(--border); border-radius:8px; background:#fff; }
+.illustrative{ border-color:var(--stone); color:var(--slate); }
+.case-nav a:hover{ color:var(--burgundy); }
+.case-cover{ border-radius:8px; }
+
+/* =========================================================
+   VERTICAL RHYTHM : generous, consistent, 8px-based.
+   Sections breathe; nothing is cramped against a divider.
+   ========================================================= */
+section.pad-sm{ padding:var(--s7) 0; }         /* 96px, beats the earlier 60px rule */
+@media (min-width:1080px){
+  section.pad-sm{ padding:120px 0; }
+}
+.p-sechead{ margin-bottom:var(--s6); padding-bottom:var(--s4); }
+.p-timeline{ gap:var(--s4) var(--s5); }
+.p-timeline .p-div{ margin:var(--s1) 0; }
+.eg-grid{ gap:var(--s7) var(--s5); margin-top:var(--s6); }
+.section-head{ margin-bottom:var(--s6); }
+footer{ padding:var(--s6) 0 var(--s5); margin-top:var(--s4); }
+.skill-grid{ gap:var(--s6) var(--s7); }
+.component{ padding:var(--s7) 0; }
+
+/* closing contact block: centred composition */
+.p-contact{ text-align:center; padding:120px 0 var(--s7); }
+.p-contact .p-sechead{
+  display:block; text-align:center;
+  border-bottom:none; padding-bottom:0; margin-bottom:var(--s3);
+}
+.p-contact .p-num{ display:block; margin-bottom:var(--s2); }
+.p-contact h2{ max-width:20ch; margin:0 auto; }
+.p-contact p{ margin:var(--s3) auto 0; max-width:52ch; }
+.p-contact .p-cta{ justify-content:center; margin-top:var(--s5); }
+
+@media (max-width:820px){
+  section.pad-sm{ padding:var(--s6) 0; }
+  .p-contact{ padding:var(--s6) 0; }
+  .p-sechead{ margin-bottom:var(--s5); }
+  .eg-grid{ gap:var(--s5); margin-top:var(--s5); }
 }
