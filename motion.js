@@ -134,3 +134,31 @@
     init();
   }
 })();
+
+/* ---- graded section reveal: subtle rise, once, reduced-motion aware ---- */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('[data-rise]');
+  if (!targets.length) return;
+  if (reduce || !('IntersectionObserver' in window)) {
+    for (var i = 0; i < targets.length; i++) targets[i].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  targets.forEach(function (t) { io.observe(t); });
+})();
+
+/* ---- hero entrance: stage the eyebrow, copy and buttons after the headline ---- */
+(function () {
+  var hero = document.querySelector('.p-hero.solo');
+  if (!hero) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { hero.classList.add('hero-in'); return; }
+  requestAnimationFrame(function () {
+    window.setTimeout(function () { hero.classList.add('hero-in'); }, 60);
+  });
+})();
