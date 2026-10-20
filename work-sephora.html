@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sephora: From Customer Insights to Lifecycle Strategy | Disha Surati</title>
+<meta name="description" content="Independent capstone: 9,999 real Sephora skincare reviews turned into page, email and lifecycle decisions, tested on simulated campaign and customer data in SQL, Looker Studio and Tableau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Disha Surati</a>
+    <ul class="nav-links">
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="marketing-edit.html">The Edit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="Disha_Surati_Resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
+      <button class="nav-toggle" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="pad-sm">
+    <div class="wrap">
+      <a href="work.html" class="case-back">← All work</a>
+      <div class="case-cover frame" data-cursor="VIEW ↗"><img src="cov-sephora.svg" alt="Cohort heatmap showing the share of each first-purchase month who ordered again in months 1 to 5"></div>
+      <div class="case-header">
+        <span class="label olive">SQL / Looker Studio / Tableau / Lifecycle Email</span>
+        <h1 data-reveal="mask" style="margin-top:14px;"><span class="reveal-line">From what skincare shoppers complain about to what the next email should say.</span></h1>
+        <p class="case-meta">Independent Capstone · Oct 2026 · Real public reviews + simulated performance data</p>
+        <div class="hero-proof">9,999 reviews analyzed · 6 tracked events · 7 emails built · 2 dashboards · 53 QA checks</div>
+        <div class="disclosure">
+          <span class="d-label">Independent Project · Simulated Performance Data</span>
+          <p>Independent capstone using Sephora as the subject of a speculative project. Public review data is historical. Campaign and customer performance are simulated. I built the linked analysis, dashboards and email prototypes; tracking and test-send evidence is labeled separately. Not affiliated with Sephora.</p>
+        </div>
+        <div class="hero-links" style="margin-top:24px;">
+          <a href="https://datastudio.google.com/reporting/7f7a22b2-0624-46f8-b9d5-4b598d8d3266" target="_blank" rel="noopener" class="cta-primary">View Looker Studio Report ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="the-question">
+    <div class="wrap">
+      <span class="tq-label">The Question</span>
+      <h2 data-reveal="mask"><span class="reveal-line">How could customer-review insights guide clearer product discovery, useful lifecycle emails and better acquisition-to-repeat-purchase decisions?</span></h2>
+    </div>
+  </section>
+
+  <section class="pad-sm">
+    <div class="wrap case-body">
+      <nav class="case-index">
+        <a href="#context">01 Problem</a>
+        <a href="#scope">02 Scope &amp; Data</a>
+        <a href="#approach">03 Method</a>
+        <a href="#analysis">04 Findings</a>
+        <a href="#meant">05 Finding &amp; Decision</a>
+        <a href="#tradeoffs">06 Tradeoffs</a>
+        <a href="#validation">07 Validation</a>
+        <a href="#dashboard">08 Dashboards</a>
+        <a href="#limits">09 Limitations</a>
+      </nav>
+      <div>
+        <div class="pr">
+          <p class="pr-kick">Project resources</p>
+          <h3>Check the <em>evidence.</em></h3>
+          <p>Each link shows a different layer: the analysis, the customer view, and the working tracking and email-to-cart path.</p>
+          <div class="pr-list">
+          <a class="pr-btn" href="https://datastudio.google.com/reporting/7f7a22b2-0624-46f8-b9d5-4b598d8d3266" target="_blank" rel="noopener noreferrer"><span class="pr-ic ext" aria-hidden="true">↗</span><span><span class="pr-t">Looker Studio report</span><span class="pr-m">Acquisition, funnel, customers and email · simulated data</span></span><span class="pr-arw" aria-hidden="true">↗</span></a>
+          <a class="pr-btn" href="https://public.tableau.com/app/profile/disha.surati/viz/Sephora_Capstone_Cohorts_twbx/Cohortsdashboard" target="_blank" rel="noopener noreferrer"><span class="pr-ic ext" aria-hidden="true">↗</span><span><span class="pr-t">Tableau cohort dashboard</span><span class="pr-m">Repeat buying by first-purchase month · simulated data</span></span><span class="pr-arw" aria-hidden="true">↗</span></a>
+          <a class="pr-btn" href="https://suratidisha03.github.io/routine-guide-demo/" target="_blank" rel="noopener noreferrer"><span class="pr-ic ext" aria-hidden="true">↗</span><span><span class="pr-t">Live demo site</span><span class="pr-m">GA4 + GTM events and cart email link · test traffic only</span></span><span class="pr-arw" aria-hidden="true">↗</span></a>
+          <a class="pr-btn" href="https://github.com/suratidisha03/sephora-lifecycle-capstone" target="_blank" rel="noopener noreferrer"><span class="pr-ic ext" aria-hidden="true">↗</span><span><span class="pr-t">SQL, QA log and data dictionary</span><span class="pr-m">GitHub · queries, checks and metric definitions</span></span><span class="pr-arw" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="component" id="context">
+          <span class="component-label">01 / Problem</span>
+          <div class="body"><p>Skincare shoppers buy on trust: will it work for my skin, will it feel right, is it worth the price. Reviews hold those doubts in the shopper's own words, but they rarely reach the page copy, the emails or the campaign decisions. I set myself one question and followed it through the whole journey: search, product page, tracking, email, repeat purchase and reporting.</p><p>This is a research question I proposed. It does not claim Sephora has a problem.</p></div>
+        </div>
+
+        <div class="component" id="scope">
+          <span class="component-label">02 / Scope &amp; Data</span>
+          <div class="body"><p>Three evidence layers, kept separate at all times. Reviewers are never joined to simulated customers, and reviews are never treated as purchases.</p></div><div class="diagnostic-panel"><div class="dp-row"><div class="dp-cell">Layer</div><div class="dp-cell">What it is</div><div class="dp-cell">What it can prove</div></div><div class="dp-row"><div class="dp-cell">Public</div><div class="dp-cell">9,999 Sephora reviews of 3 skincare products (Kaggle, collected March 2023)</div><div class="dp-cell">What reviewers in this sample said and rated</div></div><div class="dp-row"><div class="dp-cell">Simulated</div><div class="dp-cell">1,000 customers, 40,000 sessions, 1,251 orders, 3,126 emails, $3,000 hypothetical ad spend (Jan to Jun 2026, seed 42)</div><div class="dp-cell">That I can calculate and explain the metrics correctly</div></div><div class="dp-row"><div class="dp-cell">Test</div><div class="dp-cell">My own demo site (GA4 + GTM) and Mailchimp test sends to my inbox</div><div class="dp-cell">That the tracking and email setup works</div></div></div><p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Products: fresh Soy cleanser, First Aid Beauty Ultra Repair Cream, Drunk Elephant Protini. Actual spend: $0.</p>
+        </div>
+
+        <div class="component" id="approach">
+          <span class="component-label">03 / Method</span>
+          <div class="body"><p>Cleaned the reviews in SQLite with logged checks for row counts, duplicates and joins. Coded 150 recent reviews by theme, checked 20 by hand (70% agreement, 6 codes corrected), then confirmed each theme across all 9,999 reviews in SQL. Turned the themes into copy for a landing page, product pages, an SEO article, 7 emails and 2 ad hooks, each line traced to a review theme or a verified product fact.</p><p>Built a demo site and tracked 6 ecommerce events with GTM and GA4, verified in Tag Assistant and DebugView. Simulated 8 linked tables and locked 11 metric definitions before running any analysis, then wrote 6 SQL analyses: data QA, campaigns, funnel, customers and RFM, cohorts and email. Designed 3 lifecycle flows with entry, exit and suppression rules, tested them on 10 practice contacts in HubSpot Free, and built and test-sent all 7 emails in Mailchimp. Finally built 2 dashboards and checked every total against SQL.</p></div>
+        </div>
+
+        <div class="component" id="analysis">
+          <span class="component-label">04 / Findings</span>
+          <h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:24px 0 0;">Finding 01 · Real reviews: each product has one specific doubt</h4><div class="diagnostic-panel"><div class="dp-row"><div class="dp-cell">Product</div><div class="dp-cell">Doubt</div><div class="dp-cell">Evidence</div></div><div class="dp-row"><div class="dp-cell">First Aid Beauty cream</div><div class="dp-cell">Pilling, often only over serums</div><div class="dp-cell">Share of low reviews mentioning &ldquo;pill&rdquo;: about 2% a year (2016 to 2020), then 12%, 18%, 28% (2021 to 2023)</div></div><div class="dp-row"><div class="dp-cell">fresh Soy cleanser</div><div class="dp-cell">Scent splits opinion</div><div class="dp-cell">In 39% of low and 40% of high reviews, and 53% of 3-star reviews</div></div><div class="dp-row"><div class="dp-cell">Drunk Elephant Protini</div><div class="dp-cell">Price, even among fans</div><div class="dp-cell">In 34% of low and 31% of high reviews</div></div></div><p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Limit: reviewers self-select and yearly counts are small (25 to 54 low reviews a year). This shows what reviewers said, not sales impact.</p><h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:32px 0 0;">Finding 02 · Simulated: cheap clicks did not mean cheap sales</h4><div class="diagnostic-panel"><div class="dp-row"><div class="dp-cell">Channel</div><div class="dp-cell">CTR · CPC</div><div class="dp-cell">Cost per purchase · ROAS</div></div><div class="dp-row"><div class="dp-cell">Social</div><div class="dp-cell">2.47% · $0.73</div><div class="dp-cell">$32.43 · 1.63</div></div><div class="dp-row"><div class="dp-cell">Search</div><div class="dp-cell">1.67% · $1.10</div><div class="dp-cell">$29.03 · 2.40</div></div></div><p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Social won on clicks, search won on sales (3.8% vs 2.2% of clicks became orders). This gap was built into the simulation inputs, so it shows reading the metrics correctly, not a discovery. Campaign gaps within a channel (29 vs 33, 17 vs 20 orders) are noise.</p><h4 style="font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--data-blue); margin:32px 0 0;">Finding 03 · Simulated: one-time buyers who went quiet are the biggest target</h4><div class="diagnostic-panel"><div class="dp-row"><div class="dp-cell">Segment</div><div class="dp-cell">Customers</div><div class="dp-cell">Share</div></div><div class="dp-row"><div class="dp-cell">Repeat buyers (2+ orders)</div><div class="dp-cell">316 (42%)</div><div class="dp-cell">65% of revenue ($53,760 of $82,497)</div></div><div class="dp-row"><div class="dp-cell">One-time, lapsed</div><div class="dp-cell">254</div><div class="dp-cell">34% of buyers, no return in about 4 months</div></div><div class="dp-row"><div class="dp-cell">At risk (repeat buyers going quiet)</div><div class="dp-cell">125</div><div class="dp-cell">17% of buyers</div></div></div><p style="font-family:var(--font-mono); font-size:11px; color:var(--text-soft); margin-top:12px;">Cohorts return most in month 2 (28% to 34%), then fade. The repeat rate and month-2 peak come from simulation settings, so treat them as method practice, not benchmarks.</p>
+        </div>
+
+        <div class="evidence-strip">
+          <span class="es-label">Project evidence</span>
+          <div class="evidence-tags"><span>9,999 Reviews in SQL</span><span>6 Events Verified in GA4</span><span>53 QA Checks Logged</span></div>
+        </div>
+
+        <div class="component" id="meant">
+          <span class="component-label">05 / Finding &amp; Decision</span>
+          <div class="finding-decision"><div class="fd-col fd-finding"><span class="fd-label">What I Found</span><div class="fd-row"><p class="fd-item">Pilling complaints on the cream are growing, and part of it happens only when layered over other products.</p></div><div class="fd-row"><p class="fd-item">Scent decides undecided 3-star buyers of the cleanser.</p></div><div class="fd-row"><p class="fd-item">254 one-time lapsed and 125 at-risk buyers are the largest lifecycle audiences.</p></div></div><div class="fd-arrow">↗</div><div class="fd-col fd-decision"><span class="fd-label">What I'd Do</span><div class="fd-row"><p class="fd-item">Lead the cream page and the day-2 welcome email with a layering guide.</p></div><div class="fd-row"><p class="fd-item">Describe the scent and lather plainly and offer the mini first.</p></div><div class="fd-row"><p class="fd-item">Point the win-back flow at both groups, capped at 1 email a day and 3 a week.</p></div></div></div>
+        </div>
+
+        <div class="component decision-block" id="tradeoffs">
+          <span class="component-label">06 / Tradeoffs</span>
+          <div class="diagnostic-panel"><div class="dp-row"><div class="dp-cell">Decision</div><div class="dp-cell">Why</div><div class="dp-cell">Tradeoff</div></div><div class="dp-row"><div class="dp-cell">Layering guide on the cream page</div><div class="dp-cell">Answers the growing complaint directly</div><div class="dp-cell">Admits a weakness; may lower clicks from people who hadn't worried</div></div><div class="dp-row"><div class="dp-cell">Plain scent and lather copy, mini first</div><div class="dp-cell">Scent decides 3-star buyers</div><div class="dp-cell">Honest copy may put off some shoppers before they try it</div></div><div class="dp-row"><div class="dp-cell">Protini framed by cost per week</div><div class="dp-cell">Price is the shared objection</div><div class="dp-cell">Framing can't fix value for everyone</div></div><div class="dp-row"><div class="dp-cell">Judge campaigns on cost per purchase, not CPC</div><div class="dp-cell">Cheap clicks cost more per sale</div><div class="dp-cell">Needs more orders per campaign than this data had (17 to 33)</div></div><div class="dp-row"><div class="dp-cell">Cart email rebuilds the saved bag</div><div class="dp-cell">The first test send opened an empty bag</div><div class="dp-cell">One more feature to maintain</div></div></div>
+        </div>
+
+        <div class="component" id="validation">
+          <span class="component-label">07 / Validation</span>
+          <div class="body"><p>53 logged QA checks cover data loads, joins, duplicates, metric reconciliation, tracking, email rendering and dashboards. Money reconciles: $6,267 attributed + $228 lost-tag + $76,002 non-paid = $82,497 total. Funnel steps count only in time order within one session, and cohort months not yet reached stay blank, never 0. Both dashboards match SQL and open signed out.</p><p>Errors I caught and fixed: the first cart email linked to an empty bag, so I made the page rebuild the bag from the link and retested it from my inbox on the live site. Future cohort months showed as shaded cells in Tableau, so I rebuilt the chart from a file without them. AI-coded reviews were checked by hand before use, and all AI use is logged.</p></div>
+        </div>
+
+        <div class="component" id="dashboard">
+          <span class="component-label">08 / Dashboards</span>
+          <div class="body"><p>Looker Studio covers acquisition, conversion and email across 3 pages. Tableau Public covers repeat buying by first-purchase cohort.</p></div><div class="hero-links" style="margin-top:24px;"><a href="https://public.tableau.com/app/profile/disha.surati/viz/Sephora_Capstone_Cohorts_twbx/Cohortsdashboard" target="_blank" rel="noopener" class="cta-secondary">View Tableau Dashboard ↗</a> <a href="https://datastudio.google.com/reporting/7f7a22b2-0624-46f8-b9d5-4b598d8d3266" target="_blank" rel="noopener" class="cta-secondary">View Looker Studio Report ↗</a></div>
+        </div>
+
+        <div class="component" id="limits">
+          <span class="component-label">09 / Limitations</span>
+          <div class="body"><p>Performance data is simulated: it proves I can calculate and explain the metrics, not that these campaigns or emails would work. Several patterns were built into the inputs (search vs social conversion, the repeat rate, the month-2 peak), and I say so wherever they appear. The reviews are a self-selected 2016 to 2023 sample with no sales, returns or skin outcomes. The lifecycle flows are prototypes: Mailchimp Free has no multi-step automation, so the emails were built and test-sent, not run as live flows. Tracking was tested on my own demo traffic only.</p><p>Next tests: A/B the layering guide on the cream page (add to cart), the scent copy (mini selection) and cost-per-week framing in the welcome email (click rate).</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="case-nav">
+      <a href="work-ecommerce-dashboard.html">← Funnel, Segmentation &amp; Retention</a>
+      <a href="work.html">Back to Selected Work →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="nav-logo">Disha Surati</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="marketing-edit.html">The Edit</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="mailto:suratidisha@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="footer-meta">© <span id="year"></span> Disha Surati · Chicago, IL</p>
+  </div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+<script src="script.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>
