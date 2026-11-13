@@ -162,3 +162,30 @@
     window.setTimeout(function () { hero.classList.add('hero-in'); }, 60);
   });
 })();
+
+// ---------------------------------------------------------
+// Home hero: headline A/B test. Runs once on load; the
+// "Run the test again" button replays it. Reduced motion
+// shows the decided state straight away.
+// ---------------------------------------------------------
+(function () {
+  var test = document.querySelector('[data-abtest]');
+  if (!test) return;
+  var replay = document.querySelector('[data-ab-replay]');
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timer;
+  function decide() { test.classList.remove('is-running'); test.classList.add('is-decided'); }
+  function run() {
+    window.clearTimeout(timer);
+    test.classList.remove('is-decided', 'is-running');
+    if (reduced) { decide(); return; }
+    void test.offsetWidth; // restart animations
+    test.classList.add('is-running');
+    timer = window.setTimeout(decide, 2300);
+  }
+  if (replay) {
+    if (reduced) replay.hidden = true;
+    replay.addEventListener('click', run);
+  }
+  window.setTimeout(run, 500);
+})();

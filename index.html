@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Disha Surati | Digital &amp; Growth Marketing Analyst</title>
 <meta name="description" content="Digital and growth marketing analyst working across CRM, email, social, content and marketing analytics. I turn campaign and customer data into the decisions that move acquisition, engagement and retention.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,20 +31,37 @@
 
 <main>
 
-  <!-- ============ HERO ============ -->
-  <section>
+  <!-- ============ HERO: headline A/B test ============ -->
+  <section class="abhero" aria-labelledby="hero-title">
     <div class="wrap">
-      <div class="p-hero solo">
-        <div>
-          <span class="p-eyebrow">Digital &amp; Growth Marketing Analyst · Chicago</span>
-          <h1 data-reveal="mask"><span class="reveal-line">I connect creative thinking with growth decisions.</span></h1>
-          <p>I work across CRM, email, social, content and marketing analytics, turning campaign and customer data into decisions a growth team can act on.</p>
-          <div class="p-cta">
-            <a href="work.html" class="btn-p">Explore my work</a>
-            <a href="Disha_Surati_Resume.pdf" target="_blank" rel="noopener" class="btn-s">View resume</a>
-          </div>
+      <p class="abhero-who">Disha Surati <span>Marketing analyst in Chicago</span></p>
+      <h1 id="hero-title" class="visually-hidden">Disha Surati, marketing analyst. I make marketing work.</h1>
+      <div class="abtest" data-abtest aria-hidden="true">
+        <div class="ab-row" data-variant="a">
+          <span class="ab-chip">A</span>
+          <span class="ab-line">I make marketing look good.</span>
+          <span class="ab-bar"><span></span></span>
+        </div>
+        <div class="ab-row" data-variant="b">
+          <span class="ab-chip">B</span>
+          <span class="ab-line">I make marketing work.</span>
+          <span class="ab-bar"><span></span></span>
+          <span class="ab-win">Winner</span>
         </div>
       </div>
+      <div class="abhero-foot">
+        <p class="abhero-lede">I trained as a designer and moved into marketing analytics. I test creative, segment customers in SQL and CRM tools, and turn what the data says into the next campaign.</p>
+        <div class="p-cta">
+          <a href="work.html" class="btn-p">See my work</a>
+          <a href="Disha_Surati_Resume.pdf" target="_blank" rel="noopener" class="btn-s">Download resume</a>
+          <button type="button" class="ab-replay" data-ab-replay>Run the test again</button>
+        </div>
+      </div>
+      <ul class="abhero-proof">
+        <li><strong>150+</strong> sign-ups in 2 weeks for a fintech startup</li>
+        <li><strong>750K+</strong> e-commerce events analyzed in SQL</li>
+        <li><strong>81%</strong> of seats filled for a 20-speaker event</li>
+      </ul>
     </div>
   </section>
 
@@ -77,7 +93,7 @@
         </a>
 
         <a href="work-kmg.html" class="eg-card" data-rise>
-          <div class="eg-shot"><img src="cov-kmg.jpg" alt="KMG social content asset beside the documented following growth"></div>
+          <div class="eg-shot"><img src="cov-kmg.jpg" alt="KMG results: Instagram following up 12%, impressions up 15%, 81% of event seats filled, 5 sponsors, beside the Marketeralt="KMG social content asset beside the documented following growth"#39;s Nexus poster"></div>
           <span class="eg-cat">Social Strategy · Content</span>
           <h3>The Marketer's Nexus</h3>
           <p>Growing KMG&#39;s Instagram 12% and filling 81% of seats for its flagship event, The Marketer&#39;s Nexus.</p>
