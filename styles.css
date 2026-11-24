@@ -1738,3 +1738,27 @@ body *{ text-transform:none !important; }
 .cta-primary:hover{ background:var(--coral-ink); }
 .cta-secondary,.case-header a.cta-secondary{ background:transparent; color:var(--ink) !important; border:1.5px solid var(--ink); }
 .cta-secondary:hover{ background:var(--ink); color:#fff !important; }
+
+/* =========================================================
+   WORK PAGE: 4 main projects + "More projects" (Nov 2026)
+   ========================================================= */
+.eg-grid.eg-grid-3{ grid-template-columns:repeat(3,1fr); gap:40px 28px; margin-top:48px; }
+.eg-grid-3 .eg-card h3{ font-size:19px; }
+.eg-grid-3 .eg-card p{ font-size:14.5px; }
+.more-work{ border-top:1px solid var(--border); margin-top:40px; }
+.more-head{ display:flex; align-items:baseline; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.more-head h2{ font-family:var(--font-display); font-weight:800; font-size:clamp(22px,2.6vw,30px); letter-spacing:-.025em; color:#16233F; margin:0; }
+.more-head p{ font-size:14.5px; color:#4F5A70; margin:0; }
+.more-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; margin-top:28px; }
+.more-card{ display:grid; grid-template-columns:132px 1fr; gap:18px; align-items:center; text-decoration:none; color:inherit;
+            padding:14px; border:1px solid var(--border); border-radius:6px; background:#FFFFFF; transition:border-color .2s var(--ease); }
+.more-card:hover{ border-color:#F0533E; }
+.more-card:hover h3{ text-decoration:underline; text-underline-offset:3px; }
+.more-card:focus-visible{ outline:3px solid #F0533E; outline-offset:3px; }
+.more-shot{ position:relative; width:100%; padding-top:66%; border-radius:4px; overflow:hidden; background:#DCE1EA; }
+.more-shot img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.more-card .eg-cat{ margin-top:0; font-size:9.5px; }
+.more-card h3{ font-family:var(--font-display); font-weight:800; font-size:16.5px; letter-spacing:-.015em; color:#16233F; margin:6px 0 0; }
+.more-card p{ font-size:13.5px; line-height:1.5; color:#4F5A70; margin:5px 0 0; }
+@media (max-width:1000px){ .eg-grid.eg-grid-3{ grid-template-columns:1fr 1fr; } }
+@media (max-width:760px){ .eg-grid.eg-grid-3, .more-grid{ grid-template-columns:1fr; } .more-card{ grid-template-columns:104px 1fr; } }
